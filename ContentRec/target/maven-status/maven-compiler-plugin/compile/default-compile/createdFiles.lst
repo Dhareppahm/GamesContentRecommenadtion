@@ -1,0 +1,8 @@
+com/bridgelabz/contentRec/controller/ContentRestAPICall.class
+com/bridgelabz/contentRec/main/MainClass.class
+com/bridgelabz/contentRec/dao/GameInfoDao.class
+com/bridgelabz/contentRec/main/Content.class
+com/bridgelabz/contentRec/serviceImpl/GameInfoServiceImpl.class
+com/bridgelabz/contentRec/daoImpl/GameInfoDaoImpl.class
+com/bridgelabz/contentRec/services/GameInfoService.class
+com/bridgelabz/contentRec/model/GameInfo.class

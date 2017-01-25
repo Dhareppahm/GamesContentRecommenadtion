@@ -1,0 +1,660 @@
+{
+  "status": true,
+  "data": {
+    "title": "Puzzle Games",
+    "content_type_id": "10",
+    "count": 8,
+    "total_count": 474,
+    "recommended_tag": "2048 games,3d games,addicting games,aiming games,alphabet games,Animal,animal games",
+    "content": [
+      {
+        "list_type": "LIST_OPEN",
+        "type": "content",
+        "content_type_id": "10",
+        "content": [
+          {
+            "content_id": 20041974,
+            "content_name": "SHAPES",
+            "content_type_id": 10,
+            "group_id": "124",
+            "release_date": "",
+            "content_thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9s_uQEeApPUCGzRLNyDRiwZi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsULow4DpeSik3rKkVza079tXokkTe5wdFwbImQKkNBKZU1KpKgfsa6KrpIPEfZNA4_5%21iQotBr9Zz3H4gDMHXlkmp0qcKnAc0Sh9_EZPwxz4g%3D%3D/90cd95b3cfeb7e7f644b313416907713_Icon_512x512.png?0",
+            "content_description": "Shapes is a minimal and relaxing puzzle game. It's similar to Tetris and Tangram. It's very easy to play and has very intuitive controls. Download this game now and immerse yourself in hours of addictive and fun game play.\n\nFeatures:\n-Simple and easy controls\n-Clean Graphics\n-Fun levels\n",
+            "content_seo_description": "",
+            "content_short_description": "Play this unique puzzle game Shapes and give your brain some much needed workout!",
+            "build_id": "20053926",
+            "content_version_id": "173724",
+            "manifest_version_code": "1",
+            "content_rating": 4.1,
+            "content_license_type": "free",
+            "super_category_id": "55",
+            "category_id": "55",
+            "category_name": "Puzzle",
+            "downloads": "1.3 K",
+            "exact_ct": 242,
+            "mobango_exact_ct": 1018,
+            "file_extension": "apk",
+            "likes": "",
+            "views": 27,
+            "content_storage": "local",
+            "license_id": "",
+            "disp_type": "content",
+            "file_size": "22 MB",
+            "screenshot_orientation": "vertical",
+            "screenshot_details": [
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsULow4DpeSik3rKkVza079tXokkTe5wdFzyaCdvs6Cq5ieYRtzoKTeaebXxgyz1WNizbzEK4TzBN7uewo4mz5P9ZRna8_XHzhM%214PLu4xH7OQx%21yNBCXmInrnPyvBGbSlA%3D/edf8d0be2dbc43d89c319f06d0c37d94_f11a26ed2f5971c8ea5cead3e8bf5473.jpeg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsULow4DpeSik3rKkVza079tXokkTe5wdFxColRFP6IeoYOvQ8WuIkF16tnq2D2WdHccVLOkan%21A%21GrKsr_f7RMaS4DUcsiJcm3_9wy86cS6ROqsdNlTNq4nNuJAe1p4keo%3D/70af12da0c91784c65f7e45b3874a609_98378e2b92a09aa4fbdde79a68b5f86f.jpeg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsULow4DpeSik3rKkVza079tXokkTe5wdFwmeirk7Z6CTyJwzkg3737y8FP3u35PSBAuPxeyvJaFyHKjQO3uq%21PwLm0MK4Xz4UZZ6_u3or8qRgSTyal25lsn1n7Rnqdie50%3D/b7738a5555aaf3d6d00fd7b269c8eec9_9e36874bea89ab5560eb0a0c461d8cfc.jpeg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsULow4DpeSik3rKkVza079tXokkTe5wdFyxVr1KxaUIe87AjiEswXlWV03SzVr47nfoGC6qLAnpvYG_2J4fJPegsWl94S7KqgsvhUq1Lt61nqjSX1_2TivA1za7JRll3rk%3D/ea688c6da68b1aaae6119148f11499c6_c1c0de5c7d2429618b78ae264fc9c812.jpeg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsULow4DpeSik3rKkVza079tXokkTe5wdFwACXPryuThmWGXo%21ZYrV0xciVeGlF1g0IGp_dPQIZ8Orn0zgdoKwmUbv13Y76DS8WKxv1zLwvP%21QdwCilpx%21fCU1IZXgSLlRI%3D/98dab4df96bb8013969c76f0c572dc6a_4c65da66c4658dea7dd2bac8aadd3cf6.jpeg?0",
+                "dimen": "280x470"
+              }
+            ],
+            "video_thumbnail_url": "",
+            "video_play_url": "",
+            "video_duration": "",
+            "video_type": "entertainment",
+            "video_assoc_game_ids": "",
+            "video_assoc_games_count": 0,
+            "video_assoc_game_content_type_id": "10",
+            "video_remote_flag": "0",
+            "game_assoc_video_ids": "20078674",
+            "game_assoc_video_count": 1,
+            "game_assoc_video_content_type_id": "9",
+            "manifest_package_name": "de.tiltgames.shapes",
+            "content_download_url": "http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=download&params=%7B%22contentId%22%3A%2220041974%22%2C%22buildId%22%3A%2220053926%22%7D"
+          }
+        ]
+      },
+      {
+        "list_type": "LIST_OPEN",
+        "type": "content",
+        "content_type_id": "10",
+        "content": [
+          {
+            "content_id": 20059947,
+            "content_name": "Brainiac Memory Match",
+            "content_type_id": 10,
+            "group_id": "124",
+            "release_date": "",
+            "content_thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9s_uQEeApPUCGzRLNyDRiwZi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMcq46zAnnYeMF%21MA_2nqLUwzMb9bFxYp%21behamM7w_EAbTQC55QggOzh7y0M5BAOpmYfzTsXF7ZfGVPIErWSwAJiy7Rn74AVLoffhGT8Mc_I%3D/99904a70e95e93f99ae405f6aa97deae_Icon.png?0",
+            "content_description": "Memory match is a vast category of puzzle games. Brainiac memory match is a pair up game which also falls in the category of memory matching games.  Brainiac memory match is simple yet extremely challenging and enjoyable game featuring a lot of objects to discover as you progress through the puzzles.\n\nFeatures:\n- 5 categories\n- 4 modes\n- 50 different levels \n- Colourful graphics\n- Global leaderboards.",
+            "content_seo_description": "",
+            "content_short_description": "Give your brain a much-needed exercise with this amazing puzzle game!",
+            "build_id": "20064369",
+            "content_version_id": "181190",
+            "manifest_version_code": "3",
+            "content_rating": 4.2,
+            "content_license_type": "free",
+            "super_category_id": "55",
+            "category_id": "55",
+            "category_name": "Puzzle",
+            "downloads": "665 ",
+            "exact_ct": 414,
+            "mobango_exact_ct": 251,
+            "file_extension": "apk",
+            "likes": "",
+            "views": "",
+            "content_storage": "local",
+            "license_id": "",
+            "disp_type": "content",
+            "file_size": "28 MB",
+            "screenshot_orientation": "vertical",
+            "screenshot_details": [
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMcq46zAnnYeMF%21MA_2nqLUwzMb9bFxYp%21behamM7w_EB5s5dygJu1Z85t88AiesiiafEt_7_t8oGJDfqmvntbrcrkFhZnJeuOBQpxNt4Ebx2O%21WOMsNEy4lCOLrEXyrUP/e92187c6c7a2a8232a360757ae92743e_Brainiac_Memory_Match_1.jpg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMcq46zAnnYeMF%21MA_2nqLUwzMb9bFxYp%21behamM7w_EB1ArFS7jFCAT8g4m6KK4cJRvmYd238CS7khpvLJIrnVMrkFhZnJeuOBQpxNt4Ebx1nAlsYiWrqZ1COLrEXyrUP/b9bbc7ea8ef91be2cb23e37999eef4d8_Brainiac_Memory_Match_2.jpg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMcq46zAnnYeMF%21MA_2nqLUwzMb9bFxYp%21behamM7w_EBjWTkRGQsrJm_Q2fzPCuAtULtSMdNT_yL4QgIYgq5XN8rkFhZnJeuOBQpxNt4Ebx3EZ9OLfjEC81COLrEXyrUP/33df55326564768fa3a5e52b429bd52c_Brainiac_Memory_Match_3.jpg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMcq46zAnnYeMF%21MA_2nqLUwzMb9bFxYp%21behamM7w_ED73pLe5e45sFWUq_X0lBHUYHFF1oyZBIVlxcpcUNXE7MrkFhZnJeuOBQpxNt4Ebx0xdzVbnVJI8VCOLrEXyrUP/a76f419f1eb2a9c638ce9b80d9b4594d_Brainiac_Memory_Match_4.jpg?0",
+                "dimen": "280x470"
+              }
+            ],
+            "video_thumbnail_url": "",
+            "video_play_url": "",
+            "video_duration": "",
+            "video_type": "entertainment",
+            "video_assoc_game_ids": "",
+            "video_assoc_games_count": 0,
+            "video_assoc_game_content_type_id": "10",
+            "video_remote_flag": "0",
+            "game_assoc_video_ids": "",
+            "game_assoc_video_count": 0,
+            "game_assoc_video_content_type_id": "9",
+            "manifest_package_name": "com.BringItOnGames.BrainiacMemoryMatch",
+            "content_download_url": "http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=download&params=%7B%22contentId%22%3A%2220059947%22%2C%22buildId%22%3A%2220064369%22%7D"
+          }
+        ]
+      },
+      {
+        "list_type": "LIST_OPEN",
+        "type": "content",
+        "content_type_id": "10",
+        "content": [
+          {
+            "content_id": 20037734,
+            "content_name": "Magic Bloxorz",
+            "content_type_id": 10,
+            "group_id": "124",
+            "release_date": "",
+            "content_thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9s_uQEeApPUCGzRLNyDRiwZi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMd1wVTdjtNE9o6XfHW8VPYUoKWMh6Dq0bXokkTe5wdFzSON1uic9AGmTsHIxo%219Mg7Cz4bOZ_xfY4xmLKXNLExkjZ4CGAOu1wNPf6WzquD%21Y%3D/a422f5f6cc863359f502f8cb8d8bf6bd_icon512.png?0",
+            "content_description": "Magic Bloxorz is a very challenging puzzle game designed for everyone who enjoys logic and math games. The goal of the game is to put the magic bloxorz to the destination by rolling it. Player needs to take care that the magic bloxorz should not fall of edges or get stressed. You should also be aware of some traps with can make you fail the level. Each level require logic and brain challenge.\n\nFeatures:\n-Beware of traps\n-Easy controls\n-100 amazing levels\n",
+            "content_seo_description": "",
+            "content_short_description": "Do you like playing logic games? Then wait no further download and play Magic Bloxorz now!",
+            "build_id": "20051691",
+            "content_version_id": "171757",
+            "manifest_version_code": "",
+            "content_rating": 5,
+            "content_license_type": "free",
+            "super_category_id": "55",
+            "category_id": "55",
+            "category_name": "Puzzle",
+            "downloads": "1.2 K",
+            "exact_ct": 639,
+            "mobango_exact_ct": 574,
+            "file_extension": "apk",
+            "likes": "",
+            "views": "",
+            "content_storage": "local",
+            "license_id": 18,
+            "disp_type": "content",
+            "file_size": "13 MB",
+            "screenshot_orientation": "horizontal",
+            "screenshot_details": [
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMd1wVTdjtNE9o6XfHW8VPYUoKWMh6Dq0bXokkTe5wdFzX6fOOLLSG10oOnRJZg9%215S7NWUwLhtZgZEW1sV7t3IDzLDJUpAzVHoffhGT8Mc_I%3D/f89bde8ba640e1250744bfa07780974d_8sh1.png?0",
+                "dimen": "470x280"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMd1wVTdjtNE9o6XfHW8VPYUoKWMh6Dq0bXokkTe5wdFxTd21objW6abBtWfp30TyhO_bmaR5tTwmWctAiLnTuiAApJlZMyAkMoffhGT8Mc_I%3D/7eb6bf30873f6fe881197fef53e7a25d_8sh2.png?0",
+                "dimen": "470x280"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMd1wVTdjtNE9o6XfHW8VPYUoKWMh6Dq0bXokkTe5wdFxOecmyPk5TpHiN%21vXcUS7GjT1QCKIHqiIQKud%21O6f4J%21PEQz1Z%21I5HoffhGT8Mc_I%3D/bfc51c63d330f9ce2751559201b494a2_8sh3.png?0",
+                "dimen": "470x280"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMd1wVTdjtNE9o6XfHW8VPYUoKWMh6Dq0bXokkTe5wdFxfxHx%21WLefJk9aD0jQi8ved7iZfYRZBx%21dDzqGOef2s09Q9LYsLe5XoffhGT8Mc_I%3D/f990c3f00792aa9908f3e43aebd924b8_8sh4.png?0",
+                "dimen": "470x280"
+              }
+            ],
+            "video_thumbnail_url": "",
+            "video_play_url": "",
+            "video_duration": "",
+            "video_type": "entertainment",
+            "video_assoc_game_ids": "",
+            "video_assoc_games_count": 0,
+            "video_assoc_game_content_type_id": "10",
+            "video_remote_flag": "0",
+            "game_assoc_video_ids": "20078850",
+            "game_assoc_video_count": 1,
+            "game_assoc_video_content_type_id": "9",
+            "manifest_package_name": "",
+            "content_download_url": "http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=download&params=%7B%22contentId%22%3A%2220037734%22%2C%22buildId%22%3A%2220051691%22%7D"
+          }
+        ]
+      },
+      {
+        "list_type": "LIST_OPEN",
+        "type": "content",
+        "content_type_id": "10",
+        "content": [
+          {
+            "content_id": 1918171,
+            "content_name": "Fruit Roll",
+            "content_type_id": 10,
+            "group_id": "124",
+            "release_date": "",
+            "content_thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9s_uQEeApPUCGzRLNyDRiwZi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsUEC%21BUy1kihohlT_PbP%21eblRhz%216ulWX1VTVVRA79buG__Tz41QGs_wvd5VD7%214d9s%21UfRftoSnuXQ2FkAQ14iPK8xHpo2CZNdupeWCxxPOw1dbRZtN0Z2NPf6WzquD%21Y%3D/3f6a8bc8cc7fe39fa8d08ca233dbaace_56e7659c209a48c938feb8095202aff2.png?0",
+            "content_description": "Want to squish things. Tired of being a Fruit Ninja and want to do something nice to the poor fruits. One of the best cool and fun endless running games. Fortunately, hit by an angry bird, he landed on a root cane and started rolling and flying in the forest. In the beautiful and dangerous wonderland, Frank and his fruit friends fight off horrible creatures including steamrolling caterpillars, monkeys, frogs, zombies and more who are just waiting for delicious food. Go help Frank, the fruit to run away from the hard city life and protect him from being chopped by Ninja's cruel fingers, and leave ninjas in the dust. But can you be the one to master it.\n\nFeatures:\n-Intuitive one-touch control\n-Various menacing creatures\n-Progressive speed-up for a thrilling ride\n-Gorgeous graphics \n",
+            "content_seo_description": "",
+            "content_short_description": "Tired of being a fruit ninja & want to do something nice to the poor fruits, then try out this puzzle game!",
+            "build_id": "299100",
+            "content_version_id": "157667",
+            "manifest_version_code": "204",
+            "content_rating": 4.5,
+            "content_license_type": "free",
+            "super_category_id": "55",
+            "category_id": "55",
+            "category_name": "Puzzle",
+            "downloads": "650 ",
+            "exact_ct": 273,
+            "mobango_exact_ct": 377,
+            "file_extension": "apk",
+            "likes": "",
+            "views": "",
+            "content_storage": "local",
+            "license_id": 18,
+            "disp_type": "content",
+            "file_size": "8 MB",
+            "screenshot_orientation": "horizontal",
+            "screenshot_details": [
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsUEC%21BUy1kihohlT_PbP%21ebKfgtJsV54YWjpeEMzguHeGZGT1nwJOtxVdV63AT8zcOseMbzTT4rV7B0AntOqXSU/a71784b9cfc02d2b3f8b573eae52941e_01.png?0",
+                "dimen": "470x280"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsUEC%21BUy1kihohlT_PbP%21ebyxxol2czcuXwlXaE_QcAaeylNiXv8V24fZ0Xpy_7MGPC0o8edBvSjiw9dUeAQkkt/fc4dad4ff298fbdf175ac9fdbac0957d_02.png?0",
+                "dimen": "470x280"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsUEC%21BUy1kihohlT_PbP%21eb9boiG4Q2OgZi9FwmAkGdl8npM2v9GE13XLhpf7jgGtrSf7mxvsJmJGYbMfJzd69d/c9c158d39f59fd996a3599da4c940ca8_03.png?0",
+                "dimen": "470x280"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMz7q9QbC9GsUEC%21BUy1kihohlT_PbP%21ebIA6Br5SUyuluxLmfZbZh0SqKsbDKPjakw0BJ05nTfRhiOImdaXbocGdVj1vsLuZ%21/1458c15291bfc8d8d661394817c39e24_04.png?0",
+                "dimen": "470x280"
+              }
+            ],
+            "video_thumbnail_url": "",
+            "video_play_url": "",
+            "video_duration": "",
+            "video_type": "entertainment",
+            "video_assoc_game_ids": "",
+            "video_assoc_games_count": 0,
+            "video_assoc_game_content_type_id": "10",
+            "video_remote_flag": "0",
+            "game_assoc_video_ids": "20078911",
+            "game_assoc_video_count": 1,
+            "game_assoc_video_content_type_id": "9",
+            "manifest_package_name": "com.fruitroll.game.top.best.free",
+            "content_download_url": "http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=download&params=%7B%22contentId%22%3A%221918171%22%2C%22buildId%22%3A%22299100%22%7D"
+          }
+        ]
+      },
+      {
+        "list_type": "GRID_2",
+        "type": "special_close",
+        "content_type_id": "10",
+        "count": 2,
+        "content": [
+          {
+            "group_id": "329",
+            "content_name": "Truck Games",
+            "subscription_key": "",
+            "content_thumbnail_url": "",
+            "disp_type": "special",
+            "content_type_id": "10",
+            "total_content": "44 Games"
+          },
+          {
+            "group_id": "159",
+            "content_name": "Mind Games",
+            "subscription_key": "",
+            "content_thumbnail_url": "",
+            "disp_type": "special",
+            "content_type_id": "10",
+            "total_content": "49 Games"
+          }
+        ]
+      },
+      {
+        "list_type": "LIST_OPEN",
+        "type": "content",
+        "content_type_id": "10",
+        "content": [
+          {
+            "content_id": 1970789,
+            "content_name": "Num Smash",
+            "content_type_id": 10,
+            "group_id": "124",
+            "release_date": "",
+            "content_thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9s_uQEeApPUCGzRLNyDRiwZi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMDeREn1iyj%21Jx56SS7gk5axox2Y1jAqHu04UKyOcwoJ7pgKfCU837M%21_FJI2V62a6kuMEP9qjUTFx_hQmtglto2pEwRB_TJcK%21cRlxR0MfTJhuYKqsAtKNpsiwB%21l5dEqNPf6WzquD%21Y%3D/e1d7bc4249c027aba41a5d852009a83e_0bb3c9f2a21c7261f7b61bcfa56aed26.png?0",
+            "content_description": "Fill in the tight number in their required boxes using math skill in the Num Smash game. The game is easy to play and yet difficult to master. Test your brain endlessly in the Challenge mode where you are presented with many levels.\nFeatures:\n- Challenging game play\n- 2 game modes\n- Leader board\n- User friendly interface\n",
+            "content_seo_description": "",
+            "content_short_description": "Make use of your math skills to win in this puzzle game.",
+            "build_id": "319305",
+            "content_version_id": "160676",
+            "manifest_version_code": "4",
+            "content_rating": 4.2,
+            "content_license_type": "free",
+            "super_category_id": "55",
+            "category_id": "55",
+            "category_name": "Puzzle",
+            "downloads": "988 ",
+            "exact_ct": 815,
+            "mobango_exact_ct": 173,
+            "file_extension": "apk",
+            "likes": "",
+            "views": "",
+            "content_storage": "local",
+            "license_id": 18,
+            "disp_type": "content",
+            "file_size": "14 MB",
+            "screenshot_orientation": "vertical",
+            "screenshot_details": [
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMDeREn1iyj%21Jx56SS7gk5axox2Y1jAqHuVZJIHSX55NH3_8mrYbUZTN5VGgliqPoN7YKfkTCXZjy9gBVsJW8fAcLj%215DIMWok_iHmvTVWpinHFtDp0b0nBrx%219QJ0PRNVNPf6WzquD%21Y%3D/d88d6cd82a2f2f8dd13cb77521b82d85_83d9cddd361e53841a29ec534a444d06.png?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMDeREn1iyj%21Jx56SS7gk5axox2Y1jAqHu_ViIQPsB5Jn1a6EjoCJAJQRAdObnbb8DLC79QAeBmpb2jyR9WLAN8qnsWNJV0DKMhQcYdpipcIjUMZWcCJjSDCpRcDqtbPUwNPf6WzquD%21Y%3D/b67cea3bbef02ef55f82a5c4c751027f_aabed675fdd4d8b7b5360a5282e2ee10.png?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMDeREn1iyj%21Jx56SS7gk5axox2Y1jAqHu04UKyOcwoJ75g4sf9Hdn4HtljqJR7%21GIUSeG0dsVa9GRkHhoMWwZ3B7aeHBQwQ7wdah%216q4K7N5VIO35r9l15_ING56t2bJZNPf6WzquD%21Y%3D/e0d86aa1fe5c51719e250c64f9eef206_e9be1c50951ee5522dafe9d56f554f2b.png?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMDeREn1iyj%21Jx56SS7gk5axox2Y1jAqHu3_e0FVz2WwTj39hsob3GFysfLfplIybXA1FitPcoKGmGnk4BXvf0Bt21POOPdtWXo6yFd2UnHZLhT5KSNt3XPtJZ2EE3dj2DNPf6WzquD%21Y%3D/48f11e88131f6bac53d8f209c7c98540_30c32a83f6e29fc135d1a23c86a791cf.png?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMDeREn1iyj%21Jx56SS7gk5axox2Y1jAqHu_ViIQPsB5JlK68wRf_3CgXTfB_f6i5DPVK5MG9fw1L1Uwg2XERURFVg7XZKKOBbmKwHUroVfr3ESPEs3yonz69944a8Wf1TZNPf6WzquD%21Y%3D/b200e7c0ef2941ce9df03d300385d404_6e1b647a41ba25cbf7e305117c564211.png?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMDeREn1iyj%21Jx56SS7gk5axox2Y1jAqHuGwUue1B%211W1SksExOXgdVsaJlWuRp3mZVNmVVe0EBGpgD2GDLWFWGOUcJ%21k3avjCXqTmu_5PVPblcu8xwa%21NiADutGeNlEVwNPf6WzquD%21Y%3D/8b3e462df1550d68e9a1941b969c2487_c2688b011cd3bfaba42c959835bc9de9.png?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMDeREn1iyj%21Jx56SS7gk5axox2Y1jAqHuq4Dzmd%21ERndvwBmXAPw1aIiPf2yU_1XvFwq_hY3YwIaxscmcHu2cEFoCGcBIzX7M%21G8626Gtw7SbKdNwchRF3miMvIJSvEWTNPf6WzquD%21Y%3D/2a960ff1ce96c144af76817eb655ef2f_fa20cf28cdd203b951aac0e074498c40.png?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMDeREn1iyj%21Jx56SS7gk5axox2Y1jAqHu_ViIQPsB5Jnaf4zASgUBGjrBOB02xw7nkm_ZtuFMAimpUNYUHQU6Y5NZE3zYo0tzmxcY0ovmrvBk0BeQmWIX8rm69kjAKsagNPf6WzquD%21Y%3D/baa84bb974b157ed700ad0954a6fc55d_0f7e30d78e5c69f661ef227f0fae3fff.png?0",
+                "dimen": "280x470"
+              }
+            ],
+            "video_thumbnail_url": "",
+            "video_play_url": "",
+            "video_duration": "",
+            "video_type": "entertainment",
+            "video_assoc_game_ids": "",
+            "video_assoc_games_count": 0,
+            "video_assoc_game_content_type_id": "10",
+            "video_remote_flag": "0",
+            "game_assoc_video_ids": "20078873",
+            "game_assoc_video_count": 1,
+            "game_assoc_video_content_type_id": "9",
+            "manifest_package_name": "com.konamobile.numsmash",
+            "content_download_url": "http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=download&params=%7B%22contentId%22%3A%221970789%22%2C%22buildId%22%3A%22319305%22%7D"
+          }
+        ]
+      },
+      {
+        "list_type": "LIST_OPEN",
+        "type": "content",
+        "content_type_id": "10",
+        "content": [
+          {
+            "content_id": 20029694,
+            "content_name": "Chicken Crush 2",
+            "content_type_id": 10,
+            "group_id": "124",
+            "release_date": "",
+            "content_thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9s_uQEeApPUCGzRLNyDRiwZi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMmIQyCanOutL_ycKzCa8as8lbx5UPUW6SXokkTe5wdFyAjf7z3e0nn5VtBRdWh4fad%21j5P%215p8INLqTIEL3%21g5G1h3Ow6S9wAoffhGT8Mc_I%3D/a3ba033a990eb4f056f8fd9f612995d5_icon.png?0",
+            "content_description": "Chicken crush 2 is a very funny match casual game for your device. The gameplay is a classical match-3 puzzle game. Just match 3 of the same colour chicken together to remove them. Match 4 ones will trigger splendid special effects. The game comes with various levels, so why waiting play the challenge filled levels now. Just come on and have a try.\n\nFeatures:  \n-Most funny match game ever\n-Exquisite level design -Cute game style\n-Challenging gameplay\n",
+            "content_seo_description": "",
+            "content_short_description": "Your favourite crushing game now in a whole new avatar with cute characters. Play this puzzle game now!",
+            "build_id": "20047048",
+            "content_version_id": "167016",
+            "manifest_version_code": "",
+            "content_rating": 5,
+            "content_license_type": "free",
+            "super_category_id": "55",
+            "category_id": "55",
+            "category_name": "Puzzle",
+            "downloads": "2.3 K",
+            "exact_ct": 1070,
+            "mobango_exact_ct": 1228,
+            "file_extension": "apk",
+            "likes": "",
+            "views": "",
+            "content_storage": "local",
+            "license_id": 18,
+            "disp_type": "content",
+            "file_size": "15 MB",
+            "screenshot_orientation": "vertical",
+            "screenshot_details": [
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMmIQyCanOutL_ycKzCa8as8lbx5UPUW6SXokkTe5wdFwHQTVbMWdHBLLqVU%21ovk3H6Xc6gBcRqUi6B2i7CKQHwnOC7JP8QjwLxtJdS2QtDMQ09%21pbOq4P9g%3D%3D/9716e3a2916d500f66b8347c020e222a_chickencrush2_1.png?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMmIQyCanOutL_ycKzCa8as8lbx5UPUW6SXokkTe5wdFx%21gA9u6DSAg0ue87_OLP3vSW7nzSqhXWMnANpCuzdnwnOC7JP8QjwL6xR_tE%21R%21WY09%21pbOq4P9g%3D%3D/942283c914466c420162d02e2142ec0f_chickencrush2_2.png?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMmIQyCanOutL_ycKzCa8as8lbx5UPUW6SXokkTe5wdFyt4mwLlP7K%21izofbi3WTZlzAj25WFZ1Tr9tPXskmlOBnOC7JP8QjwLLOwf2WfM6eA09%21pbOq4P9g%3D%3D/eb56209047037cec7a5a3b24483dd8db_chickencrush2_3.png?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMmIQyCanOutL_ycKzCa8as8lbx5UPUW6SXokkTe5wdFyp9G5NfLPu8izOEfzyaMPybjNF9eiSwLJEsgn8ySB8EHOC7JP8QjwLw7XBIzKCnzI09%21pbOq4P9g%3D%3D/34b9b71da025cca7a727ba320ecf4e06_chickencrush2_4.png?0",
+                "dimen": "280x470"
+              }
+            ],
+            "video_thumbnail_url": "",
+            "video_play_url": "",
+            "video_duration": "",
+            "video_type": "entertainment",
+            "video_assoc_game_ids": "",
+            "video_assoc_games_count": 0,
+            "video_assoc_game_content_type_id": "10",
+            "video_remote_flag": "0",
+            "game_assoc_video_ids": "20078867",
+            "game_assoc_video_count": 1,
+            "game_assoc_video_content_type_id": "9",
+            "manifest_package_name": "",
+            "content_download_url": "http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=download&params=%7B%22contentId%22%3A%2220029694%22%2C%22buildId%22%3A%2220047048%22%7D"
+          }
+        ]
+      },
+      {
+        "list_type": "LIST_OPEN",
+        "type": "content",
+        "content_type_id": "10",
+        "content": [
+          {
+            "content_id": 1926110,
+            "content_name": "Mensa Test",
+            "content_type_id": 10,
+            "group_id": "124",
+            "release_date": "",
+            "content_thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9s_uQEeApPUCGzRLNyDRiwZi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMRtsr2Q4zp4svDJPu94xZPxr2KcJev4V%21qsIsG9vU0ot6I7H0wrTJlqVj0wDY0DdLckCiibaawuNJAniVbglKPIVbiLAVhyeA/68d77c7a878981e4004df8cf2a2a8658_icon.png?0",
+            "content_description": "Test your IQ with Mensa Test. Try to play this IQ test that contains very similar questions that you can find on the official Mensa Test. first half questions are based on common logic, math riddles, letter puzzles, and number puzzles. You just need to type your answer. In the next half question you just need to select missed or following shapes or image.\n\nFeatures:\n- Easy and hard mode\n- Many riddles\n- Achievements and leaderboards\n- 12 language support\n- Clean and sleek design. ",
+            "content_seo_description": "",
+            "content_short_description": "Are you intelligent enough? Prove yourself with this puzzle game!",
+            "build_id": "306117",
+            "content_version_id": "149216",
+            "manifest_version_code": "2",
+            "content_rating": 3.9,
+            "content_license_type": "free",
+            "super_category_id": "55",
+            "category_id": "55",
+            "category_name": "Puzzle",
+            "downloads": "10.7 K",
+            "exact_ct": 10337,
+            "mobango_exact_ct": 383,
+            "file_extension": "apk",
+            "likes": "",
+            "views": "",
+            "content_storage": "local",
+            "license_id": 18,
+            "disp_type": "content",
+            "file_size": "4 MB",
+            "screenshot_orientation": "vertical",
+            "screenshot_details": [
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMRtsr2Q4zp4svDJPu94xZPxr2KcJev4V%21VaQ1kefmpn92dIgdkcyxYNFdQxOtvZ_3EAFpOdo4zinfD2mUENfIgS7LT6KOr1Y%21W0OZpZyz5%21iqTkM3UzJ0wslbbGaOGM1XnUQhlKbXenY%3D/7fc291259ef8bbc8532ca5022399e329_bb08fbb9fa8cb9300ff1b25557926846.jpeg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMRtsr2Q4zp4svDJPu94xZPxr2KcJev4V%21q4Dzmd%21ERne%21WaGRUPiFcsolWdN04A4_a64N862sJead%21Ez5bTu0N%21HSS7LAoJA7zBg4fFF8xPJi6zDb540oU_WnbPLqLQBenUQhlKbXenY%3D/27301779d6a8e3d5736f2ef35bb6c6af_af5f24f3d32048e57c186175ee0afb3c.jpeg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMRtsr2Q4zp4svDJPu94xZPxr2KcJev4V%21KfgtJsV54YU3LXn_p9tBS42BW3GDqLjAeRNayQVIU150AkR8qewHxTUTSUijlU3ki8hfBKKV5Mr1FxXdL5IckKCyyQ3G_zE2nUQhlKbXenY%3D/a10d0028208514f8001a2e65e08f2631_4920c37914deeb51100181815d03d2ff.jpeg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMRtsr2Q4zp4svDJPu94xZPxr2KcJev4V%21q4Dzmd%21ERnfts_N2zy6iQU7Wq71%21RHVPdqHC70UD9WlfddzAU0ohOT_rbTwZB4WYSdK%21Lk2KYxWGj7X4Yfio9DIFtbZfVeIXnUQhlKbXenY%3D/2ba32a2bd707d64278e2b2a6321483e7_912325217769ea981fa69c6ff1d23042.jpeg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMRtsr2Q4zp4svDJPu94xZPxr2KcJev4V%213_e0FVz2WwTn82_2cM0YcLY_mOQQqQb299t33s3AhKfCwK4K933LtbwXO8qwNUhIsdAD0IUelt7xikNAgBs5DHXhqRauqSMVnUQhlKbXenY%3D/4c117acda96b24fe5829fd464c36aaf1_fd4bcd7469aef7344fbc15729440dbbc.jpeg?0",
+                "dimen": "280x470"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9t93aWoIWwTL41YYk0xEPR2i_sfFBFWU8ogU6pJ1MChaI9lXoN54COMRtsr2Q4zp4svDJPu94xZPxr2KcJev4V%2104UKyOcwoJ4PHZ1Py4PVskn_aXovzvNaiiqMARc_KEuL_2a9yeDoYuaprbUa0yEXFjMNbIF6FPREXp3%21Uww6rGcBfWcOfIpXnUQhlKbXenY%3D/e183e590d3b9f16b9269130c8cd6220e_64e6ada6e2d6d7449db96b9729d6996c.jpeg?0",
+                "dimen": "280x470"
+              }
+            ],
+            "video_thumbnail_url": "",
+            "video_play_url": "",
+            "video_duration": "",
+            "video_type": "entertainment",
+            "video_assoc_game_ids": "",
+            "video_assoc_games_count": 0,
+            "video_assoc_game_content_type_id": "10",
+            "video_remote_flag": "0",
+            "game_assoc_video_ids": "",
+            "game_assoc_video_count": 0,
+            "game_assoc_video_content_type_id": "9",
+            "manifest_package_name": "com.tinyghost.mensatest",
+            "content_download_url": "http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=download&params=%7B%22contentId%22%3A%221926110%22%2C%22buildId%22%3A%22306117%22%7D"
+          }
+        ]
+      },
+      {
+        "list_type": "LIST_OPEN",
+        "type": "content",
+        "content_type_id": "10",
+        "content": [
+          {
+            "content_id": 20042101,
+            "content_name": "Tiny Token Empires",
+            "content_type_id": 10,
+            "group_id": "123",
+            "release_date": "",
+            "content_thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9s_uQEeApPUCGzRLNyDRiwZi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMr3wHR_BjP7hY8mM5yfa_Lm_BnXBDt5Oc5%21udX2LHz5zj6O1PFleDUHeZw4on2IiG01T9WkjnxSxzLfyizm%211lIR4OWRlHZTTGn8xRO8Vcj_E1PKf7RWDTPKIni4I0CEX890xtc6Ykk8%3D/78eaf118008556213edb0e7ed69a66cb_39f1cb1936c9a0ad4c1cbe4b921ae401.png?0",
+            "content_description": "This game is fun, fresh and silly in just the right way. Mixing brain-teasers, humour and strategy, Tiny Token Empires puts you in charge of five ancient Empires. Manoeuvre your troops, build forts and get ready to fight. The twist, you win battles by matching tiles to unleash your troops.\nFeatures:\n-50 unit types\n-5 heroes and 25 generals\n-Cute character and tough enemies\n-attractive graphics\n \n",
+            "content_seo_description": "",
+            "content_short_description": "Lead your troops, build forts and win battles by matching tiles in this puzzle game.",
+            "build_id": "20053986",
+            "content_version_id": "0",
+            "manifest_version_code": "1",
+            "content_rating": 4,
+            "content_license_type": "paid",
+            "super_category_id": "55",
+            "category_id": "55",
+            "category_name": "Puzzle",
+            "downloads": "813 ",
+            "exact_ct": 810,
+            "mobango_exact_ct": 3,
+            "file_extension": "apk",
+            "likes": "",
+            "views": "",
+            "content_storage": "local",
+            "license_id": 24,
+            "disp_type": "content",
+            "file_size": "140 MB",
+            "screenshot_orientation": "horizontal",
+            "screenshot_details": [
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMr3wHR_BjP7hY8mM5yfa_Lm_BnXBDt5Oc5%21udX2LHz5yu3PY7GgkaRDCD5pODOPCM_DFMblidhEVb1mkyuSB9bXIHRY1l0BQv/0f812ece46d96b891c1276a1211a027d_1.gif?0",
+                "dimen": "470x280"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMr3wHR_BjP7hY8mM5yfa_Lm_BnXBDt5Oc5%21udX2LHz5xvHXEiEKRdFvq45UEq14Am3XPtYS6mssi90ypnl15J8LnWI1W_Pu_D/0a2742b22fc6c0cb14789c8a3a897e1a_2.png?0",
+                "dimen": "470x280"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMr3wHR_BjP7hY8mM5yfa_Lm_BnXBDt5Oc5%21udX2LHz5w_4JDJGKbOf1q4GhGk1KuRN7EgTg0rFkIPl4KQ_5Q%21Gvr_cqw2Vejl/5fbae2d8948a3d9989fba9851dc0adc6_3.png?0",
+                "dimen": "470x280"
+              },
+              {
+                "thumbnail_url": "http://s.mobimgs.com/m/655n_Cfch9uPSXXIdWpXsKlw98sbTwENi_sfFBFWU8ogU6pJ1MChaI9lXoN54COMr3wHR_BjP7hY8mM5yfa_Lm_BnXBDt5Oc5%21udX2LHz5xS9aX8wTk9ciXNZ%21fJTu0n%21s3EkQaZrMEE7i%21c4H3KGPAfqcaZHnKU/c7e3bac53db9440e2f3ae11cdf4700d0_4.png?0",
+                "dimen": "470x280"
+              }
+            ],
+            "video_thumbnail_url": "",
+            "video_play_url": "",
+            "video_duration": "",
+            "video_type": "entertainment",
+            "video_assoc_game_ids": "",
+            "video_assoc_games_count": 0,
+            "video_assoc_game_content_type_id": "10",
+            "video_remote_flag": "0",
+            "game_assoc_video_ids": "20078683",
+            "game_assoc_video_count": 1,
+            "game_assoc_video_content_type_id": "9",
+            "manifest_package_name": "com.herocraft.game.tinytokenempires",
+            "content_download_url": "http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=download&params=%7B%22contentId%22%3A%2220042101%22%2C%22buildId%22%3A%2220053986%22%7D"
+          }
+        ]
+      }
+    ],
+    "category": {
+      "title": "More Game Categories",
+      "list_type": "CATEGORY",
+      "type": "top_categories",
+      "content_type_id": "10",
+      "count": 5,
+      "total_count": 8,
+      "content": [
+        {
+          "category_name": "Racing",
+          "category_id": "56",
+          "group_id": "",
+          "content_type_id": "10",
+          "adult_subcategory": "No",
+          "parent_subcategory_id": 0
+        },
+        {
+          "category_name": "Action",
+          "category_id": "2",
+          "group_id": "",
+          "content_type_id": "10",
+          "adult_subcategory": "No",
+          "parent_subcategory_id": 0
+        },
+        {
+          "category_name": "3D",
+          "category_id": "1",
+          "group_id": "",
+          "content_type_id": "10",
+          "adult_subcategory": "No",
+          "parent_subcategory_id": 0
+        },
+        {
+          "category_name": "Adventure",
+          "category_id": "3",
+          "group_id": "",
+          "content_type_id": "10",
+          "adult_subcategory": "No",
+          "parent_subcategory_id": 0
+        },
+        {
+          "category_name": "Strategy",
+          "category_id": "67",
+          "group_id": "",
+          "content_type_id": "10",
+          "adult_subcategory": "No",
+          "parent_subcategory_id": 0
+        }
+      ]
+    }
+  }
+}
