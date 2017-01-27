@@ -28,12 +28,22 @@ tr:nth-child(even) {
 		<tr>
 			<td><a href="storeUserInfo"><h2>StoreUserInfoDB</h2></a></td>
 			<td><a href="getUserHistory"><h2>UserDownloadandViewHistory</h2></a></td>
-			<td><a href="getCatScore"><h2>CategoryScoreForEachVisitor</h2></a></td>
+			<td><a href="getCategoryScore"><h2>CategoryScoreForEachVisitor</h2></a></td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+		<td><a href="userContentInfo"><h2>SubTagsScoreForEachVisitor</h2></a></td>
 		</tr>
 	</table>
 	<table>
 		<tr>
 			<td><a href="gamesCategoryNameRecommendation"><h2>gamesRecommendationBasedOnMostVisitedGameCategories</h2></a></td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td><a href="gamesRecommendationBasedOnMostVisitedSubTags"><h2>gamesRecommendationBasedOnMostVisitedSubTags</h2></a></td>
 		</tr>
 	</table>
 </body>

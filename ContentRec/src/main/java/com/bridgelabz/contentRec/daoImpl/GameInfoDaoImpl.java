@@ -62,4 +62,23 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		return gameInfo;
 	}
 
+	@Override
+	public String getSubCategoryTagsByContentId(String parContentId) {
+
+		Session sess = sessionFactory.getCurrentSession();
+		Query qry = sess.createQuery("select mMetaTags from GameInfo where mContentId=:id");
+		qry.setParameter("id", parContentId);
+		String gameInfo = (String)qry.uniqueResult();
+		return gameInfo;
+	}
+
+	@Override
+	public String getFileSizeByContentId(String parContentId) {
+		Session sess = sessionFactory.getCurrentSession();
+		Query qry = sess.createQuery("select mFileSize from GameInfo where mContentId=:id");
+		qry.setParameter("id", parContentId);
+		String gameInfo = (String)qry.uniqueResult();
+		return gameInfo;
+	}
+
 }

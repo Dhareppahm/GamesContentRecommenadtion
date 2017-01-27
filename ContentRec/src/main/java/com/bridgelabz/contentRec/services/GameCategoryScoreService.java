@@ -20,6 +20,5 @@ public interface GameCategoryScoreService {
 	public List<GameCategoryScore> gamesCategoryNameRecommendationByVisitorId(String parVisitorId);
 	
 	public List getCategoryNameByVisitorId(String parVisitorId);
-	
 
 }

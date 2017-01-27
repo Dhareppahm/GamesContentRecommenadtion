@@ -13,11 +13,11 @@ public interface GameCategoryScoreDao {
 
 	public GameCategoryScore CatgeoryExists(String parVisitorId, String parCategoryName);
 
-	public void addNewCategory(GameCategoryScore parGameCategoryScore);
+	public void addNewCategory(GameCategoryScore mGameCategoryScore);
 
 	public int UpdateCategoryScore(String parVisitorId, String parCategoryName);
 
-	public List<GameCategoryScore> gamesCategoryNameRecommendationByVisitorId(String parVisitorId);
+	public List<GameCategoryScore> gamesCategoryNamesRecommendationByVisitorId(String parVisitorId);
 
 	public List getCategoryNameByVisitorId(String parVisitorId);
 	

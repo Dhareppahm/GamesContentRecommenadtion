@@ -41,7 +41,7 @@ public class GameCategoryScoreServiceImpl implements GameCategoryScoreService {
 	@Override
 	public List<GameCategoryScore> gamesCategoryNameRecommendationByVisitorId(String parVisitorId) {
 		List<GameCategoryScore> mGameCategoryScore = mGameCategoryScoreDao
-				.gamesCategoryNameRecommendationByVisitorId(parVisitorId);
+				.gamesCategoryNamesRecommendationByVisitorId(parVisitorId);
 		return mGameCategoryScore;
 	}
 

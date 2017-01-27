@@ -24,7 +24,7 @@ tr:nth-child(even) {
 </head>
 <body>
 
-	<h3 align="left">Enter the Content ID</h3>
+	<h2 align="left">Enter the Content ID</h2>
 	<form method="post" action="fetchAndSaveGameInfo">
 		<table>
 			<tr>

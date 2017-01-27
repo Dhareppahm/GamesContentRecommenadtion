@@ -74,10 +74,10 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 	}
 
 	@Override
-	public List<GameCategoryScore> gamesCategoryNameRecommendationByVisitorId(String parVisitorId) {
+	public List<GameCategoryScore> gamesCategoryNamesRecommendationByVisitorId(String parVisitorId) {
 		Session lSess = mSessionFactory.getCurrentSession();
 		Query lQueryToGetCategoryName = lSess
-				.createQuery("FROM GameCategoryScore WHERE mVisitorId=:Id ORDER BY mCatMarks ASC");
+				.createQuery("FROM GameCategoryScore WHERE mVisitorId=:Id ORDER BY mCatMarks DESC");
 		lQueryToGetCategoryName.setParameter("Id", parVisitorId);
 		List<GameCategoryScore> lGamecategoryScore = lQueryToGetCategoryName.list();
 		return lGamecategoryScore;

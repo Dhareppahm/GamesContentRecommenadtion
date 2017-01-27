@@ -7,8 +7,10 @@ package com.bridgelabz.contentRec.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,12 +36,12 @@ public class GamesCategoryScoreController {
 	@Autowired
 	GameInfoService mGameInfoServie;
 
-	@RequestMapping(value = "/getCatScore", method = RequestMethod.GET)
+	@RequestMapping(value = "/getCategoryScore", method = RequestMethod.GET)
 	public String dispalyVisitorFrom() {
-		return "CatScore";
+		return "getCategoryScore";
 	}
 
-	@RequestMapping(value = "/getCatScore", method = RequestMethod.POST)
+	@RequestMapping(value = "/getCategoryScore", method = RequestMethod.POST)
 	public String getCatScore(@RequestParam("visitorId") String parVisitorId) {
 		int mStatus;
 		Properties lProp = new Properties();
@@ -65,7 +67,7 @@ public class GamesCategoryScoreController {
 				}
 			}
 		}
-		List lCategoryNameList = mVisitorsInfoService.getCategoryNameByVisitorId(parVisitorId);
+		List lCategoryNameList = mVisitorsInfoService.getCategoryNamesByVisitorId(parVisitorId);
 		for (Iterator iterator = lCategoryNameList.iterator(); iterator.hasNext();) {
 			String lCategoryName = (String) iterator.next();
 			if (lCategoryName.equals(lProp.getProperty("CatTag1")) || lCategoryName.equals(lProp.getProperty("CatTag2"))
@@ -88,8 +90,8 @@ public class GamesCategoryScoreController {
 				continue;
 			}
 			if (mStatus > 0) {
-				System.out.println(
-						"Succesfullly updated" + " " + lCategoryName + " " + "category score for visitrID:" + parVisitorId);
+				System.out.println("Succesfullly updated" + " " + lCategoryName + " " + "category score for visitrID:"
+						+ parVisitorId);
 
 			} else {
 				System.out.println("Error occured while updating" + " " + lCategoryName + " "
@@ -97,7 +99,7 @@ public class GamesCategoryScoreController {
 			}
 
 		}
-		return "CatScore";
+		return "getCategoryScore";
 
 	}
 
@@ -107,19 +109,28 @@ public class GamesCategoryScoreController {
 
 	}
 
-	@RequestMapping(value = "/gamesCategoryNameRecommendation", method = RequestMethod.POST)
-	public ModelAndView gamesCategoryNameRecommendation(@RequestParam("visitorId") String parVisitorId, Model parModel) {
+	@RequestMapping(value = "/gamesCategoryNameAndGamesNameRecommendation", method = RequestMethod.POST)
+	public ModelAndView gamesCategoryNameRecommendation(@RequestParam("visitorId") String parVisitorId,
+			Model parModel) {
 		List<GameCategoryScore> lGameCategoryScore = mGameCategoryScoreService
 				.gamesCategoryNameRecommendationByVisitorId(parVisitorId);
 		parModel.addAttribute("visitorID", parVisitorId);
-		return new ModelAndView("GamesCategoryNameRecommendation", "gameCategoryScore", lGameCategoryScore);
-	}
-
-	@RequestMapping(value = "/gamesRecommended", method = RequestMethod.GET)
-	public ModelAndView gamesRecommended(@RequestParam("visitorId") String parVisitorId, Model parModel) {
 		List<GameInfo> lGameInfo = mGameInfoServie.getGameNameByGameCategory(parVisitorId);
 		parModel.addAttribute("visitorID", parVisitorId);
-		return new ModelAndView("GamesRecommended","gameInfo",lGameInfo);
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("gameCategoryScore", lGameCategoryScore);
+		map.put("gameInfo", lGameInfo);
+		return new ModelAndView("gamesCategoryNameAndGamesNameRecommendation", "map", map);
 	}
-	
+
+	/*
+	 * @RequestMapping(value = "/gamesRecommended", method = RequestMethod.GET)
+	 * public ModelAndView gamesRecommended(@RequestParam("visitorId") String
+	 * parVisitorId, Model parModel) {
+	 *  List<GameInfo> lGameInfo =
+	 * mGameInfoServie.getGameNameByGameCategory(parVisitorId);
+	 * parModel.addAttribute("visitorID", parVisitorId); return new
+	 * ModelAndView("GamesRecommended","gameInfo",lGameInfo); }
+	 */
+
 }

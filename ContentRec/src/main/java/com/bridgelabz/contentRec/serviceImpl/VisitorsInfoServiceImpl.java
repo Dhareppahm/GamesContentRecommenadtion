@@ -36,8 +36,14 @@ public class VisitorsInfoServiceImpl implements VisitorsInfoService {
 	}
 	
 	@Override
-	public List getCategoryNameByVisitorId(String parVisitorId) {
+	public List getCategoryNamesByVisitorId(String parVisitorId) {
 		List categoryNameList = visitorsInfoDao.getCategoryNameByVisitorId(parVisitorId);
+		return categoryNameList;
+	}
+
+	@Override
+	public List getContentIdByVisitorId(String parVisitorId) {
+		List categoryNameList = visitorsInfoDao.getContentIdByVisitorId(parVisitorId);
 		return categoryNameList;
 	}
 

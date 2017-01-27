@@ -18,6 +18,8 @@ public interface GameInfoService {
 	
 	public List<GameInfo> getGameNameByGameCategory(String parVisitorId);
 	
-
+	public String getSubCategoryTagsByContentId(String parContentId);
+	
+	public String getFileSizeByContentId(String parContentId);
 	
 }

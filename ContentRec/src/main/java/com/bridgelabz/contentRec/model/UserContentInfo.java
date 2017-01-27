@@ -20,12 +20,14 @@ public class UserContentInfo {
 	public String mVisitorId;
 	@Column(name = "category_Type")
 	public String mCategoryType;
+	@Column(name = "category_Name")
+	public String mCategoryName;
 	@Column(name = "category_Score")
 	public long mCategoryScore;
-	@Column(name = "tag_Type")
-	public String mTagType;
-	@Column(name = "tag_Score")
-	public long mTagScore;
+	@Column(name = "sub_Category_Tag_Name")
+	public String mSubCategoryTagName;
+	@Column(name = "sub_Category_Tag_Score")
+	public long mSubCategoryTagScore;
 	@Column(name = "file_Size")
 	public String mFileSize;
 	@Column(name = "file_Size_Score")
@@ -63,22 +65,6 @@ public class UserContentInfo {
 		this.mCategoryScore = mCategoryScore;
 	}
 
-	public String getmTagType() {
-		return mTagType;
-	}
-
-	public void setmTagType(String mTagType) {
-		this.mTagType = mTagType;
-	}
-
-	public long getmTagScore() {
-		return mTagScore;
-	}
-
-	public void setmTagScore(long mTagScore) {
-		this.mTagScore = mTagScore;
-	}
-
 	public String getmFileSize() {
 		return mFileSize;
 	}
@@ -93,6 +79,30 @@ public class UserContentInfo {
 
 	public void setmFileSizeScore(long mFileSizeScore) {
 		this.mFileSizeScore = mFileSizeScore;
+	}
+
+	public String getmCategoryName() {
+		return mCategoryName;
+	}
+
+	public void setmCategoryName(String mCategoryName) {
+		this.mCategoryName = mCategoryName;
+	}
+
+	public String getmSubCategoryTagName() {
+		return mSubCategoryTagName;
+	}
+
+	public void setmSubCategoryTagName(String mSubCategoryTagName) {
+		this.mSubCategoryTagName = mSubCategoryTagName;
+	}
+
+	public long getmSubCategoryTagScore() {
+		return mSubCategoryTagScore;
+	}
+
+	public void setmSubCategoryTagScore(long mSubCategoryTagScore) {
+		this.mSubCategoryTagScore = mSubCategoryTagScore;
 	}
 
 }

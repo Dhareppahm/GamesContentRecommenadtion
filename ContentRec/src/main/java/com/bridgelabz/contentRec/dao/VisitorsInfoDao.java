@@ -17,4 +17,7 @@ public interface VisitorsInfoDao {
 	public String getVisitorsInfoByVisitorId(String parVisitorId);
 	
 	public List getCategoryNameByVisitorId(String parVisitorId);
+	
+	
+	public List getContentIdByVisitorId(String parVisitorId);
 }

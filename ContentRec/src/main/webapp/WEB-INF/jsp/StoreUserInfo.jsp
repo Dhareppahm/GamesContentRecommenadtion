@@ -24,7 +24,7 @@ tr:nth-child(even) {
 </head>
 <body>
 
-	<h3 align="left">Enter the Content Id</h3>
+	<h2 align="left">Enter the Content Id</h2>
 	<form method="post" action="storeUserDatatoDb">
 		<table>
 			<tr>

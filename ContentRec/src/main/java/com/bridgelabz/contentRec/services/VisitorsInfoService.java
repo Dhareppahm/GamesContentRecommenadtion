@@ -16,5 +16,7 @@ public interface VisitorsInfoService {
 
 	public String getVisitorsInfoByVisitorId(String parVisitorId);
 	
-	public List getCategoryNameByVisitorId(String parVisitorId);
+	public List getCategoryNamesByVisitorId(String parVisitorId);
+	
+	public List getContentIdByVisitorId(String parVisitorId);
 }

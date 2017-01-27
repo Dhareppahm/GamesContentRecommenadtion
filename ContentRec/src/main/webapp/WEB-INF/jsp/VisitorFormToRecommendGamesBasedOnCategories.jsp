@@ -24,8 +24,8 @@ tr:nth-child(even) {
 </head>
 <body>
 
-	<h3 align="left">Enter the Visitor Id</h3>
-	<form method="post" action="gamesCategoryNameRecommendation">
+	<h2 align="left">Enter the Visitor Id</h2>
+	<form method="post" action="gamesCategoryNameAndGamesNameRecommendation">
 		<table>
 			<tr>
 				<td>Visitor ID</td>

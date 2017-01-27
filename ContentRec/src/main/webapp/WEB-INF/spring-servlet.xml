@@ -7,7 +7,7 @@
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-<tx:annotation-driven />
+	<tx:annotation-driven />
 	<mvc:annotation-driven />
 	<!--To specify the resource locations -->
 	<!-- <mvc:resources location="/images/" mapping="/images/**" /> -->
@@ -65,6 +65,9 @@
 				<value>
 					com.bridgelabz.contentRec.model.GameCategoryScore
 				</value>
+				<value>
+					com.bridgelabz.contentRec.model.UserContentInfo
+				</value>
 			</list>
 		</property>
 
@@ -83,7 +86,10 @@
 	<bean id="mGameInfoDao" class="com.bridgelabz.contentRec.daoImpl.GameInfoDaoImpl"></bean>
 	<bean id="mVisitorsInfoDao" class="com.bridgelabz.contentRec.daoImpl.VisitorsInfoDaoImpl"></bean>
 	<bean id="mUserInfoDao" class="com.bridgelabz.contentRec.daoImpl.UserInfoDaoImpl"></bean>
-	<bean id="mGameCategoryScoreDao" class="com.bridgelabz.contentRec.daoImpl.GameCategoryScoreDaoImpl"></bean>
+	<bean id="mGameCategoryScoreDao"
+		class="com.bridgelabz.contentRec.daoImpl.GameCategoryScoreDaoImpl"></bean>
+	<bean id="mUserContentInfoDao"
+		class="com.bridgelabz.contentRec.daoImpl.UserContentInfoDaoImpl"></bean>
 
 	<!--userServices depedency injection -->
 	<bean id="mGameInfoService"
@@ -94,6 +100,8 @@
 		class="com.bridgelabz.contentRec.serviceImpl.UserInfoServiceImpl"></bean>
 	<bean id="mGameCategoryScoreService"
 		class="com.bridgelabz.contentRec.serviceImpl.GameCategoryScoreServiceImpl"></bean>
+	<bean id="mUserContentInfoService"
+		class="com.bridgelabz.contentRec.serviceImpl.UserContentInfoServiceImpl"></bean>
 
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">

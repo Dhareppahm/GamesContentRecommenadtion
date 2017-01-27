@@ -41,4 +41,16 @@ public class GameInfoServiceImpl implements GameInfoService {
 		return lGameInfo;
 	}
 
+	@Override
+	public String getSubCategoryTagsByContentId(String parContentId) {
+		String lSubCategoryTags=mGameInfoDao.getSubCategoryTagsByContentId(parContentId);
+		return lSubCategoryTags;
+	}
+
+	@Override
+	public String getFileSizeByContentId(String parContentId) {
+		String lFileSize=mGameInfoDao.getFileSizeByContentId(parContentId);
+		return lFileSize;
+	}
+
 }

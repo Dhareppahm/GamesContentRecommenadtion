@@ -63,4 +63,13 @@ public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 
 	}
 
+	@Override
+	public List getContentIdByVisitorId(String parVisitorId) {
+		Session lSess = mSessionFactory.getCurrentSession();
+		Query qry = lSess.createQuery("select mContentId from VisitorsInfo where mVisitorId=:id");
+		qry.setParameter("id", parVisitorId);
+		List lCategoryNameList = qry.list();
+		return lCategoryNameList;
+	}
+
 }
