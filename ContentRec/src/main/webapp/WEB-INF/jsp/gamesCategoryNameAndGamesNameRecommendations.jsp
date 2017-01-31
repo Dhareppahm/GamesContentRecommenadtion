@@ -40,8 +40,8 @@ tr:nth-child(even) {
 	<table>
 	<h3 align="left">Games Content Recommendation</h3>
 	<tr>
-		<th>Content recommendation based on:</th>
-		<td><h4>Recent visited/searched game category history</h4></td>
+		<th>Content Recommendation Based On:</th>
+		<td><h4>Recent Searched Game Category History</h4></td>
 	</tr>
 
 </table>

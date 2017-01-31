@@ -30,7 +30,7 @@ import com.bridgelabz.contentRec.model.GameInfo;
 import com.bridgelabz.contentRec.services.GameInfoService;
 
 @Controller
-public class GameInfoRestApiCallController {
+public class GameInformationController {
 	String mGbDeviceId;
 	String mGbAppVersionCode;
 	String mUrlString;
@@ -61,7 +61,7 @@ public class GameInfoRestApiCallController {
 		JSONParser lParser = new JSONParser();
 		Properties lProp = new Properties();
 		InputStream lInput = null;
-		lInput = GameInfoRestApiCallController.class.getClassLoader().getResourceAsStream(lFileName);
+		lInput = GameInformationController.class.getClassLoader().getResourceAsStream(lFileName);
 		try {
 
 			if (lInput == null) {

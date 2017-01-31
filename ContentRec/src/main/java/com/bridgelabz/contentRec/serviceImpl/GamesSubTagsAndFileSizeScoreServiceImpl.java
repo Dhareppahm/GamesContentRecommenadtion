@@ -4,24 +4,24 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.bridgelabz.contentRec.dao.UserContentInfoDao;
+import com.bridgelabz.contentRec.dao.GamesSubTagsAndFileSizeScoreDao;
 import com.bridgelabz.contentRec.model.GameCategoryScore;
-import com.bridgelabz.contentRec.model.UserContentInfo;
-import com.bridgelabz.contentRec.services.UserContentInfoService;
+import com.bridgelabz.contentRec.model.GamesSubTagsAndFileSizeScore;
+import com.bridgelabz.contentRec.services.GamesSubTagsAndFileSizeScoreService;
 
-public class UserContentInfoServiceImpl implements UserContentInfoService {
+public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndFileSizeScoreService {
 	@Autowired
-	UserContentInfoDao mUserContentInfoDao;
+	GamesSubTagsAndFileSizeScoreDao mGamesSubTagsAndFileSizeScoreDao;
 
 	@Override
-	public UserContentInfo CatgeoryExists(String parVisitorId, String parCategoryName) {
-		UserContentInfo lUserContentInfo = mUserContentInfoDao.CatgeoryExists(parVisitorId, parCategoryName);
+	public GamesSubTagsAndFileSizeScore CatgeoryExists(String parVisitorId, String parCategoryName) {
+		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao.CatgeoryExists(parVisitorId, parCategoryName);
 		return lUserContentInfo;
 	}
 
 	@Override
 	public void addNewCategory(String parVisitorId, String parCategoryName) {
-		UserContentInfo lCategoryScore = new UserContentInfo();
+		GamesSubTagsAndFileSizeScore lCategoryScore = new GamesSubTagsAndFileSizeScore();
 		lCategoryScore.setmContentId("No content id");
 		lCategoryScore.setmCategoryType("Category");
 		lCategoryScore.setmVisitorId(parVisitorId);
@@ -31,25 +31,25 @@ public class UserContentInfoServiceImpl implements UserContentInfoService {
 		// lCategoryScore.setmCategoryScore(mCategoryScore);
 		// lCategoryScore.setmSubCategoryTagScore(mSubCategoryTagScore);
 		lCategoryScore.setmSubCategoryTagName("No sub tag");
-		mUserContentInfoDao.addNewCategory(lCategoryScore);
+		mGamesSubTagsAndFileSizeScoreDao.addNewCategory(lCategoryScore);
 
 	}
 
 	@Override
 	public int UpdateCategoryScore(String parVisitorId, String parCategoryName) {
-		int mStatus = mUserContentInfoDao.UpdateCategoryScore(parVisitorId, parCategoryName);
+		int mStatus = mGamesSubTagsAndFileSizeScoreDao.UpdateCategoryScore(parVisitorId, parCategoryName);
 		return mStatus;
 	}
 
 	@Override
-	public UserContentInfo SubCatgeoryTagExists(String parVisitorId, String parSubCategoryName) {
-		UserContentInfo lUserContentInfo = mUserContentInfoDao.SubCatgeoryTagExists(parVisitorId, parSubCategoryName);
+	public GamesSubTagsAndFileSizeScore SubCatgeoryTagExists(String parVisitorId, String parSubCategoryName) {
+		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao.SubCatgeoryTagExists(parVisitorId, parSubCategoryName);
 		return lUserContentInfo;
 	}
 
 	@Override
 	public void addNewSubCategoryTag(String parVisitorId, String parSubCategoryName,String parContentId) {
-		UserContentInfo lSubCategoryScore = new UserContentInfo();
+		GamesSubTagsAndFileSizeScore lSubCategoryScore = new GamesSubTagsAndFileSizeScore();
 		lSubCategoryScore.setmContentId(parContentId);
 		lSubCategoryScore.setmCategoryType("Tag");
 		lSubCategoryScore.setmVisitorId(parVisitorId);
@@ -59,24 +59,24 @@ public class UserContentInfoServiceImpl implements UserContentInfoService {
 		lSubCategoryScore.setmFileSize("No file size");
 		// lSubCategoryScore.setmFileSizeScore(mFileSizeScore);
 		// lSubCategoryScore.setmSubCategoryTagScore(mSubCategoryTagScore);
-		mUserContentInfoDao.addNewSubCategoryTag(lSubCategoryScore);
+		mGamesSubTagsAndFileSizeScoreDao.addNewSubCategoryTag(lSubCategoryScore);
 	}
 
 	@Override
 	public int UpdateSubCategoryTagScore(String parVisitorId, String parSubCategoryName) {
-		int mStatus = mUserContentInfoDao.UpdateSubCategoryScoreTag(parVisitorId, parSubCategoryName);
+		int mStatus = mGamesSubTagsAndFileSizeScoreDao.UpdateSubCategoryScoreTag(parVisitorId, parSubCategoryName);
 		return mStatus;
 	}
 
 	@Override
-	public UserContentInfo FileSizeExists(String parVisitorId, String parFileSize) {
-		UserContentInfo lUserContentInfo = mUserContentInfoDao.FileSizeExists(parVisitorId, parFileSize);
+	public GamesSubTagsAndFileSizeScore FileSizeExists(String parVisitorId, String parFileSize) {
+		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao.FileSizeExists(parVisitorId, parFileSize);
 		return lUserContentInfo;
 	}
 
 	@Override
 	public void addNewFileSize(String parVisitorId, String parFileSize) {
-		UserContentInfo lUserContentInfo = new UserContentInfo();
+		GamesSubTagsAndFileSizeScore lUserContentInfo = new GamesSubTagsAndFileSizeScore();
 		lUserContentInfo.setmCategoryName("No category");
 		lUserContentInfo.setmCategoryType("File size");
 		// lUserContentInfo.setmCategoryScore(mCategoryScore);
@@ -87,32 +87,32 @@ public class UserContentInfoServiceImpl implements UserContentInfoService {
 		// lUserContentInfo.setmCategoryScore(mCategoryScore);
 		lUserContentInfo.setmSubCategoryTagName("No sub tag");
 		lUserContentInfo.setmContentId("No content id");
-		mUserContentInfoDao.addNewFileSize(lUserContentInfo);
+		mGamesSubTagsAndFileSizeScoreDao.addNewFileSize(lUserContentInfo);
 
 	}
 
 	@Override
 	public int UpdateFileSizeScore(String parVisitorId, String parFileSize) {
-		int status = mUserContentInfoDao.UpdateFileSizeScore(parVisitorId, parFileSize);
+		int status = mGamesSubTagsAndFileSizeScoreDao.UpdateFileSizeScore(parVisitorId, parFileSize);
 		return status;
 	}
 
 	@Override
 	public List gamesSubTagsRecommendationByVisitorId(String parVisitorId) {
-		List lSubTagsList=mUserContentInfoDao.gamesSubTagsRecommendationByVisitorId(parVisitorId);
+		List lSubTagsList=mGamesSubTagsAndFileSizeScoreDao.gamesSubTagsRecommendationByVisitorId(parVisitorId);
 		return lSubTagsList;
 	}
 
 	@Override
-	public List<UserContentInfo> getGamesSubTagsScore(String parVisitorId) {
+	public List<GamesSubTagsAndFileSizeScore> getGamesSubTagsScore(String parVisitorId) {
 		
-		List<UserContentInfo> lSubTagsScore=mUserContentInfoDao.getGamesSubTagsScore(parVisitorId);
+		List<GamesSubTagsAndFileSizeScore> lSubTagsScore=mGamesSubTagsAndFileSizeScoreDao.getGamesSubTagsScore(parVisitorId);
 		return lSubTagsScore;
 	}
 
 	@Override
-	public List<UserContentInfo> getGamesFileSizeScore(String parVisitorId) {
-		List<UserContentInfo> lGamesFileSizeScore=mUserContentInfoDao.getGamesFileSizeScore(parVisitorId);
+	public List<GamesSubTagsAndFileSizeScore> getGamesFileSizeScore(String parVisitorId) {
+		List<GamesSubTagsAndFileSizeScore> lGamesFileSizeScore=mGamesSubTagsAndFileSizeScoreDao.getGamesFileSizeScore(parVisitorId);
 		return lGamesFileSizeScore;
 	}
 

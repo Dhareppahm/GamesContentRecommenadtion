@@ -9,8 +9,8 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "UserContentInfo")
-public class UserContentInfo {
+@Table(name = "GamesSubTagsAndFileSizeScore")
+public class GamesSubTagsAndFileSizeScore {
 	@Id
 	@GenericGenerator(name = "gene", strategy = "increment")
 	@GeneratedValue(generator = "gene")

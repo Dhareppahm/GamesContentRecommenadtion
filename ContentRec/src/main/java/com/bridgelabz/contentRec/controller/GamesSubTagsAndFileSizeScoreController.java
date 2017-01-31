@@ -19,13 +19,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.bridgelabz.contentRec.model.GameCategoryScore;
 import com.bridgelabz.contentRec.model.GameInfo;
-import com.bridgelabz.contentRec.model.UserContentInfo;
+import com.bridgelabz.contentRec.model.GamesSubTagsAndFileSizeScore;
 import com.bridgelabz.contentRec.services.GameInfoService;
-import com.bridgelabz.contentRec.services.UserContentInfoService;
+import com.bridgelabz.contentRec.services.GamesSubTagsAndFileSizeScoreService;
 import com.bridgelabz.contentRec.services.VisitorsInfoService;
 
 @Controller
-public class UserContentInfoController {
+public class GamesSubTagsAndFileSizeScoreController {
 	@Autowired
 	VisitorsInfoService mVisitorsInfoService;
 
@@ -33,7 +33,7 @@ public class UserContentInfoController {
 	GameInfoService mGameInfoService;
 
 	@Autowired
-	UserContentInfoService mUserContentInfoService;
+	GamesSubTagsAndFileSizeScoreService mGamesSubTagsAndFileSizeScoreService;
 	int mCategoryStatus;
 
 	@RequestMapping(value = "/userContentInfo", method = RequestMethod.GET)
@@ -49,7 +49,7 @@ public class UserContentInfoController {
 		String lFileName = "CategoryList.properties";
 
 		InputStream lInput = null;
-		lInput = UserContentInfoController.class.getClassLoader().getResourceAsStream(lFileName);
+		lInput = GamesSubTagsAndFileSizeScoreController.class.getClassLoader().getResourceAsStream(lFileName);
 		try {
 
 			if (lInput == null) {
@@ -79,13 +79,13 @@ public class UserContentInfoController {
 					|| lCategoryName.equals(lProp.getProperty("CatTag7"))
 					|| lCategoryName.equals(lProp.getProperty("CatTag8"))
 					|| lCategoryName.equals(lProp.getProperty("CatTag9"))) {
-				UserContentInfo lCatScore = mUserContentInfoService.CatgeoryExists(parVisitorId, lCategoryName);
+				GamesSubTagsAndFileSizeScore lCatScore = mGamesSubTagsAndFileSizeScoreService.CatgeoryExists(parVisitorId, lCategoryName);
 				if (lCatScore != null) {
-					mCategoryStatus = mUserContentInfoService.UpdateCategoryScore(parVisitorId, lCategoryName);
+					mCategoryStatus = mGamesSubTagsAndFileSizeScoreService.UpdateCategoryScore(parVisitorId, lCategoryName);
 
 				} else {
-					mUserContentInfoService.addNewCategory(parVisitorId, lCategoryName);
-					mCategoryStatus = mUserContentInfoService.UpdateCategoryScore(parVisitorId, lCategoryName);
+					mGamesSubTagsAndFileSizeScoreService.addNewCategory(parVisitorId, lCategoryName);
+					mCategoryStatus = mGamesSubTagsAndFileSizeScoreService.UpdateCategoryScore(parVisitorId, lCategoryName);
 				}
 
 				List lContentIdList = mVisitorsInfoService.getContentIdByVisitorId(parVisitorId);
@@ -96,25 +96,25 @@ public class UserContentInfoController {
 					String lSubCategoryTagList = mGameInfoService.getSubCategoryTagsByContentId(lContentId);
 					String[] subTags = lSubCategoryTagList.split(",");
 					for (int i = 0; i < subTags.length; i++) {
-						UserContentInfo userContentInfo = mUserContentInfoService.SubCatgeoryTagExists(parVisitorId,
+						GamesSubTagsAndFileSizeScore userContentInfo = mGamesSubTagsAndFileSizeScoreService.SubCatgeoryTagExists(parVisitorId,
 								subTags[i]);
 						if (userContentInfo != null) {
-							mUserContentInfoService.UpdateSubCategoryTagScore(parVisitorId, subTags[i]);
+							mGamesSubTagsAndFileSizeScoreService.UpdateSubCategoryTagScore(parVisitorId, subTags[i]);
 						} else {
-							mUserContentInfoService.addNewSubCategoryTag(parVisitorId, subTags[i],lContentId);
-							int mCategorySubTagStatus = mUserContentInfoService.UpdateSubCategoryTagScore(parVisitorId,
+							mGamesSubTagsAndFileSizeScoreService.addNewSubCategoryTag(parVisitorId, subTags[i],lContentId);
+							int mCategorySubTagStatus = mGamesSubTagsAndFileSizeScoreService.UpdateSubCategoryTagScore(parVisitorId,
 									subTags[i]);
 						}
 					}
 					String lFileSize = mGameInfoService.getFileSizeByContentId(lContentId);
 					System.out.println(lFileSize);
-					UserContentInfo lUserContentInfo = mUserContentInfoService.FileSizeExists(parVisitorId, lFileSize);
+					GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreService.FileSizeExists(parVisitorId, lFileSize);
 					if (lUserContentInfo != null) {
-						mUserContentInfoService.UpdateFileSizeScore(parVisitorId, lFileSize);
+						mGamesSubTagsAndFileSizeScoreService.UpdateFileSizeScore(parVisitorId, lFileSize);
 					} else {
 
-						mUserContentInfoService.addNewFileSize(parVisitorId, lFileSize);
-						mUserContentInfoService.UpdateFileSizeScore(parVisitorId, lFileSize);
+						mGamesSubTagsAndFileSizeScoreService.addNewFileSize(parVisitorId, lFileSize);
+						mGamesSubTagsAndFileSizeScoreService.UpdateFileSizeScore(parVisitorId, lFileSize);
 					}
 
 				}
@@ -146,9 +146,9 @@ public class UserContentInfoController {
 			Model parModel) {
 		// int lFlag = 0;
 		List lGameInfoList = new ArrayList();
-		List<UserContentInfo> lGameSubTagsSCore = mUserContentInfoService.getGamesSubTagsScore(parVisitorId);
+		List<GamesSubTagsAndFileSizeScore> lGameSubTagsSCore = mGamesSubTagsAndFileSizeScoreService.getGamesSubTagsScore(parVisitorId);
 		Map<String, Object> lGameInfoAndSubTagsmap = new HashMap<String, Object>();
-		List lSubTagsList = mUserContentInfoService.gamesSubTagsRecommendationByVisitorId(parVisitorId);
+		List lSubTagsList = mGamesSubTagsAndFileSizeScoreService.gamesSubTagsRecommendationByVisitorId(parVisitorId);
 		for (Iterator iterator = lSubTagsList.iterator(); iterator.hasNext();) {
 			String lsubTagName = (String) iterator.next();
 
@@ -190,7 +190,7 @@ public class UserContentInfoController {
 	@RequestMapping(value = "/gamesRecommendationBasedOnFileSize", method = RequestMethod.POST)
 	public ModelAndView gamesRecommendationBasedOnFileSize(@RequestParam("visitorId") String parVisitorId,
 			Model parModel) {
-		List<UserContentInfo> lGameFileSizeScore = mUserContentInfoService
+		List<GamesSubTagsAndFileSizeScore> lGameFileSizeScore = mGamesSubTagsAndFileSizeScoreService
 				.getGamesFileSizeScore(parVisitorId);
 		parModel.addAttribute("visitorID", parVisitorId);
 		List<GameInfo> lGameInfo = mGameInfoService.getGameNameByFileSize(parVisitorId);

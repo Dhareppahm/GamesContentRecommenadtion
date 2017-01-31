@@ -66,7 +66,7 @@
 					com.bridgelabz.contentRec.model.GameCategoryScore
 				</value>
 				<value>
-					com.bridgelabz.contentRec.model.UserContentInfo
+					com.bridgelabz.contentRec.model.GamesSubTagsAndFileSizeScore
 				</value>
 			</list>
 		</property>
@@ -88,8 +88,8 @@
 	<bean id="mUserInfoDao" class="com.bridgelabz.contentRec.daoImpl.UserInfoDaoImpl"></bean>
 	<bean id="mGameCategoryScoreDao"
 		class="com.bridgelabz.contentRec.daoImpl.GameCategoryScoreDaoImpl"></bean>
-	<bean id="mUserContentInfoDao"
-		class="com.bridgelabz.contentRec.daoImpl.UserContentInfoDaoImpl"></bean>
+	<bean id="mGamesSubTagsAndFileSizeScoreDao"
+		class="com.bridgelabz.contentRec.daoImpl.GamesSubTagsAndFileSizeScoreDaoImpl"></bean>
 
 	<!--userServices depedency injection -->
 	<bean id="mGameInfoService"
@@ -100,8 +100,8 @@
 		class="com.bridgelabz.contentRec.serviceImpl.UserInfoServiceImpl"></bean>
 	<bean id="mGameCategoryScoreService"
 		class="com.bridgelabz.contentRec.serviceImpl.GameCategoryScoreServiceImpl"></bean>
-	<bean id="mUserContentInfoService"
-		class="com.bridgelabz.contentRec.serviceImpl.UserContentInfoServiceImpl"></bean>
+	<bean id="mGamesSubTagsAndFileSizeScoreService"
+		class="com.bridgelabz.contentRec.serviceImpl.GamesSubTagsAndFileSizeScoreServiceImpl"></bean>
 
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">

@@ -87,7 +87,7 @@ public class GameInfoDaoImpl implements GameInfoDao {
 	public List<GameInfo> getGameNameByFileSize(String parVisitorId) {
 		Session sess = sessionFactory.getCurrentSession();
 		Query qry = sess.createQuery(
-				"FROM GameInfo WHERE mFileSize IN(select mFileSize FROM UserContentInfo WHERE mVisitorId=:id)");
+				"FROM GameInfo WHERE mFileSize IN(select mFileSize FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:id)");
 		qry.setParameter("id", parVisitorId);
 		List<GameInfo> gameInfo = qry.list();
 		return gameInfo;
