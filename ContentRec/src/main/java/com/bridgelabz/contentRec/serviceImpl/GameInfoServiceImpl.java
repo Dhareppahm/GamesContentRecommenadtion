@@ -23,11 +23,7 @@ public class GameInfoServiceImpl implements GameInfoService {
 
 	}
 
-	@Override
-	public List<GameInfo> dispalyGameInfoByContentId(String parContentId) {
-		List<GameInfo> lGameInfo = mGameInfoDao.dispalyGameInfoByContentId(parContentId);
-		return lGameInfo;
-	}
+
 
 	@Override
 	public List<GameInfo> getGameInfoByContentId(String parContentId) {

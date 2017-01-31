@@ -36,14 +36,6 @@ public class GameInfoDaoImpl implements GameInfoDao {
 
 	}
 
-	public List<GameInfo> dispalyGameInfoByContentId(String parContentId) {
-		Session sess = sessionFactory.getCurrentSession();
-		Query qry = sess.createQuery("from GameInfo where mContentId=:id");
-		qry.setParameter("id", parContentId);
-		List<GameInfo> gameInfo = qry.list();
-		return gameInfo;
-	}
-
 	public List<GameInfo> getGameInfoByContentId(String parContentId) {
 		Session sess = sessionFactory.getCurrentSession();
 		Query qry = sess.createQuery("from GameInfo where mContentId=:id");

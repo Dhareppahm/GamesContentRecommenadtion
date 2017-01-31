@@ -116,20 +116,11 @@ public class GamesCategoryScoreController {
 				.gamesCategoryNameRecommendationByVisitorId(parVisitorId);
 		parModel.addAttribute("visitorID", parVisitorId);
 		List<GameInfo> lGameInfo = mGameInfoService.getGameNameByGameCategory(parVisitorId);
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("gameCategoryScore", lGameCategoryScore);
-		map.put("gameInfo", lGameInfo);
-		return new ModelAndView("Game", "map", map);
+		Map<String, Object> lMap = new HashMap<String, Object>();
+		lMap.put("gameCategoryScore", lGameCategoryScore);
+		lMap.put("gameInfo", lGameInfo);
+		return new ModelAndView("gamesCategoryNameAndGamesNameRecommendations", "map", lMap);
 	}
 
-	/*
-	 * @RequestMapping(value = "/gamesRecommended", method = RequestMethod.GET)
-	 * public ModelAndView gamesRecommended(@RequestParam("visitorId") String
-	 * parVisitorId, Model parModel) {
-	 *  List<GameInfo> lGameInfo =
-	 * mGameInfoServie.getGameNameByGameCategory(parVisitorId);
-	 * parModel.addAttribute("visitorID", parVisitorId); return new
-	 * ModelAndView("GamesRecommended","gameInfo",lGameInfo); }
-	 */
 
 }

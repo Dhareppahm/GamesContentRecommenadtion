@@ -34,7 +34,7 @@ public class GameInfoRestApiCallController {
 	String mGbDeviceId;
 	String mGbAppVersionCode;
 	String mUrlString;
-	Logger mlogger = Logger.getLogger("GAMEINFO");
+	Logger mLogger = Logger.getLogger("GAMEINFO");
 	@Autowired
 	private GameInfoService mGameInfoService;
 
@@ -50,7 +50,7 @@ public class GameInfoRestApiCallController {
 
 	@RequestMapping(value = "/displayGameInfo", method = RequestMethod.POST)
 	public ModelAndView dispalyGameData(@RequestParam("contentId") String parContId) {
-		List<GameInfo> lGameInfo = mGameInfoService.dispalyGameInfoByContentId(parContId);
+		List<GameInfo> lGameInfo = mGameInfoService.getGameInfoByContentId(parContId);
 		return new ModelAndView("GameInformation", "gameInfo", lGameInfo);
 	}
 
@@ -108,67 +108,67 @@ public class GameInfoRestApiCallController {
 				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
 			}
 
-			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+			BufferedReader lBufferReader = new BufferedReader(new InputStreamReader((conn.getInputStream())));
 
-			Object lOb = lParser.parse(br);
-			JSONObject lObject = (JSONObject) lOb;
-			JSONObject lItemObj = (JSONObject) lObject.get("data");
+			Object lObject = lParser.parse(lBufferReader);
+			JSONObject lJsonObject = (JSONObject) lObject;
+			JSONObject lItemObj = (JSONObject) lJsonObject.get("data");
 
-			Object contentIdObj = lItemObj.get("content_id");
-			long contentId = (long) contentIdObj;
-			lGameInfo.setmContentId(String.valueOf(contentId));
+			Object lContentIdObj = lItemObj.get("content_id");
+			long lContentId = (long) lContentIdObj;
+			lGameInfo.setmContentId(String.valueOf(lContentId));
 
-			Object contentNameObj = lItemObj.get("content_name");
-			String contentName = (String) contentNameObj;
-			lGameInfo.setmContentName(contentName);
+			Object lContentNameObj = lItemObj.get("content_name");
+			String lContentName = (String) lContentNameObj;
+			lGameInfo.setmContentName(lContentName);
 
-			Object contentTypeIdObj = lItemObj.get("content_type_id");
-			long contentTypeId = (long) contentTypeIdObj;
-			lGameInfo.setmContentTypeId(String.valueOf(contentTypeId));
+			Object lContentTypeIdObj = lItemObj.get("content_type_id");
+			long lContentTypeId = (long) lContentTypeIdObj;
+			lGameInfo.setmContentTypeId(String.valueOf(lContentTypeId));
 
-			Object groupIdObj = lItemObj.get("group_id");
-			String groupId = (String) groupIdObj;
-			lGameInfo.setmGroupId(groupId);
+			Object lGroupIdObj = lItemObj.get("group_id");
+			String lGroupId = (String) lGroupIdObj;
+			lGameInfo.setmGroupId(lGroupId);
 
-			Object categoryIdObj = lItemObj.get("category_id");
-			String categoryId = (String) categoryIdObj;
-			lGameInfo.setmCategoryId(categoryId);
+			Object lCategoryIdObj = lItemObj.get("category_id");
+			String lCategoryId = (String) lCategoryIdObj;
+			lGameInfo.setmCategoryId(lCategoryId);
 
-			Object categoryNameObj = lItemObj.get("category_name");
-			String categoryName = (String) categoryNameObj;
-			lGameInfo.setmCategoryName(categoryName);
+			Object lCategoryNameObj = lItemObj.get("category_name");
+			String lCategoryName = (String) lCategoryNameObj;
+			lGameInfo.setmCategoryName(lCategoryName);
 
-			Object downloadsObj = lItemObj.get("downloads");
-			String downloads = (String) downloadsObj;
-			lGameInfo.setmTotalDownloads(downloads);
+			Object lDownloadsObj = lItemObj.get("downloads");
+			String lDownloads = (String) lDownloadsObj;
+			lGameInfo.setmTotalDownloads(lDownloads);
 
-			Object fileSizeObj = lItemObj.get("file_size");
-			String fileSize = (String) fileSizeObj;
-			lGameInfo.setmFileSize(fileSize);
+			Object lFileSizeObj = lItemObj.get("file_size");
+			String lFileSize = (String) lFileSizeObj;
+			lGameInfo.setmFileSize(lFileSize);
 
-			Object manifestPackageNameObj = lItemObj.get("manifest_package_name");
-			String manifestPackageName = (String) manifestPackageNameObj;
-			lGameInfo.setmManifestPackageName(manifestPackageName);
+			Object lManifestPackageNameObj = lItemObj.get("manifest_package_name");
+			String lManifestPackageName = (String) lManifestPackageNameObj;
+			lGameInfo.setmManifestPackageName(lManifestPackageName);
 
-			Object contentDownloadUrlObj = lItemObj.get("content_download_url");
-			String contentDownloadUrl = (String) contentDownloadUrlObj;
-			lGameInfo.setmContentDownloadUrl(contentDownloadUrl);
+			Object lContentDownloadUrlObj = lItemObj.get("content_download_url");
+			String lContentDownloadUrl = (String) lContentDownloadUrlObj;
+			lGameInfo.setmContentDownloadUrl(lContentDownloadUrl);
 
-			Object metaTagsObj = lItemObj.get("meta_tags");
-			String metaTags = (String) metaTagsObj;
-			lGameInfo.setmMetaTags(metaTags);
+			Object lMetaTagsObj = lItemObj.get("meta_tags");
+			String lMetaTags = (String) lMetaTagsObj;
+			lGameInfo.setmMetaTags(lMetaTags);
 
-			Object contentRatingObj = lItemObj.get("content_rating");
-			String contentRating = (String.valueOf(contentRatingObj));
-			lGameInfo.setmContentRating(contentRating);
+			Object lContentRatingObj = lItemObj.get("content_rating");
+			String lContentRating = (String.valueOf(lContentRatingObj));
+			lGameInfo.setmContentRating(lContentRating);
 
-			Object contentReviewTotalObj = lItemObj.get("content_review_total");
-			long contentReviewTotal = (long) contentReviewTotalObj;
-			lGameInfo.setmContentReviewTotal(String.valueOf(contentReviewTotal));
+			Object lContentReviewTotalObj = lItemObj.get("content_review_total");
+			long lContentReviewTotal = (long) lContentReviewTotalObj;
+			lGameInfo.setmContentReviewTotal(String.valueOf(lContentReviewTotal));
 			
-			Object contentThumbnailUrlObj=lItemObj.get("content_thumbnail_url");
-			String contentThumbnailUrl=(String)contentThumbnailUrlObj;
-			lGameInfo.setmContentThumbnailUrl(contentThumbnailUrl);
+			Object lContentThumbnailUrlObj=lItemObj.get("content_thumbnail_url");
+			String lContentThumbnailUrl=(String)lContentThumbnailUrlObj;
+			lGameInfo.setmContentThumbnailUrl(lContentThumbnailUrl);
 			mGameInfoService.saveGameInfo(lGameInfo);
 
 			conn.disconnect();

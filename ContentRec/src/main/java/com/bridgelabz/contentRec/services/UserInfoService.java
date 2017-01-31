@@ -15,6 +15,5 @@ public interface UserInfoService {
 	public void saveUserInfo(UserInfo parUserInfo);
 
 	public List<UserInfo> getVisitorHistoryByVisitorId(String parVisitorId);
-	
 
 }

@@ -21,8 +21,14 @@ tr:nth-child(even) {
 </style>
 </head>
 <table>
-	<h2 align="left">Recommended game categories and score for visitor
-		ID:${visitorID}</h2>
+	<h3 align="left">Games Content Recommendation</h3>
+	<tr>
+		<th>Content recommendation based on:</th>
+		<td><h4>Recent visited sub tags history</h4></td>
+	</tr>
+
+</table>
+<table>
 	<tr>
 		<th>Visitor Id</th>
 		<th>Category Name</th>
@@ -36,13 +42,12 @@ tr:nth-child(even) {
 			<td>${game.mCatMarks}</td>
 	</tr>
 	</c:forEach>
-	
+
 </table>
-<h2>Recommended games for visitor:${visitorID} based on visitor
-	category history</h2>
+<h2>Recommended games:</h2>
 <table>
 	<tr>
-	<th>Game Image</th>
+		<th>Game Image</th>
 		<th>Game Name</th>
 		<th>Game Rating</th>
 		<th>File Size</th>
@@ -50,7 +55,8 @@ tr:nth-child(even) {
 	</tr>
 	<c:forEach var="gameInfo" items="${map.gameInfo}">
 		<tr>
-				<td><img src="${gameInfo.mContentThumbnailUrl}" width="150px" height="150px"/></td>
+			<td><img src="${gameInfo.mContentThumbnailUrl}" width="150px"
+				height="150px" /></td>
 			<td>${gameInfo.mContentName}</td>
 			<td>${gameInfo.mContentRating}</td>
 			<td>${gameInfo.mFileSize}</td>
@@ -58,5 +64,3 @@ tr:nth-child(even) {
 		</tr>
 	</c:forEach>
 </table>
-<%-- <a href="<c:url value="gamesRecommended"/>?visitorId=${visitorID}"><h2>Recommended games for Visitor ${visitorID}</a></h2>
- --%>

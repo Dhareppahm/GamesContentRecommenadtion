@@ -35,7 +35,6 @@ public class UserContentInfoController {
 	@Autowired
 	UserContentInfoService mUserContentInfoService;
 	int mCategoryStatus;
-	/* int mCategorySubTagStatus; */
 
 	@RequestMapping(value = "/userContentInfo", method = RequestMethod.GET)
 	public String userContentInfo() {
@@ -184,7 +183,7 @@ public class UserContentInfoController {
 		lGameInfoAndSubTagsmap.put("Subtags", lGameSubTagsSCore);
 		lGameInfoAndSubTagsmap.put("GameInfo", lGameInfoList);
 
-		return new ModelAndView("GameInfoo", "GameInfoAndSubTagsmap",
+		return new ModelAndView("gamesRecommendationBasedOnMostVisitedSubTags", "GameInfoAndSubTagsmap",
 				lGameInfoAndSubTagsmap);
 	}
 	
@@ -195,10 +194,10 @@ public class UserContentInfoController {
 				.getGamesFileSizeScore(parVisitorId);
 		parModel.addAttribute("visitorID", parVisitorId);
 		List<GameInfo> lGameInfo = mGameInfoService.getGameNameByFileSize(parVisitorId);
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("gameFileScore", lGameFileSizeScore);
-		map.put("gameInfo", lGameInfo);
-		return new ModelAndView("gamesRecommendationBasedOnFileSize", "map", map);
+		Map<String, Object> lMap = new HashMap<String, Object>();
+		lMap.put("gameFileScore", lGameFileSizeScore);
+		lMap.put("gameInfo", lGameInfo);
+		return new ModelAndView("gamesRecommendationBasedOnFileSize", "map", lMap);
 	}
 	
 	@RequestMapping(value = "/gamesRecommendationBasedOnFileSize", method = RequestMethod.GET)

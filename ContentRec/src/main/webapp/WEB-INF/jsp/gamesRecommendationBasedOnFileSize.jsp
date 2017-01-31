@@ -36,10 +36,17 @@ tr:nth-child(even) {
 	<!-- Load the icon while page loading  -->
 	<div class="loader"></div>
 	<br>
+	<table>
+		<h3 align="left">Games Content Recommendation</h3> 
+		<tr>
+			<th> Content recommendation based on:</th>
+		    <td><h4>Recent visited file size history</h4></td>
+		</tr>
+
+	</table>
+	<br>
 	<!-- BootStrap Card to display Image and Info -->
 	<table>
-		<h3 align="left">Recommended games based on file size score for
-			visitor ID:${visitorID}</h3>
 		<tr>
 			<th>Visitor Id</th>
 			<th>File Size</th>
@@ -56,8 +63,7 @@ tr:nth-child(even) {
 
 	</table>
 	<br>
-	<h3>Recommended games for visitor:${visitorID} based on visitor
-		file size history</h3>
+	<h3>Recommended games:</h3>
 	<!-- BootStrap Card to display Image and Info -->
 	<br>
 	<div class="container">

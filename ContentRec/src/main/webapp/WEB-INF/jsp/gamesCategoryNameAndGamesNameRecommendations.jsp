@@ -38,47 +38,50 @@ tr:nth-child(even) {
 	<br>
 	<!-- BootStrap Card to display Image and Info -->
 	<table>
-		<h3 align="left">Recommended game Sub tags and tag score for
-			visitor ID:${visitorID}</h3>
+	<h3 align="left">Games Content Recommendation</h3>
+	<tr>
+		<th>Content recommendation based on:</th>
+		<td><h4>Recent visited/searched game category history</h4></td>
+	</tr>
+
+</table>
+	<table>
 		<tr>
 			<th>Visitor Id</th>
-			<th>Sub Tag Name</th>
-			<th>Sub Tag Score</th>
+			<th>Category Name</th>
+			<th>Category Score</th>
 		</tr>
 		<tr>
 		<tr>
 			<td rowspan="10000">${visitorID}</td>
-			<c:forEach var="subTags" items="${GameInfoAndSubTagsmap.Subtags}">
-				<td>${subTags.mSubCategoryTagName}</td>
-				<td>${subTags.mSubCategoryTagScore}</td>
+			<c:forEach var="game" items="${map.gameCategoryScore}">
+				<td>${game.mCategoryName}</td>
+				<td>${game.mCatMarks}</td>
 		</tr>
 		</c:forEach>
 
 	</table>
 	<br>
-	<h3>Recommended games for visitor:${visitorID} based on visitor
-		category history</h3>
+	<h3>Recommended games:</h3>
 	<!-- BootStrap Card to display Image and Info -->
 	<br>
 	<div class="container">
 		<div class="row">
-			<c:forEach items="${GameInfoAndSubTagsmap.GameInfo}" var="gameInfo">
-				<c:forEach var="game" items="${gameInfo}">
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-4"
-						style="margin-top: 20px;">
-						<img class="card-img-top" height="200px" width="200px"
-							src="${game.mContentThumbnailUrl}" alt="Card image cap">
-						<div class="card-block">
-							<h4 class="card-title">${game.mContentName}</h4>
-							 Rating:
-							<p class="card-text">${game.mContentRating}</p>
-							File Size:
-							<p class="card-text">${game.mFileSize}</p>
-							Total Downloads:
-							<p class="card-text">${game.mTotalDownloads}</p>
-						</div>
+			<c:forEach items="${map.gameInfo}" var="gameInfo">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-4"
+					style="margin-top: 20px;">
+					<img class="card-img-top" height="200px" width="200px"
+						src="${gameInfo.mContentThumbnailUrl}" alt="Card image cap">
+					<div class="card-block">
+						<h4 class="card-title">${gameInfo.mContentName}</h4>
+						Rating:
+						<p class="card-text">${gameInfo.mContentRating}</p>
+						File Size:
+						<p class="card-text">${gameInfo.mFileSize}</p>
+						Total Downloads:
+						<p class="card-text">${gameInfo.mTotalDownloads}</p>
 					</div>
-				</c:forEach>
+				</div>
 			</c:forEach>
 		</div>
 	</div>

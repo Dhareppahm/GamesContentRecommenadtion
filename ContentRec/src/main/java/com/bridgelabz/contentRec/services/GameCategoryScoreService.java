@@ -18,7 +18,7 @@ public interface GameCategoryScoreService {
 	public int UpdateCategoryScore(String parVisitorId, String parCategoryName);
 
 	public List<GameCategoryScore> gamesCategoryNameRecommendationByVisitorId(String parVisitorId);
-	
+
 	public List getCategoryNameByVisitorId(String parVisitorId);
 
 }

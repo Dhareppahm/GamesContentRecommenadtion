@@ -20,5 +20,5 @@ public interface GameCategoryScoreDao {
 	public List<GameCategoryScore> gamesCategoryNamesRecommendationByVisitorId(String parVisitorId);
 
 	public List getCategoryNameByVisitorId(String parVisitorId);
-	
+
 }

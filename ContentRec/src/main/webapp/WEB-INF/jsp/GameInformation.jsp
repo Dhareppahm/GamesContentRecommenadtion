@@ -23,6 +23,7 @@ tr:nth-child(even) {
 <h2>Game Information</h2>
 <table>
 	<tr>
+	    <th>Game Image</th>
 		<th>contentId</th>
 		<th>contentName</th>
 		<th>contentTypeId</th>
@@ -39,7 +40,7 @@ tr:nth-child(even) {
 	</tr>
 	<c:forEach var="game" items="${gameInfo}">
 		<tr>
-
+<td><img src="${game.mContentThumbnailUrl}" width="180px" height="180px"/></td>
 			<td>${game.mContentId}</td>
 			<td>${game.mContentName}</td>
 			<td>${game.mContentTypeId}</td>
