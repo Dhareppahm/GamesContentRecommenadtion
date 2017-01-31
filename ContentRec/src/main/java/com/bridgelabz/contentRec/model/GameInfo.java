@@ -40,6 +40,8 @@ public class GameInfo {
 	private String mContentReviewTotal;
 	@Column(name = "content_Rating")
 	private String mContentRating;
+	@Column(name = "content_Thumbnail_Url")
+	private String mContentThumbnailUrl;
 	public String getmContentId() {
 		return mContentId;
 	}
@@ -117,6 +119,12 @@ public class GameInfo {
 	}
 	public void setmContentRating(String mContentRating) {
 		this.mContentRating = mContentRating;
+	}
+	public String getmContentThumbnailUrl() {
+		return mContentThumbnailUrl;
+	}
+	public void setmContentThumbnailUrl(String mContentThumbnailUrl) {
+		this.mContentThumbnailUrl = mContentThumbnailUrl;
 	}
 
 	

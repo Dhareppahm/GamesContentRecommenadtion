@@ -22,9 +22,15 @@ public class UserContentInfoServiceImpl implements UserContentInfoService {
 	@Override
 	public void addNewCategory(String parVisitorId, String parCategoryName) {
 		UserContentInfo lCategoryScore = new UserContentInfo();
+		lCategoryScore.setmContentId("No content id");
 		lCategoryScore.setmCategoryType("Category");
 		lCategoryScore.setmVisitorId(parVisitorId);
 		lCategoryScore.setmCategoryName(parCategoryName);
+		lCategoryScore.setmFileSize("No file size");
+		// lCategoryScore.setmFileSizeScore(mFileSizeScore);
+		// lCategoryScore.setmCategoryScore(mCategoryScore);
+		// lCategoryScore.setmSubCategoryTagScore(mSubCategoryTagScore);
+		lCategoryScore.setmSubCategoryTagName("No sub tag");
 		mUserContentInfoDao.addNewCategory(lCategoryScore);
 
 	}
@@ -42,11 +48,17 @@ public class UserContentInfoServiceImpl implements UserContentInfoService {
 	}
 
 	@Override
-	public void addNewSubCategoryTag(String parVisitorId, String parSubCategoryName) {
+	public void addNewSubCategoryTag(String parVisitorId, String parSubCategoryName,String parContentId) {
 		UserContentInfo lSubCategoryScore = new UserContentInfo();
+		lSubCategoryScore.setmContentId(parContentId);
 		lSubCategoryScore.setmCategoryType("Tag");
 		lSubCategoryScore.setmVisitorId(parVisitorId);
 		lSubCategoryScore.setmSubCategoryTagName(parSubCategoryName);
+		lSubCategoryScore.setmCategoryName("No category Name");
+		// lSubCategoryScore.setmCategoryScore(0);
+		lSubCategoryScore.setmFileSize("No file size");
+		// lSubCategoryScore.setmFileSizeScore(mFileSizeScore);
+		// lSubCategoryScore.setmSubCategoryTagScore(mSubCategoryTagScore);
 		mUserContentInfoDao.addNewSubCategoryTag(lSubCategoryScore);
 	}
 
@@ -65,8 +77,16 @@ public class UserContentInfoServiceImpl implements UserContentInfoService {
 	@Override
 	public void addNewFileSize(String parVisitorId, String parFileSize) {
 		UserContentInfo lUserContentInfo = new UserContentInfo();
+		lUserContentInfo.setmCategoryName("No category");
+		lUserContentInfo.setmCategoryType("File size");
+		// lUserContentInfo.setmCategoryScore(mCategoryScore);
+		// lUserContentInfo.setmFileSizeScore(mFileSizeScore);
+		// lUserContentInfo.setmSubCategoryTagScore(mSubCategoryTagScore);
 		lUserContentInfo.setmVisitorId(parVisitorId);
 		lUserContentInfo.setmFileSize(parFileSize);
+		// lUserContentInfo.setmCategoryScore(mCategoryScore);
+		lUserContentInfo.setmSubCategoryTagName("No sub tag");
+		lUserContentInfo.setmContentId("No content id");
 		mUserContentInfoDao.addNewFileSize(lUserContentInfo);
 
 	}
@@ -78,8 +98,22 @@ public class UserContentInfoServiceImpl implements UserContentInfoService {
 	}
 
 	@Override
-	public List<GameCategoryScore> gamesSubTagsRecommendationByVisitorId(String parVisitorId) {
-	
-		return null;
+	public List gamesSubTagsRecommendationByVisitorId(String parVisitorId) {
+		List lSubTagsList=mUserContentInfoDao.gamesSubTagsRecommendationByVisitorId(parVisitorId);
+		return lSubTagsList;
 	}
+
+	@Override
+	public List<UserContentInfo> getGamesSubTagsScore(String parVisitorId) {
+		
+		List<UserContentInfo> lSubTagsScore=mUserContentInfoDao.getGamesSubTagsScore(parVisitorId);
+		return lSubTagsScore;
+	}
+
+	@Override
+	public List<UserContentInfo> getGamesFileSizeScore(String parVisitorId) {
+		List<UserContentInfo> lGamesFileSizeScore=mUserContentInfoDao.getGamesFileSizeScore(parVisitorId);
+		return lGamesFileSizeScore;
+	}
+
 }

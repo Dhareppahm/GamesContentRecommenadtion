@@ -32,6 +32,8 @@ public class UserContentInfo {
 	public String mFileSize;
 	@Column(name = "file_Size_Score")
 	public long mFileSizeScore;
+	@Column(name = "content_Id")
+	public String mContentId;
 
 	public int getmId() {
 		return mId;
@@ -103,6 +105,14 @@ public class UserContentInfo {
 
 	public void setmSubCategoryTagScore(long mSubCategoryTagScore) {
 		this.mSubCategoryTagScore = mSubCategoryTagScore;
+	}
+
+	public String getmContentId() {
+		return mContentId;
+	}
+
+	public void setmContentId(String mContentId) {
+		this.mContentId = mContentId;
 	}
 
 }

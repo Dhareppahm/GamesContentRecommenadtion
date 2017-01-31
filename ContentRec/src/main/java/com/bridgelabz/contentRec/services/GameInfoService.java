@@ -22,4 +22,9 @@ public interface GameInfoService {
 	
 	public String getFileSizeByContentId(String parContentId);
 	
+	public List<GameInfo> getGameNameBySubTags(String parSubTag);
+	
+	
+	public List<GameInfo> getGameNameByFileSize(String parVisitorId);
+	
 }

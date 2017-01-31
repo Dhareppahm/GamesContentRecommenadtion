@@ -81,4 +81,24 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		return gameInfo;
 	}
 
+	@Override
+	public  List<GameInfo> getGameNameBySubTags(String parSubTag) {
+		Session sess = sessionFactory.getCurrentSession();
+		Query qry = sess.createQuery(
+				"FROM GameInfo WHERE mMetaTags LIKE '%"+parSubTag+"%'");
+		//qry.setParameter("id", parVisitorId);
+		 List<GameInfo> gameInfo =qry.list();
+		return gameInfo;
+	}
+
+	@Override
+	public List<GameInfo> getGameNameByFileSize(String parVisitorId) {
+		Session sess = sessionFactory.getCurrentSession();
+		Query qry = sess.createQuery(
+				"FROM GameInfo WHERE mFileSize IN(select mFileSize FROM UserContentInfo WHERE mVisitorId=:id)");
+		qry.setParameter("id", parVisitorId);
+		List<GameInfo> gameInfo = qry.list();
+		return gameInfo;
+	}
+
 }

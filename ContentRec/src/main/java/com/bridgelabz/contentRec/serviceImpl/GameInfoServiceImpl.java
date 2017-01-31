@@ -53,4 +53,17 @@ public class GameInfoServiceImpl implements GameInfoService {
 		return lFileSize;
 	}
 
+	@Override
+	public List<GameInfo> getGameNameBySubTags(String parSubTag) {
+		 List<GameInfo> lGameNameList=mGameInfoDao.getGameNameBySubTags(parSubTag);
+		return lGameNameList;
+	}
+
+	@Override
+	public List<GameInfo> getGameNameByFileSize(String parVisitorId) {
+		List<GameInfo> lGameNames=mGameInfoDao.getGameNameByFileSize(parVisitorId);
+		
+		return lGameNames;
+	}
+
 }

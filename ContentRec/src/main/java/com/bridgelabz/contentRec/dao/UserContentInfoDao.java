@@ -17,13 +17,16 @@ public interface UserContentInfoDao {
 	public void addNewSubCategoryTag(UserContentInfo parUserContentInfo);
 
 	public int UpdateSubCategoryScoreTag(String parVisitorId, String parSubCategoryName);
-	
+
 	public UserContentInfo FileSizeExists(String parVisitorId, String parFileSize);
 
 	public void addNewFileSize(UserContentInfo parUserContentInfo);
 
 	public int UpdateFileSizeScore(String parVisitorId, String parFileSize);
-	
 
-	public List<GameCategoryScore> gamesSubTagsRecommendationByVisitorId(String parVisitorId);
+	public List gamesSubTagsRecommendationByVisitorId(String parVisitorId);
+	
+	public List<UserContentInfo> getGamesSubTagsScore(String parVisitorId);
+	
+	public List<UserContentInfo> getGamesFileSizeScore(String parVisitorId);
 }

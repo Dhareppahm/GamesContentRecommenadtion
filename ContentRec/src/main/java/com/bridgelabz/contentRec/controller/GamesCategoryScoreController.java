@@ -34,7 +34,7 @@ public class GamesCategoryScoreController {
 	@Autowired
 	VisitorsInfoService mVisitorsInfoService;
 	@Autowired
-	GameInfoService mGameInfoServie;
+	GameInfoService mGameInfoService;
 
 	@RequestMapping(value = "/getCategoryScore", method = RequestMethod.GET)
 	public String dispalyVisitorFrom() {
@@ -115,12 +115,11 @@ public class GamesCategoryScoreController {
 		List<GameCategoryScore> lGameCategoryScore = mGameCategoryScoreService
 				.gamesCategoryNameRecommendationByVisitorId(parVisitorId);
 		parModel.addAttribute("visitorID", parVisitorId);
-		List<GameInfo> lGameInfo = mGameInfoServie.getGameNameByGameCategory(parVisitorId);
-		parModel.addAttribute("visitorID", parVisitorId);
+		List<GameInfo> lGameInfo = mGameInfoService.getGameNameByGameCategory(parVisitorId);
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("gameCategoryScore", lGameCategoryScore);
 		map.put("gameInfo", lGameInfo);
-		return new ModelAndView("gamesCategoryNameAndGamesNameRecommendation", "map", map);
+		return new ModelAndView("Game", "map", map);
 	}
 
 	/*

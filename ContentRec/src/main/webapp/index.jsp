@@ -46,5 +46,10 @@ tr:nth-child(even) {
 			<td><a href="gamesRecommendationBasedOnMostVisitedSubTags"><h2>gamesRecommendationBasedOnMostVisitedSubTags</h2></a></td>
 		</tr>
 	</table>
+	<table>
+		<tr>
+			<td><a href="gamesRecommendationBasedOnFileSize"><h2>gamesRecommendationBasedOnFileSize</h2></a></td>
+		</tr>
+	</table>
 </body>
 </html>

@@ -21,5 +21,10 @@ public interface GameInfoDao {
 	public String getSubCategoryTagsByContentId(String parContentId);
 	
 	public String getFileSizeByContentId(String parContentId);
+	
+	public  List<GameInfo> getGameNameBySubTags(String parSubTag);
+
+	public List<GameInfo> getGameNameByFileSize(String parVisitorId);
+
 
 }

@@ -167,12 +167,39 @@ public class UserContentInfoDaoImpl implements UserContentInfoDao {
 	}
 
 	@Override
-	public List<GameCategoryScore> gamesSubTagsRecommendationByVisitorId(String parVisitorId) {
+	public List gamesSubTagsRecommendationByVisitorId(String parVisitorId) {
 		Session lSess = mSessionFactory.getCurrentSession();
+		String lTagName="Games";
 		Query lQueryToGetSubTagsName = lSess
-				.createQuery("FROM UserContentInfo WHERE mVisitorId=:Id ORDER BY mSubCategoryTagScore DESC");
+/*				.createQuery("SELECT mSubCategoryTagName FROM UserContentInfo WHERE mVisitorId=:Id");
+*/	.createQuery("SELECT mSubCategoryTagName FROM UserContentInfo WHERE mVisitorId=:Id and mSubCategoryTagName LIKE '%"+lTagName+"%'");
+
 		lQueryToGetSubTagsName.setParameter("Id", parVisitorId);
-		List<GameCategoryScore> lGameSubTagsScore = lQueryToGetSubTagsName.list();
+	///	lQueryToGetSubTagsName.setParameter("Tag",lTagName);
+		List lGameSubTagsName = lQueryToGetSubTagsName.list();
+		return lGameSubTagsName;
+	}
+
+	@Override
+	public List<UserContentInfo> getGamesSubTagsScore(String parVisitorId) {
+		Session lSess = mSessionFactory.getCurrentSession();
+		String lTagName="Games";
+		Query lQueryToGetSubTagsName = lSess
+				.createQuery("FROM UserContentInfo WHERE mVisitorId=:Id and mSubCategoryTagName LIKE '%"+lTagName+"%' ORDER BY mSubCategoryTagScore DESC");
+		lQueryToGetSubTagsName.setParameter("Id", parVisitorId);
+		List<UserContentInfo> lGameSubTagsScore = lQueryToGetSubTagsName.list();
+		return lGameSubTagsScore;
+	
+	}
+
+	@Override
+	public List<UserContentInfo> getGamesFileSizeScore(String parVisitorId) {
+		Session lSess = mSessionFactory.getCurrentSession();
+		String lTagName="Games";
+		Query lQueryToGetSubTagsName = lSess
+				.createQuery("FROM UserContentInfo WHERE mVisitorId=:Id and mFileSize LIKE '%MB'");
+		lQueryToGetSubTagsName.setParameter("Id", parVisitorId);
+		List<UserContentInfo> lGameSubTagsScore = lQueryToGetSubTagsName.list();
 		return lGameSubTagsScore;
 	}
 

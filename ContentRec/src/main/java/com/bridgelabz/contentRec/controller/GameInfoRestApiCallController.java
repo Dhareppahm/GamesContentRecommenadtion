@@ -74,6 +74,11 @@ public class GameInfoRestApiCallController {
 			mGbDeviceId = lProp.getProperty("gbDeviceId");
 			mGbAppVersionCode = lProp.getProperty("gbAppVersionCode");
 			mUrlString = lProp.getProperty("restCalURL");
+			System.out.println(mGbDeviceId);
+			System.out.println(mGbAppVersionCode);
+
+			System.out.println(mUrlString);
+
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		} finally {
@@ -160,7 +165,10 @@ public class GameInfoRestApiCallController {
 			Object contentReviewTotalObj = lItemObj.get("content_review_total");
 			long contentReviewTotal = (long) contentReviewTotalObj;
 			lGameInfo.setmContentReviewTotal(String.valueOf(contentReviewTotal));
-
+			
+			Object contentThumbnailUrlObj=lItemObj.get("content_thumbnail_url");
+			String contentThumbnailUrl=(String)contentThumbnailUrlObj;
+			lGameInfo.setmContentThumbnailUrl(contentThumbnailUrl);
 			mGameInfoService.saveGameInfo(lGameInfo);
 
 			conn.disconnect();

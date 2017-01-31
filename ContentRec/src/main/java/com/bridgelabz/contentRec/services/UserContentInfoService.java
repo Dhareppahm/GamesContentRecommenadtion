@@ -2,7 +2,6 @@ package com.bridgelabz.contentRec.services;
 
 import java.util.List;
 
-import com.bridgelabz.contentRec.model.GameCategoryScore;
 import com.bridgelabz.contentRec.model.UserContentInfo;
 
 public interface UserContentInfoService {
@@ -15,7 +14,7 @@ public interface UserContentInfoService {
 
 	public UserContentInfo SubCatgeoryTagExists(String parVisitorId, String parSubCategoryName);
 
-	public void addNewSubCategoryTag(String parVisitorId, String parSubCategoryName);
+	public void addNewSubCategoryTag(String parVisitorId, String parSubCategoryName,String parContentId);
 
 	public int UpdateSubCategoryTagScore(String parVisitorId, String parSubCategoryName);
 
@@ -25,5 +24,10 @@ public interface UserContentInfoService {
 
 	public int UpdateFileSizeScore(String parVisitorId, String parFileSize);
 	
-	public List<GameCategoryScore> gamesSubTagsRecommendationByVisitorId(String parVisitorId);
+	public List gamesSubTagsRecommendationByVisitorId(String parVisitorId);
+	
+	public List<UserContentInfo> getGamesSubTagsScore(String parVisitorId);
+	
+	public List<UserContentInfo> getGamesFileSizeScore(String parVisitorId);
+	
 }

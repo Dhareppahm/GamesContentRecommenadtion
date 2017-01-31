@@ -2,16 +2,23 @@ package com.bridgelabz.contentRec.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.bridgelabz.contentRec.model.GameCategoryScore;
+import com.bridgelabz.contentRec.model.GameInfo;
 import com.bridgelabz.contentRec.model.UserContentInfo;
 import com.bridgelabz.contentRec.services.GameInfoService;
 import com.bridgelabz.contentRec.services.UserContentInfoService;
@@ -28,8 +35,7 @@ public class UserContentInfoController {
 	@Autowired
 	UserContentInfoService mUserContentInfoService;
 	int mCategoryStatus;
-/*	int mCategorySubTagStatus;*/
-
+	/* int mCategorySubTagStatus; */
 
 	@RequestMapping(value = "/userContentInfo", method = RequestMethod.GET)
 	public String userContentInfo() {
@@ -39,7 +45,7 @@ public class UserContentInfoController {
 
 	@RequestMapping(value = "/userContentInfo", method = RequestMethod.POST)
 	public String getCatScore(@RequestParam("visitorId") String parVisitorId) {
-	
+
 		Properties lProp = new Properties();
 		String lFileName = "CategoryList.properties";
 
@@ -96,8 +102,9 @@ public class UserContentInfoController {
 						if (userContentInfo != null) {
 							mUserContentInfoService.UpdateSubCategoryTagScore(parVisitorId, subTags[i]);
 						} else {
-							mUserContentInfoService.addNewSubCategoryTag(parVisitorId, subTags[i]);
-							int mCategorySubTagStatus= mUserContentInfoService.UpdateSubCategoryTagScore(parVisitorId, subTags[i]);
+							mUserContentInfoService.addNewSubCategoryTag(parVisitorId, subTags[i],lContentId);
+							int mCategorySubTagStatus = mUserContentInfoService.UpdateSubCategoryTagScore(parVisitorId,
+									subTags[i]);
 						}
 					}
 					String lFileSize = mGameInfoService.getFileSizeByContentId(lContentId);
@@ -110,7 +117,7 @@ public class UserContentInfoController {
 						mUserContentInfoService.addNewFileSize(parVisitorId, lFileSize);
 						mUserContentInfoService.UpdateFileSizeScore(parVisitorId, lFileSize);
 					}
-					
+
 				}
 
 			} else {
@@ -129,9 +136,75 @@ public class UserContentInfoController {
 		return "UserContentInfo";
 
 	}
+
 	@RequestMapping(value = "/gamesRecommendationBasedOnMostVisitedSubTags", method = RequestMethod.GET)
 	public String dispalyVisitorFrom() {
 		return "getSubTagsScore";
+	}
+
+	@RequestMapping(value = "/gamesRecommendationBasedOnMostVisitedSubTags", method = RequestMethod.POST)
+	public ModelAndView gamesCategoryNameRecommendation(@RequestParam("visitorId") String parVisitorId,
+			Model parModel) {
+		// int lFlag = 0;
+		List lGameInfoList = new ArrayList();
+		List<UserContentInfo> lGameSubTagsSCore = mUserContentInfoService.getGamesSubTagsScore(parVisitorId);
+		Map<String, Object> lGameInfoAndSubTagsmap = new HashMap<String, Object>();
+		List lSubTagsList = mUserContentInfoService.gamesSubTagsRecommendationByVisitorId(parVisitorId);
+		for (Iterator iterator = lSubTagsList.iterator(); iterator.hasNext();) {
+			String lsubTagName = (String) iterator.next();
+
+			List<GameInfo> lGameInfo = mGameInfoService.getGameNameBySubTags(lsubTagName);
+			lGameInfoList.add(lGameInfo);
+
+/*			for (int k = 0; k < lGameInfo.size(); k++) {
+				String lContetnName = lGameInfo.get(k).getmContentName();
+				System.out.println("Object-->" + lContetnName);
+				// lGameInfoList.add(lGameInfo);
+				for (int i = 0; i < lGameInfoList.size(); i++) {
+
+					List<GameInfo> game = (List<GameInfo>) lGameInfoList.get(i);
+					String lContentNameInList = game.get(i).getmContentName();
+					System.out.println("List-->" + lContentNameInList);
+
+					if (lContetnName.equals(lContentNameInList)) {
+						lFlag = 1;
+
+					} else {
+						continue;
+					}
+					if (lFlag != 1) {
+						System.out.println("Added");
+						lGameInfoList.add(lGameInfo);
+					}
+				}
+
+			}*/
+		}
+		parModel.addAttribute("visitorID", parVisitorId);
+		lGameInfoAndSubTagsmap.put("Subtags", lGameSubTagsSCore);
+		lGameInfoAndSubTagsmap.put("GameInfo", lGameInfoList);
+
+		return new ModelAndView("GameInfoo", "GameInfoAndSubTagsmap",
+				lGameInfoAndSubTagsmap);
+	}
+	
+	@RequestMapping(value = "/gamesRecommendationBasedOnFileSize", method = RequestMethod.POST)
+	public ModelAndView gamesRecommendationBasedOnFileSize(@RequestParam("visitorId") String parVisitorId,
+			Model parModel) {
+		List<UserContentInfo> lGameFileSizeScore = mUserContentInfoService
+				.getGamesFileSizeScore(parVisitorId);
+		parModel.addAttribute("visitorID", parVisitorId);
+		List<GameInfo> lGameInfo = mGameInfoService.getGameNameByFileSize(parVisitorId);
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("gameFileScore", lGameFileSizeScore);
+		map.put("gameInfo", lGameInfo);
+		return new ModelAndView("gamesRecommendationBasedOnFileSize", "map", map);
+	}
+	
+	@RequestMapping(value = "/gamesRecommendationBasedOnFileSize", method = RequestMethod.GET)
+	public String gamesRecommendationBasedOnFileSizeVisitorForm() {
+		return "gamesRecommendationBasedOnFileSizeVisitorForm";
+
 	}
 
 }

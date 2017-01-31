@@ -25,7 +25,7 @@ tr:nth-child(even) {
 <body>
 
 	<h2 align="left">Enter the Visitor Id</h2>
-	<form method="post" action="getCategoryScore">
+	<form method="post" action="gamesRecommendationBasedOnFileSize">
 		<table>
 			<tr>
 				<td>Visitor Id</td>

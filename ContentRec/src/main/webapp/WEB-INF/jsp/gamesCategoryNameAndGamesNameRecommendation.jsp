@@ -11,7 +11,7 @@ table {
 
 td, th {
 	border: 1px solid #dddddd;
-	text-align: left;
+	text-align: center;
 	padding: 8px;
 }
 
@@ -21,7 +21,7 @@ tr:nth-child(even) {
 </style>
 </head>
 <table>
-	<h2 align="left">Recommended game categories for visitor
+	<h2 align="left">Recommended game categories and score for visitor
 		ID:${visitorID}</h2>
 	<tr>
 		<th>Visitor Id</th>
@@ -42,6 +42,7 @@ tr:nth-child(even) {
 	category history</h2>
 <table>
 	<tr>
+	<th>Game Image</th>
 		<th>Game Name</th>
 		<th>Game Rating</th>
 		<th>File Size</th>
@@ -49,6 +50,7 @@ tr:nth-child(even) {
 	</tr>
 	<c:forEach var="gameInfo" items="${map.gameInfo}">
 		<tr>
+				<td><img src="${gameInfo.mContentThumbnailUrl}" width="150px" height="150px"/></td>
 			<td>${gameInfo.mContentName}</td>
 			<td>${gameInfo.mContentRating}</td>
 			<td>${gameInfo.mFileSize}</td>
