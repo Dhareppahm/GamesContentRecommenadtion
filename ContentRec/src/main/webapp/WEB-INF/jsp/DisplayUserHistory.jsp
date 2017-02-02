@@ -1,7 +1,7 @@
-
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
+<title>User download and view history</title>
 <style>
 table {
 	font-family: arial, sans-serif;

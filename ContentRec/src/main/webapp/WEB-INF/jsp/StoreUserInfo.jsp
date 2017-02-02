@@ -1,40 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
-<style>
-table {
-	font-family: arial, sans-serif;
-	border-collapse: collapse;
-	width: 25%;
-}
-
-td, th {
-	border: 1px solid #dddddd;
-	text-align: left;
-	padding: 15px;
-}
-
-tr:nth-child(even) {
-	background-color: #dddddd;
-}
-</style>
+<title>Game Information Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
-<body>
 
-	<h2 align="left">Enter the Content Id</h2>
-	<form method="post" action="storeUserDatatoDb">
-		<table>
-			<tr>
-				<td>Content ID</td>
-				<td><input type="text" name="contentId" required />
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" value="SUBMIT" /></td>
-			</tr>
-		</table>
+<body>
+	<br>
+	<br>
+	<form class="form-inline" action="storeUserDatatoDb" method="post">
+		<div class="form-group mx-sm-3">
+			<input type="text" class="form-control"
+				placeholder="Content ID" name="contentId" required/>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 </body>
 </html>
+

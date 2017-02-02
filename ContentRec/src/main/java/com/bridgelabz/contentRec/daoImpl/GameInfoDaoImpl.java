@@ -48,7 +48,8 @@ public class GameInfoDaoImpl implements GameInfoDao {
 	public List<GameInfo> getGameNameByGameCategory(String parVisitorId) {
 		Session sess = sessionFactory.getCurrentSession();
 		Query qry = sess.createQuery(
-				"FROM GameInfo WHERE mCategoryName IN(select mCategoryName FROM GameCategoryScore WHERE mVisitorId=:id)");
+				"FROM GameInfo WHERE mCategoryName IN(select mCategoryName FROM GameCategoryScore WHERE mVisitorId=:id)"
+						+ " " + "ORDER BY mContentRating DESC");
 		qry.setParameter("id", parVisitorId);
 		List<GameInfo> gameInfo = qry.list();
 		return gameInfo;
@@ -60,7 +61,7 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		Session sess = sessionFactory.getCurrentSession();
 		Query qry = sess.createQuery("select mMetaTags from GameInfo where mContentId=:id");
 		qry.setParameter("id", parContentId);
-		String gameInfo = (String)qry.uniqueResult();
+		String gameInfo = (String) qry.uniqueResult();
 		return gameInfo;
 	}
 
@@ -69,17 +70,16 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		Session sess = sessionFactory.getCurrentSession();
 		Query qry = sess.createQuery("select mFileSize from GameInfo where mContentId=:id");
 		qry.setParameter("id", parContentId);
-		String gameInfo = (String)qry.uniqueResult();
+		String gameInfo = (String) qry.uniqueResult();
 		return gameInfo;
 	}
 
 	@Override
-	public  List<GameInfo> getGameNameBySubTags(String parSubTag) {
+	public List<GameInfo> getGameNameBySubTags(String parSubTag) {
 		Session sess = sessionFactory.getCurrentSession();
 		Query qry = sess.createQuery(
-				"FROM GameInfo WHERE mMetaTags LIKE '%"+parSubTag+"%'");
-		//qry.setParameter("id", parVisitorId);
-		 List<GameInfo> gameInfo =qry.list();
+				"FROM GameInfo WHERE mMetaTags LIKE '%" + parSubTag + "%'"+" "+"ORDER BY mTotalDownloads DESC");
+		List<GameInfo> gameInfo = qry.list();
 		return gameInfo;
 	}
 
@@ -87,7 +87,7 @@ public class GameInfoDaoImpl implements GameInfoDao {
 	public List<GameInfo> getGameNameByFileSize(String parVisitorId) {
 		Session sess = sessionFactory.getCurrentSession();
 		Query qry = sess.createQuery(
-				"FROM GameInfo WHERE mFileSize IN(select mFileSize FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:id)");
+				"FROM GameInfo WHERE mFileSize IN(select mFileSize FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:id) ORDER BY mContentRating DESC");
 		qry.setParameter("id", parVisitorId);
 		List<GameInfo> gameInfo = qry.list();
 		return gameInfo;

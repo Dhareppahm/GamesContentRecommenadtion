@@ -23,6 +23,7 @@ public interface GameInfoDao {
 	public  List<GameInfo> getGameNameBySubTags(String parSubTag);
 
 	public List<GameInfo> getGameNameByFileSize(String parVisitorId);
+	
 
 
 }

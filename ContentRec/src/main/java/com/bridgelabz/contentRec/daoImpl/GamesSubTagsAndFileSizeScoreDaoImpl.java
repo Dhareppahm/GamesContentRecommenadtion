@@ -172,7 +172,7 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		Session lSess = mSessionFactory.getCurrentSession();
 		String lTagName = "Games";
 		Query lQueryToGetSubTagsName = lSess.createQuery(
-				"SELECT mSubCategoryTagName FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:Id and mSubCategoryTagName LIKE '%"+ lTagName + "%'");
+				"SELECT mSubCategoryTagName FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:Id and mSubCategoryTagName LIKE '%"+ lTagName + "%' ORDER BY mSubCategoryTagScore DESC");
 		lQueryToGetSubTagsName.setParameter("Id", parVisitorId);
 		List lGameSubTagsName = lQueryToGetSubTagsName.list();
 		return lGameSubTagsName;
@@ -196,7 +196,7 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		Session lSess = mSessionFactory.getCurrentSession();
 		String lTagName = "Games";
 		Query lQueryToGetSubTagsName = lSess
-				.createQuery("FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:Id and mFileSize LIKE '%MB'");
+				.createQuery("FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:Id and mFileSize LIKE '%MB' ORDER BY mFileSizeScore DESC");
 		lQueryToGetSubTagsName.setParameter("Id", parVisitorId);
 		List<GamesSubTagsAndFileSizeScore> lGameSubTagsScore = lQueryToGetSubTagsName.list();
 		return lGameSubTagsScore;

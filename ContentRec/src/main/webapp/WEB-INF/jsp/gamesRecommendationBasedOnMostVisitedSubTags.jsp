@@ -4,6 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<title>Games recommendation based on most visited sub tags</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -30,6 +31,15 @@ tr:nth-child(even) {
 	$(window).load(function() {
 		$(".loader").fadeOut("slow");
 	})
+	function bigImg(x) {
+		x.style.height = "280px";
+		x.style.width = "280px";
+	}
+
+	function normalImg(x) {
+		x.style.height = "200px";
+		x.style.width = "200px";
+	}
 </script>
 </head>
 <body>
@@ -37,18 +47,18 @@ tr:nth-child(even) {
 	<div class="loader"></div>
 	<br>
 	<table>
-	<h3 align="left">Games Content Recommendation</h3>
-	<tr>
-		<th>Content Recommendation Based On:</th>
-		<td><h4>Recent Searched Game Sub Tags History</h4></td>
-	</tr>
+		<h3 align="left">Games Content Recommendation</h3>
+		<tr>
+			<th>Content Recommendation Based On:</th>
+			<td><h4>Recent Searched Game Sub Tags History</h4></td>
+		</tr>
 
-</table>
+	</table>
 	<!-- BootStrap Card to display Image and Info -->
 	<table>
 		<tr>
 			<th>Visitor Id</th>
-			<th>Sub Tag Name</th>
+			<th>Recommended Searches</th>
 			<th>Sub Tag Score</th>
 		</tr>
 		<tr>
@@ -62,7 +72,8 @@ tr:nth-child(even) {
 
 	</table>
 	<br>
-	<h3>Recommended games:</h3>
+	<h3>Related games:</h3>
+	<h4 style="color: RED">[Priority Based on TotalDownloads]</h4>
 	<!-- BootStrap Card to display Image and Info -->
 	<br>
 	<div class="container">
@@ -71,16 +82,20 @@ tr:nth-child(even) {
 				<c:forEach var="game" items="${gameInfo}">
 					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-4"
 						style="margin-top: 20px;">
-						<img class="card-img-top" height="200px" width="200px"
+						<img onmouseover="bigImg(this)" onmouseout="normalImg(this)"
+							border="0" class="img-rounded"
 							src="${game.mContentThumbnailUrl}" alt="Card image cap">
 						<div class="card-block">
 							<h4 class="card-title">${game.mContentName}</h4>
-							 Rating:
+							Rating:
 							<p class="card-text">${game.mContentRating}</p>
 							File Size:
 							<p class="card-text">${game.mFileSize}</p>
 							Total Downloads:
 							<p class="card-text">${game.mTotalDownloads}</p>
+							<a href="${game.mContentDownloadUrl}" class="btn btn-info">Read
+								more..</a>
+
 						</div>
 					</div>
 				</c:forEach>
