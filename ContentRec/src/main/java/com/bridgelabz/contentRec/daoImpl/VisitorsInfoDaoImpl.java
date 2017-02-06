@@ -7,6 +7,7 @@ package com.bridgelabz.contentRec.daoImpl;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -21,6 +22,8 @@ import com.bridgelabz.contentRec.model.VisitorsInfo;
 public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 	@Autowired
 	SessionFactory mSessionFactory;
+	
+	Logger mLogger = Logger.getLogger("VISITORSINFORMATIONDAOIMPL");
 
 	public void addVisitors(VisitorsInfo visitorsInfo) {
 

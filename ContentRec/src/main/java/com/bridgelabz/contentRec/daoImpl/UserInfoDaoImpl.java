@@ -7,6 +7,7 @@ package com.bridgelabz.contentRec.daoImpl;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -23,6 +24,7 @@ public class UserInfoDaoImpl implements UserInfoDao {
 	@Autowired
 	SessionFactory mSessionFactory;
 
+	Logger mLogger = Logger.getLogger("USERINFORMATIONDAOIMPL");
 	@Override
 	public void saveGameInfo(UserInfo parUserInfo) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -40,7 +42,6 @@ public class UserInfoDaoImpl implements UserInfoDao {
 		Query qry = lSess.createQuery("from UserInfo where mUserId=:id");
 		qry.setParameter("id", parVisitorId);
 		List<UserInfo> lUserInfo = qry.list();
-	/*	lUserInfo.get(1).get */
 		return lUserInfo;
 
 	}

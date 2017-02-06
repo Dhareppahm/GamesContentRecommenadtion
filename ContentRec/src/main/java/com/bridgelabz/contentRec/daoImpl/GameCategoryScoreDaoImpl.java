@@ -7,6 +7,7 @@ package com.bridgelabz.contentRec.daoImpl;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -26,6 +27,7 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 	@Autowired
 	SessionFactory mSessionFactory;
 
+	Logger mLogger = Logger.getLogger("GAMECATEGORYSCOREDAOIMPL");
 	@Override
 	public GameCategoryScore CatgeoryExists(String parVisitorId, String parCategoryName) {
 		Session lSess = mSessionFactory.getCurrentSession();

@@ -23,8 +23,6 @@ public class GameInfoServiceImpl implements GameInfoService {
 
 	}
 
-
-
 	@Override
 	public List<GameInfo> getGameInfoByContentId(String parContentId) {
 		List<GameInfo> lGameInfo = mGameInfoDao.getGameInfoByContentId(parContentId);
@@ -39,26 +37,26 @@ public class GameInfoServiceImpl implements GameInfoService {
 
 	@Override
 	public String getSubCategoryTagsByContentId(String parContentId) {
-		String lSubCategoryTags=mGameInfoDao.getSubCategoryTagsByContentId(parContentId);
+		String lSubCategoryTags = mGameInfoDao.getSubCategoryTagsByContentId(parContentId);
 		return lSubCategoryTags;
 	}
 
 	@Override
 	public String getFileSizeByContentId(String parContentId) {
-		String lFileSize=mGameInfoDao.getFileSizeByContentId(parContentId);
+		String lFileSize = mGameInfoDao.getFileSizeByContentId(parContentId);
 		return lFileSize;
 	}
 
 	@Override
 	public List<GameInfo> getGameNameBySubTags(String parSubTag) {
-		 List<GameInfo> lGameNameList=mGameInfoDao.getGameNameBySubTags(parSubTag);
+		List<GameInfo> lGameNameList = mGameInfoDao.getGameNameBySubTags(parSubTag);
 		return lGameNameList;
 	}
 
 	@Override
 	public List<GameInfo> getGameNameByFileSize(String parVisitorId) {
-		List<GameInfo> lGameNames=mGameInfoDao.getGameNameByFileSize(parVisitorId);
-		
+		List<GameInfo> lGameNames = mGameInfoDao.getGameNameByFileSize(parVisitorId);
+
 		return lGameNames;
 	}
 

@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,8 @@ import com.bridgelabz.contentRec.services.VisitorsInfoService;
 public class VisitorsInfoController {
 	@Autowired
 	VisitorsInfoService mVisitorsInfoService;
+	
+	Logger mLogger = Logger.getLogger("VISITORSINFORMATIONCONTROLLER");
 
 	@RequestMapping(value = "/uploadCSVToDb", method = RequestMethod.GET)
 	public String dispalyGameInfo() {

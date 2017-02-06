@@ -34,7 +34,7 @@ public class GameInformationController {
 	String mGbDeviceId;
 	String mGbAppVersionCode;
 	String mUrlString;
-	Logger mLogger = Logger.getLogger("GAMEINFO");
+	Logger mLogger = Logger.getLogger("GAMEINFORMATIONCONTROLLER");
 	@Autowired
 	private GameInfoService mGameInfoService;
 
@@ -92,11 +92,11 @@ public class GameInformationController {
 		}
 
 		GameInfo lGameInfo = new GameInfo();
-		/* REST call to fetch JSON properties */
 		try {
-			URL lUrl = new URL(mUrlString);
+			String uurl="http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=contentDetail&params={%22contentid%22:"+ parContId + ",%22additionalParam%22:{%22reviews%22:{%22start%22:0,%22limit%22:10}}}";
+			URL lUrl = new URL(uurl);
 			HttpURLConnection conn = (HttpURLConnection) lUrl.openConnection();
-
+			mLogger.info("Method : fetchAndSaveGameData "+uurl);
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");
 			System.out.println(parContId);

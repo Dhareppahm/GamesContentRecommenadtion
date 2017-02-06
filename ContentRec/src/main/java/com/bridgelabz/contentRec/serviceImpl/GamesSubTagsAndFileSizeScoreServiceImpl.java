@@ -27,9 +27,6 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		lCategoryScore.setmVisitorId(parVisitorId);
 		lCategoryScore.setmCategoryName(parCategoryName);
 		lCategoryScore.setmFileSize("No file size");
-		// lCategoryScore.setmFileSizeScore(mFileSizeScore);
-		// lCategoryScore.setmCategoryScore(mCategoryScore);
-		// lCategoryScore.setmSubCategoryTagScore(mSubCategoryTagScore);
 		lCategoryScore.setmSubCategoryTagName("No sub tag");
 		mGamesSubTagsAndFileSizeScoreDao.addNewCategory(lCategoryScore);
 
@@ -55,10 +52,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		lSubCategoryScore.setmVisitorId(parVisitorId);
 		lSubCategoryScore.setmSubCategoryTagName(parSubCategoryName);
 		lSubCategoryScore.setmCategoryName("No category Name");
-		// lSubCategoryScore.setmCategoryScore(0);
 		lSubCategoryScore.setmFileSize("No file size");
-		// lSubCategoryScore.setmFileSizeScore(mFileSizeScore);
-		// lSubCategoryScore.setmSubCategoryTagScore(mSubCategoryTagScore);
 		mGamesSubTagsAndFileSizeScoreDao.addNewSubCategoryTag(lSubCategoryScore);
 	}
 
@@ -79,12 +73,8 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		GamesSubTagsAndFileSizeScore lUserContentInfo = new GamesSubTagsAndFileSizeScore();
 		lUserContentInfo.setmCategoryName("No category");
 		lUserContentInfo.setmCategoryType("File size");
-		// lUserContentInfo.setmCategoryScore(mCategoryScore);
-		// lUserContentInfo.setmFileSizeScore(mFileSizeScore);
-		// lUserContentInfo.setmSubCategoryTagScore(mSubCategoryTagScore);
 		lUserContentInfo.setmVisitorId(parVisitorId);
 		lUserContentInfo.setmFileSize(parFileSize);
-		// lUserContentInfo.setmCategoryScore(mCategoryScore);
 		lUserContentInfo.setmSubCategoryTagName("No sub tag");
 		lUserContentInfo.setmContentId("No content id");
 		mGamesSubTagsAndFileSizeScoreDao.addNewFileSize(lUserContentInfo);

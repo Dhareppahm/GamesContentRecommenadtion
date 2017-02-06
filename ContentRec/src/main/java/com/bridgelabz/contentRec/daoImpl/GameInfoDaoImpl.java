@@ -7,6 +7,7 @@ package com.bridgelabz.contentRec.daoImpl;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -25,6 +26,8 @@ import com.bridgelabz.contentRec.model.GameInfo;
 public class GameInfoDaoImpl implements GameInfoDao {
 	@Autowired
 	SessionFactory sessionFactory;
+	
+	Logger mLogger = Logger.getLogger("GAMEINFORMATIONDAOIMPL");
 
 	public void saveGameInfo(GameInfo parGameInfo) {
 		Session sess = sessionFactory.getCurrentSession();

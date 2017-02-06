@@ -2,6 +2,7 @@ package com.bridgelabz.contentRec.daoImpl;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -21,6 +22,8 @@ import com.bridgelabz.contentRec.model.GamesSubTagsAndFileSizeScore;
 public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileSizeScoreDao {
 	@Autowired
 	SessionFactory mSessionFactory;
+	
+	Logger mLogger = Logger.getLogger("GAMESUBTAGSANDFILESIZESCOREDAOIMPL");
 
 	@Override
 	public GamesSubTagsAndFileSizeScore CatgeoryExists(String parVisitorId, String parCategoryName) {
