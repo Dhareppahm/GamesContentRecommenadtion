@@ -17,11 +17,26 @@ public class UserInfoServiceImpl implements UserInfoService {
 	@Autowired
 	UserInfoDao mUserInfoDao;
 
+	/**
+	 * This method is used to save visitor information
+	 * 
+	 * @param UserInfo,
+	 *            is the first parameter for this method contains visitor
+	 *            information
+	 */
 	@Override
 	public void saveUserInfo(UserInfo parUserInfo) {
 		mUserInfoDao.saveGameInfo(parUserInfo);
 
 	}
+
+	/**
+	 * This method is used to get visitor history
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return List<UserInfo>,list of user informations
+	 */
 
 	@Override
 	public List<UserInfo> getVisitorHistoryByVisitorId(String parVisitorId) {

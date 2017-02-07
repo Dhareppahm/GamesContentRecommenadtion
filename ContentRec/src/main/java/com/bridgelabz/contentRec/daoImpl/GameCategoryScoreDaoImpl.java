@@ -28,14 +28,25 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 	SessionFactory mSessionFactory;
 
 	Logger mLogger = Logger.getLogger("GAMECATEGORYSCOREDAOIMPL");
+
+	/**
+	 * This method is used to check the game category exists or not
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains category name
+	 * @return GameCategoryScore,GameCategoryScore object
+	 */
 	@Override
 	public GameCategoryScore CatgeoryExists(String parVisitorId, String parCategoryName) {
 		Session lSess = mSessionFactory.getCurrentSession();
 		try {
 			Criteria lCriteria = lSess.createCriteria(GameCategoryScore.class);
 
-			GameCategoryScore lCategoryScore = (GameCategoryScore) lCriteria.add(Restrictions.conjunction()
-					.add(Restrictions.eq("mVisitorId", parVisitorId)).add(Restrictions.eq("mCategoryName", parCategoryName)))
+			GameCategoryScore lCategoryScore = (GameCategoryScore) lCriteria
+					.add(Restrictions.conjunction().add(Restrictions.eq("mVisitorId", parVisitorId))
+							.add(Restrictions.eq("mCategoryName", parCategoryName)))
 					.uniqueResult();
 			return lCategoryScore;
 		} catch (HibernateException e) {
@@ -44,6 +55,14 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 		return null;
 	}
 
+	/**
+	 * This method is used to add new game category
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains category name
+	 */
 	@Override
 	public void addNewCategory(GameCategoryScore mGameCategoryScore) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -56,6 +75,15 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 
 	}
 
+	/**
+	 * This method is used to add update the game category score
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains category name
+	 * @return Integer,status of the query
+	 */
 	@Override
 	public int UpdateCategoryScore(String parVisitorId, String parCategoryName) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -66,8 +94,8 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 		long categoryScore = (long) lQueryForToGetCategoryScore.uniqueResult();
 		categoryScore = categoryScore + 1;
 
-		Query lQueryForToUpdateCategoryScore = lSess
-				.createQuery("update GameCategoryScore set mCatMarks=:score where mVisitorId=:id and mCategoryName=:CatName");
+		Query lQueryForToUpdateCategoryScore = lSess.createQuery(
+				"update GameCategoryScore set mCatMarks=:score where mVisitorId=:id and mCategoryName=:CatName");
 		lQueryForToUpdateCategoryScore.setParameter("score", categoryScore);
 		lQueryForToUpdateCategoryScore.setParameter("id", parVisitorId);
 		lQueryForToUpdateCategoryScore.setParameter("CatName", parCategoryName);
@@ -75,6 +103,14 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 		return lStatus;
 	}
 
+	/**
+	 * This method is used to recommend game category name to visitor by
+	 * visitorId
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @return List<GameCategoryScore>,list game category names
+	 */
 	@Override
 	public List<GameCategoryScore> gamesCategoryNamesRecommendationByVisitorId(String parVisitorId) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -86,6 +122,13 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 
 	}
 
+	/**
+	 * This method is used to get game category name byvisitorId
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @return List<GameCategoryScore>,list game category names
+	 */
 	@Override
 	public List getCategoryNameByVisitorId(String parVisitorId) {
 		Session lSess = mSessionFactory.getCurrentSession();

@@ -13,11 +13,30 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 	@Autowired
 	GamesSubTagsAndFileSizeScoreDao mGamesSubTagsAndFileSizeScoreDao;
 
+	/**
+	 * This method is used to check the game category exists or not
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains category name
+	 * @return GamesSubTagsAndFileSizeScore,GamesSubTagsAndFileSizeScore object
+	 */
 	@Override
 	public GamesSubTagsAndFileSizeScore CatgeoryExists(String parVisitorId, String parCategoryName) {
-		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao.CatgeoryExists(parVisitorId, parCategoryName);
+		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao.CatgeoryExists(parVisitorId,
+				parCategoryName);
 		return lUserContentInfo;
 	}
+
+	/**
+	 * This method is used to add new game category
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains category name
+	 */
 
 	@Override
 	public void addNewCategory(String parVisitorId, String parCategoryName) {
@@ -32,20 +51,51 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 
 	}
 
+	/**
+	 * This method is used to add update the game category score
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains category name
+	 * @return Integer,status of the query
+	 */
+
 	@Override
 	public int UpdateCategoryScore(String parVisitorId, String parCategoryName) {
 		int mStatus = mGamesSubTagsAndFileSizeScoreDao.UpdateCategoryScore(parVisitorId, parCategoryName);
 		return mStatus;
 	}
 
+	/**
+	 * This method is used to check the game sub tag exists or not
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains sub tag name
+	 * @return GamesSubTagsAndFileSizeScore,GamesSubTagsAndFileSizeScore object
+	 */
 	@Override
 	public GamesSubTagsAndFileSizeScore SubCatgeoryTagExists(String parVisitorId, String parSubCategoryName) {
-		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao.SubCatgeoryTagExists(parVisitorId, parSubCategoryName);
+		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao
+				.SubCatgeoryTagExists(parVisitorId, parSubCategoryName);
 		return lUserContentInfo;
 	}
 
+	/**
+	 * This method is used to add new game sub tag
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains sub tag name
+	 * @param String,is
+	 *            third parameter for this method contains content ID
+	 */
+
 	@Override
-	public void addNewSubCategoryTag(String parVisitorId, String parSubCategoryName,String parContentId) {
+	public void addNewSubCategoryTag(String parVisitorId, String parSubCategoryName, String parContentId) {
 		GamesSubTagsAndFileSizeScore lSubCategoryScore = new GamesSubTagsAndFileSizeScore();
 		lSubCategoryScore.setmContentId(parContentId);
 		lSubCategoryScore.setmCategoryType("Tag");
@@ -56,17 +106,48 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		mGamesSubTagsAndFileSizeScoreDao.addNewSubCategoryTag(lSubCategoryScore);
 	}
 
+	/**
+	 * This method is used to update the sub tag score
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains sub tag name
+	 * @return Integer,status of the query
+	 * 
+	 */
+
 	@Override
 	public int UpdateSubCategoryTagScore(String parVisitorId, String parSubCategoryName) {
 		int mStatus = mGamesSubTagsAndFileSizeScoreDao.UpdateSubCategoryScoreTag(parVisitorId, parSubCategoryName);
 		return mStatus;
 	}
 
+	/**
+	 * This method is used to check the game file size exists or not
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains file size
+	 * @return GamesSubTagsAndFileSizeScore,GamesSubTagsAndFileSizeScore object
+	 */
+
 	@Override
 	public GamesSubTagsAndFileSizeScore FileSizeExists(String parVisitorId, String parFileSize) {
-		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao.FileSizeExists(parVisitorId, parFileSize);
+		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao.FileSizeExists(parVisitorId,
+				parFileSize);
 		return lUserContentInfo;
 	}
+
+	/**
+	 * This method is used to add new game file size
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains file size
+	 */
 
 	@Override
 	public void addNewFileSize(String parVisitorId, String parFileSize) {
@@ -81,28 +162,64 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 
 	}
 
+	/**
+	 * This method is used to update the file size score
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains file size
+	 * @return Integer,status of the query
+	 * 
+	 */
+
 	@Override
 	public int UpdateFileSizeScore(String parVisitorId, String parFileSize) {
 		int status = mGamesSubTagsAndFileSizeScoreDao.UpdateFileSizeScore(parVisitorId, parFileSize);
 		return status;
 	}
 
+	/**
+	 * This method is used to recommend the game sub tags by visitor ID
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @return List,list of sub tag names
+	 * 
+	 */
+
 	@Override
 	public List gamesSubTagsRecommendationByVisitorId(String parVisitorId) {
-		List lSubTagsList=mGamesSubTagsAndFileSizeScoreDao.gamesSubTagsRecommendationByVisitorId(parVisitorId);
+		List lSubTagsList = mGamesSubTagsAndFileSizeScoreDao.gamesSubTagsRecommendationByVisitorId(parVisitorId);
 		return lSubTagsList;
 	}
 
+	/**
+	 * This method is used to get sub tags score by visitor ID
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @return List<GamesSubTagsAndFileSizeScore>,list of sub tags score
+	 * 
+	 */
 	@Override
 	public List<GamesSubTagsAndFileSizeScore> getGamesSubTagsScore(String parVisitorId) {
-		
-		List<GamesSubTagsAndFileSizeScore> lSubTagsScore=mGamesSubTagsAndFileSizeScoreDao.getGamesSubTagsScore(parVisitorId);
+		List<GamesSubTagsAndFileSizeScore> lSubTagsScore = mGamesSubTagsAndFileSizeScoreDao
+				.getGamesSubTagsScore(parVisitorId);
 		return lSubTagsScore;
 	}
 
+	/**
+	 * This method is used to get file size score by visitor ID
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @return List<GamesSubTagsAndFileSizeScore>,list file size score
+	 */
 	@Override
 	public List<GamesSubTagsAndFileSizeScore> getGamesFileSizeScore(String parVisitorId) {
-		List<GamesSubTagsAndFileSizeScore> lGamesFileSizeScore=mGamesSubTagsAndFileSizeScoreDao.getGamesFileSizeScore(parVisitorId);
+		List<GamesSubTagsAndFileSizeScore> lGamesFileSizeScore = mGamesSubTagsAndFileSizeScoreDao
+				.getGamesFileSizeScore(parVisitorId);
 		return lGamesFileSizeScore;
 	}
 

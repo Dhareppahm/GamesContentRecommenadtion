@@ -23,35 +23,42 @@ public class GameCategoryScore {
 	@Column(name = "Id")
 	public int mId;
 	@Column(name = "Visitor_Id")
-	public String mVisitorId;
+	public String mVisitorId;// visitor ID
 	@Column(name = "Category_Name")
-	public String mCategoryName;
+	public String mCategoryName;// game category name
 	@Column(name = "Cat_Marks")
-	public long mCatMarks;
+	public long mCatMarks;// game category score
+
 	public int getmId() {
 		return mId;
 	}
+
 	public void setmId(int mId) {
 		this.mId = mId;
 	}
+
 	public String getmVisitorId() {
 		return mVisitorId;
 	}
+
 	public void setmVisitorId(String mVisitorId) {
 		this.mVisitorId = mVisitorId;
 	}
+
 	public String getmCategoryName() {
 		return mCategoryName;
 	}
+
 	public void setmCategoryName(String mCategoryName) {
 		this.mCategoryName = mCategoryName;
 	}
+
 	public long getmCatMarks() {
 		return mCatMarks;
 	}
+
 	public void setmCatMarks(long mCatMarks) {
 		this.mCatMarks = mCatMarks;
 	}
-
 
 }

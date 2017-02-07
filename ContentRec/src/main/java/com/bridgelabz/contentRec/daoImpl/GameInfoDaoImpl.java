@@ -26,9 +26,15 @@ import com.bridgelabz.contentRec.model.GameInfo;
 public class GameInfoDaoImpl implements GameInfoDao {
 	@Autowired
 	SessionFactory sessionFactory;
-	
+
 	Logger mLogger = Logger.getLogger("GAMEINFORMATIONDAOIMPL");
 
+	/**
+	 * This method is used to save game information
+	 * 
+	 * @param GameInfo,is
+	 *            the first parameter for this method contains game information
+	 */
 	public void saveGameInfo(GameInfo parGameInfo) {
 		Session sess = sessionFactory.getCurrentSession();
 		try {
@@ -39,6 +45,13 @@ public class GameInfoDaoImpl implements GameInfoDao {
 
 	}
 
+	/**
+	 * This method is used to get game information by content Id
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains content Id
+	 * @return List<GameInfo>,list game information
+	 */
 	public List<GameInfo> getGameInfoByContentId(String parContentId) {
 		Session sess = sessionFactory.getCurrentSession();
 		Query qry = sess.createQuery("from GameInfo where mContentId=:id");
@@ -47,6 +60,13 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		return gameInfo;
 	}
 
+	/**
+	 * This method is used to get game name by category name
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return List<GameInfo>,list game information
+	 */
 	@Override
 	public List<GameInfo> getGameNameByGameCategory(String parVisitorId) {
 		Session sess = sessionFactory.getCurrentSession();
@@ -58,6 +78,13 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		return gameInfo;
 	}
 
+	/**
+	 * This method is used to get sub tags by content Id
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains content Id
+	 * @return String,sub tag name
+	 */
 	@Override
 	public String getSubCategoryTagsByContentId(String parContentId) {
 
@@ -68,6 +95,13 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		return gameInfo;
 	}
 
+	/**
+	 * This method is used to get file size by content Id
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains content Id
+	 * @return String,file size
+	 */
 	@Override
 	public String getFileSizeByContentId(String parContentId) {
 		Session sess = sessionFactory.getCurrentSession();
@@ -77,15 +111,29 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		return gameInfo;
 	}
 
+	/**
+	 * This method is used to get game name by sub tag
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains sub tag name
+	 * @return List<GameInfo>,list of game names
+	 */
 	@Override
 	public List<GameInfo> getGameNameBySubTags(String parSubTag) {
 		Session sess = sessionFactory.getCurrentSession();
 		Query qry = sess.createQuery(
-				"FROM GameInfo WHERE mMetaTags LIKE '%" + parSubTag + "%'"+" "+"ORDER BY mTotalDownloads DESC");
+				"FROM GameInfo WHERE mMetaTags LIKE '%" + parSubTag + "%'" + " " + "ORDER BY mTotalDownloads DESC");
 		List<GameInfo> gameInfo = qry.list();
 		return gameInfo;
 	}
 
+	/**
+	 * This method is used to get game name by file size
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains file size
+	 * @return List<GameInfo>,list of game names
+	 */
 	@Override
 	public List<GameInfo> getGameNameByFileSize(String parVisitorId) {
 		Session sess = sessionFactory.getCurrentSession();

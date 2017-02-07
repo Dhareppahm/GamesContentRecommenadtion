@@ -12,8 +12,10 @@ import com.bridgelabz.contentRec.model.UserInfo;
 
 public interface UserInfoService {
 
+	// This method is used to save game information.
 	public void saveUserInfo(UserInfo parUserInfo);
 
+	// This method is used to get visitor history.
 	public List<UserInfo> getVisitorHistoryByVisitorId(String parVisitorId);
 
 }

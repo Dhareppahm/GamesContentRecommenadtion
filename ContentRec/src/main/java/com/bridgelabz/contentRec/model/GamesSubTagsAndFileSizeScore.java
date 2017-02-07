@@ -17,23 +17,23 @@ public class GamesSubTagsAndFileSizeScore {
 	@Column(name = "id")
 	public int mId;
 	@Column(name = "visitor_Id")
-	public String mVisitorId;
+	public String mVisitorId;// visitor Id
 	@Column(name = "category_Type")
-	public String mCategoryType;
+	public String mCategoryType;// game category type
 	@Column(name = "category_Name")
-	public String mCategoryName;
+	public String mCategoryName;// game category name
 	@Column(name = "category_Score")
-	public long mCategoryScore;
+	public long mCategoryScore;// game category score
 	@Column(name = "sub_Category_Tag_Name")
-	public String mSubCategoryTagName;
+	public String mSubCategoryTagName;// game sub tag name
 	@Column(name = "sub_Category_Tag_Score")
-	public long mSubCategoryTagScore;
+	public long mSubCategoryTagScore;// game sub tag score
 	@Column(name = "file_Size")
-	public String mFileSize;
+	public String mFileSize;// game file size
 	@Column(name = "file_Size_Score")
-	public long mFileSizeScore;
+	public long mFileSizeScore;// game file size score
 	@Column(name = "content_Id")
-	public String mContentId;
+	public String mContentId;// game Id
 
 	public int getmId() {
 		return mId;

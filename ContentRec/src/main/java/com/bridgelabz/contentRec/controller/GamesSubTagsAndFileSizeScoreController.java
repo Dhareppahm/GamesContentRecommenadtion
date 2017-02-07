@@ -36,15 +36,27 @@ public class GamesSubTagsAndFileSizeScoreController {
 	@Autowired
 	GamesSubTagsAndFileSizeScoreService mGamesSubTagsAndFileSizeScoreService;
 	int mCategoryStatus;
-	
+
 	Logger mLogger = Logger.getLogger("GAMESUBTAGSANDFILESIZECONTROLLER");
 
+	/**
+	 * This method is used to display user form
+	 * 
+	 * @return String(view),UserContentInfo view
+	 */
 	@RequestMapping(value = "/userContentInfo", method = RequestMethod.GET)
 	public String userContentInfo() {
 		return "UserContentInfo";
 
 	}
 
+	/**
+	 * This method is used to calculate the sub tags and file size score
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return String(view),UserContentInfo view
+	 */
 	@RequestMapping(value = "/userContentInfo", method = RequestMethod.POST)
 	public String getCatScore(@RequestParam("visitorId") String parVisitorId) {
 
@@ -144,11 +156,21 @@ public class GamesSubTagsAndFileSizeScoreController {
 
 	}
 
+	/**
+	 * This method is used to display games recommendation form
+	 * 
+	 * @return String(view),getSubTagsScore view
+	 */
 	@RequestMapping(value = "/gamesRecommendationBasedOnMostVisitedSubTags", method = RequestMethod.GET)
 	public String dispalyVisitorFrom() {
 		return "getSubTagsScore";
 	}
 
+	/**
+	 * This method is used to transfer visited sub tags to view part
+	 * 
+	 * @return ModelAndView,gamesRecommendationBasedOnMostVisitedSubTags view
+	 */
 	@RequestMapping(value = "/gamesRecommendationBasedOnMostVisitedSubTags", method = RequestMethod.POST)
 	public ModelAndView gamesCategoryNameRecommendation(@RequestParam("visitorId") String parVisitorId,
 			Model parModel) {
@@ -172,6 +194,11 @@ public class GamesSubTagsAndFileSizeScoreController {
 				lGameInfoAndSubTagsmap);
 	}
 
+	/**
+	 * This method is used to transfer visited file size to view part
+	 * 
+	 * @return ModelAndView,gamesRecommendationBasedOnMostVisitedSubTags view
+	 */
 	@RequestMapping(value = "/gamesRecommendationBasedOnFileSize", method = RequestMethod.POST)
 	public ModelAndView gamesRecommendationBasedOnFileSize(@RequestParam("visitorId") String parVisitorId,
 			Model parModel) {
@@ -185,6 +212,11 @@ public class GamesSubTagsAndFileSizeScoreController {
 		return new ModelAndView("gamesRecommendationBasedOnFileSize", "map", lMap);
 	}
 
+	/**
+	 * This method is used to display games recommendation form
+	 * 
+	 * @return ModelAndView,gamesRecommendationBasedOnFileSizeVisitorForm view
+	 */
 	@RequestMapping(value = "/gamesRecommendationBasedOnFileSize", method = RequestMethod.GET)
 	public String gamesRecommendationBasedOnFileSizeVisitorForm() {
 		return "gamesRecommendationBasedOnFileSizeVisitorForm";

@@ -25,6 +25,14 @@ public class UserInfoDaoImpl implements UserInfoDao {
 	SessionFactory mSessionFactory;
 
 	Logger mLogger = Logger.getLogger("USERINFORMATIONDAOIMPL");
+
+	/**
+	 * This method is used to save visitor information
+	 * 
+	 * @param UserInfo,
+	 *            is the first parameter for this method contains visitor
+	 *            information
+	 */
 	@Override
 	public void saveGameInfo(UserInfo parUserInfo) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -36,6 +44,13 @@ public class UserInfoDaoImpl implements UserInfoDao {
 
 	}
 
+	/**
+	 * This method is used to get visitor history
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return List<UserInfo>,list of user informations
+	 */
 	@Override
 	public List<UserInfo> getVisitorHistoryByVisitorId(String parVisitorId) {
 		Session lSess = mSessionFactory.getCurrentSession();

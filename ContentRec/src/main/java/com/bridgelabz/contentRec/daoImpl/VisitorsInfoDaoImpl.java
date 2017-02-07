@@ -22,9 +22,15 @@ import com.bridgelabz.contentRec.model.VisitorsInfo;
 public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 	@Autowired
 	SessionFactory mSessionFactory;
-	
+
 	Logger mLogger = Logger.getLogger("VISITORSINFORMATIONDAOIMPL");
 
+	/**
+	 * This method is used to add visitor
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains content Id
+	 */
 	public void addVisitors(VisitorsInfo visitorsInfo) {
 
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -36,6 +42,13 @@ public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 
 	}
 
+	/**
+	 * This method is used to get visitor information by content Id
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains content Id
+	 * @return List<VisitorsInfo>,list of informations
+	 */
 	@Override
 	public List<VisitorsInfo> getVisitorsInfoByContentId(String parContentId) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -46,15 +59,30 @@ public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 
 	}
 
+	/**
+	 * This method is used to get visitor information by visitor Id
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return List,list of visitor informations
+	 */
 	@Override
 	public String getVisitorsInfoByVisitorId(String parVisitorId) {
 		Session lSess = mSessionFactory.getCurrentSession();
-		Query lQueryToGetVisitorsInfoByVisitorId = lSess.createQuery("select mCategoryName from VisitorsInfo where mContentId=:id");
+		Query lQueryToGetVisitorsInfoByVisitorId = lSess
+				.createQuery("select mCategoryName from VisitorsInfo where mContentId=:id");
 		lQueryToGetVisitorsInfoByVisitorId.setParameter("id", parVisitorId);
 		String lVisitorsInfo = lQueryToGetVisitorsInfoByVisitorId.uniqueResult().toString();
 		return lVisitorsInfo;
 	}
 
+	/**
+	 * This method is used to get category name by visitor Id
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return List,list of visitor informations
+	 */
 	@Override
 	public List getCategoryNameByVisitorId(String parVisitorId) {
 
@@ -66,6 +94,13 @@ public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 
 	}
 
+	/**
+	 * This method is used to get content Id by visitor Id
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return List,list of content Id's
+	 */
 	@Override
 	public List getContentIdByVisitorId(String parVisitorId) {
 		Session lSess = mSessionFactory.getCurrentSession();

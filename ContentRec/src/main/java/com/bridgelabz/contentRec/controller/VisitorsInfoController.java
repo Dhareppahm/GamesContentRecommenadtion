@@ -23,14 +23,28 @@ import com.bridgelabz.contentRec.services.VisitorsInfoService;
 public class VisitorsInfoController {
 	@Autowired
 	VisitorsInfoService mVisitorsInfoService;
-	
+
 	Logger mLogger = Logger.getLogger("VISITORSINFORMATIONCONTROLLER");
 
+	/**
+	 * This method is used to display visitor form
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return String(view),UploadCSV view
+	 */
 	@RequestMapping(value = "/uploadCSVToDb", method = RequestMethod.GET)
 	public String dispalyGameInfo() {
 		return "UploadCSV";
 	}
 
+	/**
+	 * This method is used to read visitors information from CSV file
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return String(view),GetUserHistory view
+	 */
 	@RequestMapping(value = "/getDataFromCSV", method = RequestMethod.GET)
 	public String getDataFromCSV() {
 		FileReader lFileReader;
@@ -53,7 +67,6 @@ public class VisitorsInfoController {
 				for (i = 0; i < lData.length; i++) {
 					lData[i] = lData[i].replace("\"", "");
 				}
-
 				if (!(lData[0].equals(lTemp))) {
 					VisitorsInfo vi = new VisitorsInfo();
 					vi.setmVisitorId(lData[0]);
@@ -66,7 +79,6 @@ public class VisitorsInfoController {
 				}
 				lNextRecord = lBufferedReader.readLine();
 			}
-
 			lBufferedReader.close();
 			lFileReader.close();
 		} catch (FileNotFoundException e) {

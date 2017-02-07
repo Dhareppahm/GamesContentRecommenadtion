@@ -38,22 +38,44 @@ public class GameInformationController {
 	@Autowired
 	private GameInfoService mGameInfoService;
 
+	/**
+	 * This method is used to display game information form
+	 * 
+	 * @return String(view),DisplayGameInfo view
+	 */
 	@RequestMapping(value = "/displayGameInfo", method = RequestMethod.GET)
 	public String dispalyGameInfo() {
 		return "DisplayGameInfo";
 	}
 
+	/**
+	 * This method is used to display game information form
+	 * 
+	 * @return String(view),FetchAndSaveGameInfo view
+	 */
 	@RequestMapping(value = "/fetchAndSaveGameInfo", method = RequestMethod.GET)
 	public String fetchAndSaveGameInfo() {
 		return "FetchAndSaveGameInfo";
 	}
 
+	/**
+	 * This method is used to transfer game information view part
+	 * 
+	 * @return String(view),GameInformation view
+	 */
 	@RequestMapping(value = "/displayGameInfo", method = RequestMethod.POST)
 	public ModelAndView dispalyGameData(@RequestParam("contentId") String parContId) {
 		List<GameInfo> lGameInfo = mGameInfoService.getGameInfoByContentId(parContId);
 		return new ModelAndView("GameInformation", "gameInfo", lGameInfo);
 	}
 
+	/**
+	 * This method is used to fetch game information from the rest call
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains content Id
+	 * @return String(view),FetchAndSaveGameInfo view
+	 */
 	@RequestMapping(value = "/fetchAndSaveGameInfo", method = RequestMethod.POST)
 	public String fetchAndSaveGameData(@RequestParam("contentId") String parContId) {
 
@@ -76,7 +98,6 @@ public class GameInformationController {
 			mUrlString = lProp.getProperty("restCalURL");
 			System.out.println(mGbDeviceId);
 			System.out.println(mGbAppVersionCode);
-
 			System.out.println(mUrlString);
 
 		} catch (IOException e1) {
@@ -93,22 +114,23 @@ public class GameInformationController {
 
 		GameInfo lGameInfo = new GameInfo();
 		try {
-			String uurl="http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=contentDetail&params={%22contentid%22:"+ parContId + ",%22additionalParam%22:{%22reviews%22:{%22start%22:0,%22limit%22:10}}}";
+			String uurl = "http://wap.mauj.com/BETAAPI/GAMESBOND_V2/?method=contentDetail&params={%22contentid%22:"
+					+ parContId + ",%22additionalParam%22:{%22reviews%22:{%22start%22:0,%22limit%22:10}}}";
 			URL lUrl = new URL(uurl);
-			HttpURLConnection conn = (HttpURLConnection) lUrl.openConnection();
-			mLogger.info("Method : fetchAndSaveGameData "+uurl);
-			conn.setRequestMethod("GET");
-			conn.setRequestProperty("Accept", "application/json");
+			HttpURLConnection lConn = (HttpURLConnection) lUrl.openConnection();
+			mLogger.info("Method : fetchAndSaveGameData " + uurl);
+			lConn.setRequestMethod("GET");
+			lConn.setRequestProperty("Accept", "application/json");
 			System.out.println(parContId);
-			conn.setRequestProperty("GB_DEVICE_ID", mGbDeviceId);
-			conn.setRequestProperty("GB_APP_VERSION_CODE", mGbAppVersionCode);
-			conn.setRequestProperty("User-Agent", "Mozilla/5.0");
+			lConn.setRequestProperty("GB_DEVICE_ID", mGbDeviceId);
+			lConn.setRequestProperty("GB_APP_VERSION_CODE", mGbAppVersionCode);
+			lConn.setRequestProperty("User-Agent", "Mozilla/5.0");
 
-			if (conn.getResponseCode() != 200) {
-				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+			if (lConn.getResponseCode() != 200) {
+				throw new RuntimeException("Failed : HTTP error code : " + lConn.getResponseCode());
 			}
 
-			BufferedReader lBufferReader = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+			BufferedReader lBufferReader = new BufferedReader(new InputStreamReader((lConn.getInputStream())));
 
 			Object lObject = lParser.parse(lBufferReader);
 			JSONObject lJsonObject = (JSONObject) lObject;
@@ -165,13 +187,12 @@ public class GameInformationController {
 			Object lContentReviewTotalObj = lItemObj.get("content_review_total");
 			long lContentReviewTotal = (long) lContentReviewTotalObj;
 			lGameInfo.setmContentReviewTotal(String.valueOf(lContentReviewTotal));
-			
-			Object lContentThumbnailUrlObj=lItemObj.get("content_thumbnail_url");
-			String lContentThumbnailUrl=(String)lContentThumbnailUrlObj;
+
+			Object lContentThumbnailUrlObj = lItemObj.get("content_thumbnail_url");
+			String lContentThumbnailUrl = (String) lContentThumbnailUrlObj;
 			lGameInfo.setmContentThumbnailUrl(lContentThumbnailUrl);
 			mGameInfoService.saveGameInfo(lGameInfo);
-
-			conn.disconnect();
+			lConn.disconnect();
 
 		}
 

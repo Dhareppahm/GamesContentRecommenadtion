@@ -38,14 +38,27 @@ public class GamesCategoryScoreController {
 	GameInfoService mGameInfoService;
 
 	Logger mLogger = Logger.getLogger("GAMECATEGORYSCORECONTROLLER");
+
+	/**
+	 * This method is used to display category form
+	 * 
+	 * @return String(view),getCategoryScore view
+	 */
 	@RequestMapping(value = "/getCategoryScore", method = RequestMethod.GET)
 	public String dispalyVisitorFrom() {
 		return "getCategoryScore";
 	}
 
+	/**
+	 * This method is used to calculate game category score
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return String(view),FetchAndSaveGameInfo view
+	 */
 	@RequestMapping(value = "/getCategoryScore", method = RequestMethod.POST)
 	public String getCatScore(@RequestParam("visitorId") String parVisitorId) {
-		int mStatus;
+		int lStatus;
 		Properties lProp = new Properties();
 		String lFileName = "CategoryList.properties";
 
@@ -82,16 +95,16 @@ public class GamesCategoryScoreController {
 					|| lCategoryName.equals(lProp.getProperty("CatTag9"))) {
 				GameCategoryScore lCatScore = mGameCategoryScoreService.CatgeoryExists(parVisitorId, lCategoryName);
 				if (lCatScore != null) {
-					mStatus = mGameCategoryScoreService.UpdateCategoryScore(parVisitorId, lCategoryName);
+					lStatus = mGameCategoryScoreService.UpdateCategoryScore(parVisitorId, lCategoryName);
 
 				} else {
 					mGameCategoryScoreService.addNewCategory(parVisitorId, lCategoryName);
-					mStatus = mGameCategoryScoreService.UpdateCategoryScore(parVisitorId, lCategoryName);
+					lStatus = mGameCategoryScoreService.UpdateCategoryScore(parVisitorId, lCategoryName);
 				}
 			} else {
 				continue;
 			}
-			if (mStatus > 0) {
+			if (lStatus > 0) {
 				System.out.println("Succesfullly updated" + " " + lCategoryName + " " + "category score for visitrID:"
 						+ parVisitorId);
 
@@ -105,12 +118,24 @@ public class GamesCategoryScoreController {
 
 	}
 
+	/**
+	 * This method is used to display visitor form
+	 * 
+	 * @return String(view),VisitorFormToRecommendGamesBasedOnCategories view
+	 */
 	@RequestMapping(value = "/gamesCategoryNameRecommendation", method = RequestMethod.GET)
 	public String displayGamesCategoryNameRecommendation() {
 		return "VisitorFormToRecommendGamesBasedOnCategories";
 
 	}
 
+	/**
+	 * This method is used to transfer games category name and games name recommendations to view part
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return ModelAndView,gamesCategoryNameAndGamesNameRecommendations view
+	 */
 	@RequestMapping(value = "/gamesCategoryNameAndGamesNameRecommendation", method = RequestMethod.POST)
 	public ModelAndView gamesCategoryNameRecommendation(@RequestParam("visitorId") String parVisitorId,
 			Model parModel) {
@@ -123,6 +148,5 @@ public class GamesCategoryScoreController {
 		lMap.put("gameInfo", lGameInfo);
 		return new ModelAndView("gamesCategoryNameAndGamesNameRecommendations", "map", lMap);
 	}
-
 
 }

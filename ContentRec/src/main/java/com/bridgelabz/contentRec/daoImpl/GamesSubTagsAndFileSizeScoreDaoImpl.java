@@ -22,9 +22,18 @@ import com.bridgelabz.contentRec.model.GamesSubTagsAndFileSizeScore;
 public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileSizeScoreDao {
 	@Autowired
 	SessionFactory mSessionFactory;
-	
+
 	Logger mLogger = Logger.getLogger("GAMESUBTAGSANDFILESIZESCOREDAOIMPL");
 
+	/**
+	 * This method is used to check the game category exists or not
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains category name
+	 * @return GamesSubTagsAndFileSizeScore,GamesSubTagsAndFileSizeScore object
+	 */
 	@Override
 	public GamesSubTagsAndFileSizeScore CatgeoryExists(String parVisitorId, String parCategoryName) {
 
@@ -43,6 +52,14 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		return null;
 	}
 
+	/**
+	 * This method is used to add new game category
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains category name
+	 */
 	@Override
 	public void addNewCategory(GamesSubTagsAndFileSizeScore parGamesSubTagsAndFileSizeScore) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -55,6 +72,15 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 
 	}
 
+	/**
+	 * This method is used to add update the game category score
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains category name
+	 * @return Integer,status of the query
+	 */
 	@Override
 	public int UpdateCategoryScore(String parVisitorId, String parCategoryName) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -74,6 +100,15 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		return lStatus;
 	}
 
+	/**
+	 * This method is used to check the game sub tag exists or not
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains sub tag name
+	 * @return GamesSubTagsAndFileSizeScore,GamesSubTagsAndFileSizeScore object
+	 */
 	@Override
 	public GamesSubTagsAndFileSizeScore SubCatgeoryTagExists(String parVisitorId, String parSubCategoryName) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -91,6 +126,16 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		return null;
 	}
 
+	/**
+	 * This method is used to add new game sub tag
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains sub tag name
+	 * @param String,is
+	 *            third parameter for this method contains content ID
+	 */
 	@Override
 	public void addNewSubCategoryTag(GamesSubTagsAndFileSizeScore parGamesSubTagsAndFileSizeScore) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -103,6 +148,16 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 
 	}
 
+	/**
+	 * This method is used to update the sub tag score
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains sub tag name
+	 * @return Integer,status of the query
+	 * 
+	 */
 	@Override
 	public int UpdateSubCategoryScoreTag(String parVisitorId, String parSubCategoryName) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -122,6 +177,15 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		return lStatus;
 	}
 
+	/**
+	 * This method is used to check the game file size exists or not
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains file size
+	 * @return GamesSubTagsAndFileSizeScore,GamesSubTagsAndFileSizeScore object
+	 */
 	@Override
 	public GamesSubTagsAndFileSizeScore FileSizeExists(String parVisitorId, String parFileSize) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -139,6 +203,14 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		return null;
 	}
 
+	/**
+	 * This method is used to add new game file size
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains file size
+	 */
 	@Override
 	public void addNewFileSize(GamesSubTagsAndFileSizeScore parGamesSubTagsAndFileSizeScore) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -151,6 +223,16 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 
 	}
 
+	/**
+	 * This method is used to update the file size score
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @param String,is
+	 *            second parameter for this method contains file size
+	 * @return Integer,status of the query
+	 * 
+	 */
 	@Override
 	public int UpdateFileSizeScore(String parVisitorId, String parFileSize) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -170,17 +252,34 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		return lStatus;
 	}
 
+	/**
+	 * This method is used to recommend the game sub tags by visitor ID
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @return List,list of sub tag names
+	 * 
+	 */
 	@Override
 	public List gamesSubTagsRecommendationByVisitorId(String parVisitorId) {
 		Session lSess = mSessionFactory.getCurrentSession();
 		String lTagName = "Games";
 		Query lQueryToGetSubTagsName = lSess.createQuery(
-				"SELECT mSubCategoryTagName FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:Id and mSubCategoryTagName LIKE '%"+ lTagName + "%' ORDER BY mSubCategoryTagScore DESC");
+				"SELECT mSubCategoryTagName FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:Id and mSubCategoryTagName LIKE '%"
+						+ lTagName + "%' ORDER BY mSubCategoryTagScore DESC");
 		lQueryToGetSubTagsName.setParameter("Id", parVisitorId);
 		List lGameSubTagsName = lQueryToGetSubTagsName.list();
 		return lGameSubTagsName;
 	}
 
+	/**
+	 * This method is used to get sub tags score by visitor ID
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @return List<GamesSubTagsAndFileSizeScore>,list of sub tags score
+	 * 
+	 */
 	@Override
 	public List<GamesSubTagsAndFileSizeScore> getGamesSubTagsScore(String parVisitorId) {
 		Session lSess = mSessionFactory.getCurrentSession();
@@ -194,12 +293,19 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 
 	}
 
+	/**
+	 * This method is used to get file size score by visitor ID
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitorId
+	 * @return List<GamesSubTagsAndFileSizeScore>,list file size score
+	 */
 	@Override
 	public List<GamesSubTagsAndFileSizeScore> getGamesFileSizeScore(String parVisitorId) {
 		Session lSess = mSessionFactory.getCurrentSession();
 		String lTagName = "Games";
-		Query lQueryToGetSubTagsName = lSess
-				.createQuery("FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:Id and mFileSize LIKE '%MB' ORDER BY mFileSizeScore DESC");
+		Query lQueryToGetSubTagsName = lSess.createQuery(
+				"FROM GamesSubTagsAndFileSizeScore WHERE mVisitorId=:Id and mFileSize LIKE '%MB' ORDER BY mFileSizeScore DESC");
 		lQueryToGetSubTagsName.setParameter("Id", parVisitorId);
 		List<GamesSubTagsAndFileSizeScore> lGameSubTagsScore = lQueryToGetSubTagsName.list();
 		return lGameSubTagsScore;

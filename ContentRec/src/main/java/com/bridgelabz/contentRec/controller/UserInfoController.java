@@ -33,14 +33,26 @@ public class UserInfoController {
 
 	@Autowired
 	UserInfoService mUserInfoService;
-	
+
 	Logger mLogger = Logger.getLogger("USERINFORMATIONCONTROLLER");
 
+	/**
+	 * This method is used to display user form
+	 * 
+	 * @return StoreUserInfo,StoreUserInfo view
+	 */
 	@RequestMapping(value = "/storeUserInfo", method = RequestMethod.GET)
 	public String dispalyGameInfo() {
 		return "StoreUserInfo";
 	}
 
+	/**
+	 * This method is used to store visitors information
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains content Id
+	 * @return String(view),StoreUserInfo view
+	 */
 	@RequestMapping(value = "/storeUserDatatoDb", method = RequestMethod.POST)
 	public String storeUserDatatoDb(@RequestParam("contentId") String parContentId) {
 		// Multiple visitors information for same contentId
@@ -69,11 +81,23 @@ public class UserInfoController {
 		return "StoreUserInfo";
 	}
 
+	/**
+	 * This method is used to display user form
+	 * 
+	 * @return String(view),GetUserHistory view
+	 */
 	@RequestMapping(value = "/getUserHistory", method = RequestMethod.GET)
 	public String getUserHistory() {
 		return "GetUserHistory";
 	}
 
+	/**
+	 * This method is used to transfer user information view part
+	 * 
+	 * @param String,
+	 *            is the first parameter for this method contains visitor Id
+	 * @return String(view),DisplayUserHistory view
+	 */
 	@RequestMapping(value = "/getUserHistory", method = RequestMethod.POST)
 	public ModelAndView getHistory(@RequestParam("visitorId") String parVisitorId) {
 		List<UserInfo> lUserInfo = mUserInfoService.getVisitorHistoryByVisitorId(parVisitorId);
