@@ -37,82 +37,82 @@ public class GamesSubTagsAndFileSizeScore {
 
 	public int getmId() {
 		return mId;
-	}
+	}// End of getmId method
 
 	public void setmId(int mId) {
 		this.mId = mId;
-	}
+	}// End of setmId method
 
 	public String getmVisitorId() {
 		return mVisitorId;
-	}
+	}// End of getmVisitorId method
 
 	public void setmVisitorId(String mVisitorId) {
 		this.mVisitorId = mVisitorId;
-	}
+	}// End of setmVisitorId method
 
 	public String getmCategoryType() {
 		return mCategoryType;
-	}
+	}// End of getmCategoryType method
 
 	public void setmCategoryType(String mCategoryType) {
 		this.mCategoryType = mCategoryType;
-	}
+	}// End of setmCategoryType method
 
 	public long getmCategoryScore() {
 		return mCategoryScore;
-	}
+	}// End of getmCategoryScore method
 
 	public void setmCategoryScore(long mCategoryScore) {
 		this.mCategoryScore = mCategoryScore;
-	}
+	}// End of setmCategoryScore method
 
 	public String getmFileSize() {
 		return mFileSize;
-	}
+	}// End of getmFileSize method
 
 	public void setmFileSize(String mFileSize) {
 		this.mFileSize = mFileSize;
-	}
+	}// End of setmFileSize method
 
 	public long getmFileSizeScore() {
 		return mFileSizeScore;
-	}
+	}// End of getmFileSizeScore method
 
 	public void setmFileSizeScore(long mFileSizeScore) {
 		this.mFileSizeScore = mFileSizeScore;
-	}
+	}// End of setmFileSizeScore method
 
 	public String getmCategoryName() {
 		return mCategoryName;
-	}
+	}// End of getmCategoryName method
 
 	public void setmCategoryName(String mCategoryName) {
 		this.mCategoryName = mCategoryName;
-	}
+	}// End of setmCategoryName method
 
 	public String getmSubCategoryTagName() {
 		return mSubCategoryTagName;
-	}
+	}// End of getmSubCategoryTagName method
 
 	public void setmSubCategoryTagName(String mSubCategoryTagName) {
 		this.mSubCategoryTagName = mSubCategoryTagName;
-	}
+	}// End of setmSubCategoryTagName method
 
 	public long getmSubCategoryTagScore() {
 		return mSubCategoryTagScore;
-	}
+	}// End of getmSubCategoryTagScore method
 
 	public void setmSubCategoryTagScore(long mSubCategoryTagScore) {
 		this.mSubCategoryTagScore = mSubCategoryTagScore;
-	}
+	}// End of setmSubCategoryTagScore method
 
 	public String getmContentId() {
 		return mContentId;
-	}
+	}// End of getmContentId method
 
 	public void setmContentId(String mContentId) {
 		this.mContentId = mContentId;
-	}
+	}// End of setmContentId method
 
-}
+}// End of GamesSubTagsAndFileSizeScore class

@@ -27,7 +27,7 @@ public class GameInfoServiceImpl implements GameInfoService {
 	public void saveGameInfo(GameInfo parGameInfo) {
 		mGameInfoDao.saveGameInfo(parGameInfo);
 
-	}
+	}// End of saveGameInfo method
 
 	/**
 	 * This method is used to get game information by content Id
@@ -41,7 +41,7 @@ public class GameInfoServiceImpl implements GameInfoService {
 	public List<GameInfo> getGameInfoByContentId(String parContentId) {
 		List<GameInfo> lGameInfo = mGameInfoDao.getGameInfoByContentId(parContentId);
 		return lGameInfo;
-	}
+	}// End of getGameInfoByContentId method
 
 	/**
 	 * This method is used to get game name by category name
@@ -55,7 +55,7 @@ public class GameInfoServiceImpl implements GameInfoService {
 	public List<GameInfo> getGameNameByGameCategory(String parVisitorId) {
 		List<GameInfo> lGameInfo = mGameInfoDao.getGameNameByGameCategory(parVisitorId);
 		return lGameInfo;
-	}
+	}// End of getGameNameByGameCategory method
 
 	/**
 	 * This method is used to get sub tags by content Id
@@ -69,7 +69,7 @@ public class GameInfoServiceImpl implements GameInfoService {
 	public String getSubCategoryTagsByContentId(String parContentId) {
 		String lSubCategoryTags = mGameInfoDao.getSubCategoryTagsByContentId(parContentId);
 		return lSubCategoryTags;
-	}
+	}// End of getSubCategoryTagsByContentId method
 
 	/**
 	 * This method is used to get file size by content Id
@@ -82,7 +82,7 @@ public class GameInfoServiceImpl implements GameInfoService {
 	public String getFileSizeByContentId(String parContentId) {
 		String lFileSize = mGameInfoDao.getFileSizeByContentId(parContentId);
 		return lFileSize;
-	}
+	}// End of getFileSizeByContentId method
 
 	/**
 	 * This method is used to get game name by sub tag
@@ -96,7 +96,7 @@ public class GameInfoServiceImpl implements GameInfoService {
 	public List<GameInfo> getGameNameBySubTags(String parSubTag) {
 		List<GameInfo> lGameNameList = mGameInfoDao.getGameNameBySubTags(parSubTag);
 		return lGameNameList;
-	}
+	}// End of getGameNameBySubTags method
 
 	/**
 	 * This method is used to get game name by file size
@@ -110,6 +110,6 @@ public class GameInfoServiceImpl implements GameInfoService {
 	public List<GameInfo> getGameNameByFileSize(String parVisitorId) {
 		List<GameInfo> lGameNames = mGameInfoDao.getGameNameByFileSize(parVisitorId);
 		return lGameNames;
-	}
+	}// End of getGameNameByFileSize method
 
-}
+}// End of GameInfoServiceImpl class

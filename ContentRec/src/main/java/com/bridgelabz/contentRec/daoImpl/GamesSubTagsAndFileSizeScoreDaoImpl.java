@@ -46,11 +46,12 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 							.add(Restrictions.eq("mCategoryName", parCategoryName)))
 					.uniqueResult();
 			return lCategoryScore;
-		} catch (HibernateException e) {
+		} // End of try
+		catch (HibernateException e) {
 			e.printStackTrace();
-		}
+		} // End of catch
 		return null;
-	}
+	}// End of CatgeoryExists method
 
 	/**
 	 * This method is used to add new game category
@@ -66,11 +67,12 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 
 		try {
 			lSess.save(parGamesSubTagsAndFileSizeScore);
-		} catch (Exception e) {
+		} // End of try
+		catch (Exception e) {
 			e.printStackTrace();
-		}
+		} // End of catch
 
-	}
+	}// End of addNewCategory method
 
 	/**
 	 * This method is used to add update the game category score
@@ -98,7 +100,7 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		lQueryForToUpdateCategoryScore.setParameter("CatName", parCategoryName);
 		int lStatus = lQueryForToUpdateCategoryScore.executeUpdate();
 		return lStatus;
-	}
+	}// End of UpdateCategoryScore method
 
 	/**
 	 * This method is used to check the game sub tag exists or not
@@ -120,11 +122,12 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 							.add(Restrictions.eq("mSubCategoryTagName", parSubCategoryName)))
 					.uniqueResult();
 			return lCategoryScore;
-		} catch (HibernateException e) {
+		} // End of try
+		catch (HibernateException e) {
 			e.printStackTrace();
-		}
+		} // End of catch
 		return null;
-	}
+	}// End of SubCatgeoryTagExists method
 
 	/**
 	 * This method is used to add new game sub tag
@@ -142,11 +145,12 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 
 		try {
 			lSess.save(parGamesSubTagsAndFileSizeScore);
-		} catch (Exception e) {
+		} // End of try
+		catch (Exception e) {
 			e.printStackTrace();
-		}
+		} // End of catch
 
-	}
+	}// End of addNewSubCategoryTag
 
 	/**
 	 * This method is used to update the sub tag score
@@ -175,7 +179,7 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		lQueryForToUpdateSubCategoryTagScore.setParameter("SubCategoryTagName", parSubCategoryName);
 		int lStatus = lQueryForToUpdateSubCategoryTagScore.executeUpdate();
 		return lStatus;
-	}
+	}// End of UpdateSubCategoryScoreTag method
 
 	/**
 	 * This method is used to check the game file size exists or not
@@ -197,11 +201,12 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 							.add(Restrictions.eq("mFileSize", parFileSize)))
 					.uniqueResult();
 			return lFileSize;
-		} catch (HibernateException e) {
+		} // End of try
+		catch (HibernateException e) {
 			e.printStackTrace();
-		}
+		} // End of catch
 		return null;
-	}
+	}// End of FileSizeExists method
 
 	/**
 	 * This method is used to add new game file size
@@ -217,11 +222,12 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 
 		try {
 			lSess.save(parGamesSubTagsAndFileSizeScore);
-		} catch (Exception e) {
+		} // End of try
+		catch (Exception e) {
 			e.printStackTrace();
-		}
+		} // End of catch
 
-	}
+	}// End of addNewFileSize method
 
 	/**
 	 * This method is used to update the file size score
@@ -250,7 +256,7 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		lQueryForToUpdateFileSizeScore.setParameter("FileSize", parFileSize);
 		int lStatus = lQueryForToUpdateFileSizeScore.executeUpdate();
 		return lStatus;
-	}
+	}// End of UpdateFileSizeScore method
 
 	/**
 	 * This method is used to recommend the game sub tags by visitor ID
@@ -270,7 +276,7 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		lQueryToGetSubTagsName.setParameter("Id", parVisitorId);
 		List lGameSubTagsName = lQueryToGetSubTagsName.list();
 		return lGameSubTagsName;
-	}
+	}// End of gamesSubTagsRecommendationByVisitorId method
 
 	/**
 	 * This method is used to get sub tags score by visitor ID
@@ -291,7 +297,7 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		List<GamesSubTagsAndFileSizeScore> lGameSubTagsScore = lQueryToGetSubTagsName.list();
 		return lGameSubTagsScore;
 
-	}
+	}// End of getGamesSubTagsScore method
 
 	/**
 	 * This method is used to get file size score by visitor ID
@@ -309,6 +315,6 @@ public class GamesSubTagsAndFileSizeScoreDaoImpl implements GamesSubTagsAndFileS
 		lQueryToGetSubTagsName.setParameter("Id", parVisitorId);
 		List<GamesSubTagsAndFileSizeScore> lGameSubTagsScore = lQueryToGetSubTagsName.list();
 		return lGameSubTagsScore;
-	}
+	}// End of getGamesFileSizeScore method
 
-}
+}// End of GamesSubTagsAndFileSizeScoreDaoImpl class

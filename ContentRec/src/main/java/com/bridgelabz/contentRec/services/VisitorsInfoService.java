@@ -25,4 +25,5 @@ public interface VisitorsInfoService {
 
 	// This method is used to get content Id by visitor Id.
 	public List getContentIdByVisitorId(String parVisitorId);
-}
+	
+}// End of VisitorsInfoService class

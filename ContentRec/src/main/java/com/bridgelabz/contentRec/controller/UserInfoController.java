@@ -44,7 +44,7 @@ public class UserInfoController {
 	@RequestMapping(value = "/storeUserInfo", method = RequestMethod.GET)
 	public String dispalyGameInfo() {
 		return "StoreUserInfo";
-	}
+	}// End of dispalyGameInfo method
 
 	/**
 	 * This method is used to store visitors information
@@ -74,12 +74,12 @@ public class UserInfoController {
 				lUserInfo.setmDownload(lVisitorsInfoObj.getmDownload());
 				mUserInfoService.saveUserInfo(lUserInfo);
 
-			}
+			} // End of inner for
 
-		}
+		} // End of outer for
 
 		return "StoreUserInfo";
-	}
+	}// End of storeUserDatatoDb method
 
 	/**
 	 * This method is used to display user form
@@ -89,7 +89,7 @@ public class UserInfoController {
 	@RequestMapping(value = "/getUserHistory", method = RequestMethod.GET)
 	public String getUserHistory() {
 		return "GetUserHistory";
-	}
+	}// End of getUserHistory method
 
 	/**
 	 * This method is used to transfer user information view part
@@ -102,5 +102,5 @@ public class UserInfoController {
 	public ModelAndView getHistory(@RequestParam("visitorId") String parVisitorId) {
 		List<UserInfo> lUserInfo = mUserInfoService.getVisitorHistoryByVisitorId(parVisitorId);
 		return new ModelAndView("DisplayUserHistory", "userInfo", lUserInfo);
-	}
-}
+	}// End of getHistory method
+}// End of UserInfoController class

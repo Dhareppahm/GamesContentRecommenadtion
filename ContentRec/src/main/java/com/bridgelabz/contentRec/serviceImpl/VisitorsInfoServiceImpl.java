@@ -26,7 +26,7 @@ public class VisitorsInfoServiceImpl implements VisitorsInfoService {
 	public void addVisitors(VisitorsInfo parVisitorsInfo) {
 		visitorsInfoDao.addVisitors(parVisitorsInfo);
 
-	}
+	}// End of saveUserInfo method
 
 	/**
 	 * This method is used to get visitor information by content Id
@@ -40,7 +40,7 @@ public class VisitorsInfoServiceImpl implements VisitorsInfoService {
 	public List<VisitorsInfo> getVisitorsInfoByContentId(String parContetnId) {
 		List<VisitorsInfo> visitorsInfo = visitorsInfoDao.getVisitorsInfoByContentId(parContetnId);
 		return visitorsInfo;
-	}
+	}// End of getVisitorsInfoByContentId method
 
 	/**
 	 * This method is used to get visitor information by visitor Id
@@ -55,7 +55,7 @@ public class VisitorsInfoServiceImpl implements VisitorsInfoService {
 		String visitorsInfo = visitorsInfoDao.getVisitorsInfoByVisitorId(parVisitorId);
 		return visitorsInfo;
 
-	}
+	}// End of getVisitorsInfoByVisitorId method
 
 	/**
 	 * This method is used to get category name by visitor Id
@@ -68,7 +68,7 @@ public class VisitorsInfoServiceImpl implements VisitorsInfoService {
 	public List getCategoryNamesByVisitorId(String parVisitorId) {
 		List categoryNameList = visitorsInfoDao.getCategoryNameByVisitorId(parVisitorId);
 		return categoryNameList;
-	}
+	}// End of getCategoryNamesByVisitorId method
 
 	/**
 	 * This method is used to get content Id by visitor Id
@@ -81,6 +81,6 @@ public class VisitorsInfoServiceImpl implements VisitorsInfoService {
 	public List getContentIdByVisitorId(String parVisitorId) {
 		List categoryNameList = visitorsInfoDao.getContentIdByVisitorId(parVisitorId);
 		return categoryNameList;
-	}
+	}// End of getContentIdByVisitorId method
 
-}
+}// End of VisitorsInfoServiceImpl class

@@ -38,11 +38,12 @@ public class UserInfoDaoImpl implements UserInfoDao {
 		Session lSess = mSessionFactory.getCurrentSession();
 		try {
 			lSess.save(parUserInfo);
-		} catch (Exception e) {
+		} // End of try
+		catch (Exception e) {
 			e.printStackTrace();
-		}
+		} // End of catch
 
-	}
+	}// End of saveGameInfo method
 
 	/**
 	 * This method is used to get visitor history
@@ -59,5 +60,5 @@ public class UserInfoDaoImpl implements UserInfoDao {
 		List<UserInfo> lUserInfo = qry.list();
 		return lUserInfo;
 
-	}
-}
+	}// End of getVisitorHistoryByVisitorId method
+}// End of UserInfoDaoImpl class

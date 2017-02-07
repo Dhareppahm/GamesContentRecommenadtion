@@ -39,11 +39,12 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		Session sess = sessionFactory.getCurrentSession();
 		try {
 			sess.save(parGameInfo);
-		} catch (Exception e) {
+		} // End of try
+		catch (Exception e) {
 			e.printStackTrace();
-		}
+		} // End of catch
 
-	}
+	}// End of saveGameInfo method
 
 	/**
 	 * This method is used to get game information by content Id
@@ -58,7 +59,7 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		qry.setParameter("id", parContentId);
 		List<GameInfo> gameInfo = qry.list();
 		return gameInfo;
-	}
+	}// End of getGameInfoByContentId method
 
 	/**
 	 * This method is used to get game name by category name
@@ -76,7 +77,7 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		qry.setParameter("id", parVisitorId);
 		List<GameInfo> gameInfo = qry.list();
 		return gameInfo;
-	}
+	}// End of getGameNameByGameCategory method
 
 	/**
 	 * This method is used to get sub tags by content Id
@@ -93,7 +94,7 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		qry.setParameter("id", parContentId);
 		String gameInfo = (String) qry.uniqueResult();
 		return gameInfo;
-	}
+	}// End of getSubCategoryTagsByContentId method
 
 	/**
 	 * This method is used to get file size by content Id
@@ -109,7 +110,7 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		qry.setParameter("id", parContentId);
 		String gameInfo = (String) qry.uniqueResult();
 		return gameInfo;
-	}
+	}// End of getFileSizeByContentId method
 
 	/**
 	 * This method is used to get game name by sub tag
@@ -125,7 +126,7 @@ public class GameInfoDaoImpl implements GameInfoDao {
 				"FROM GameInfo WHERE mMetaTags LIKE '%" + parSubTag + "%'" + " " + "ORDER BY mTotalDownloads DESC");
 		List<GameInfo> gameInfo = qry.list();
 		return gameInfo;
-	}
+	}// End of getFileSizeByContentId method
 
 	/**
 	 * This method is used to get game name by file size
@@ -142,6 +143,6 @@ public class GameInfoDaoImpl implements GameInfoDao {
 		qry.setParameter("id", parVisitorId);
 		List<GameInfo> gameInfo = qry.list();
 		return gameInfo;
-	}
+	}// End of getGameNameByFileSize method
 
 }

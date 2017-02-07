@@ -36,58 +36,58 @@ public class VisitorsInfo {
 
 	public int getmId() {
 		return mId;
-	}
+	}// End of getmId method
 
 	public void setmId(int mId) {
 		this.mId = mId;
-	}
+	}// End of setmId method
 
 	public String getmVisitorId() {
 		return mVisitorId;
-	}
+	}// End of getmVisitorId method
 
 	public void setmVisitorId(String mVisitorId) {
 		this.mVisitorId = mVisitorId;
-	}
+	}// End of setmVisitorId method
 
 	public String getmContentId() {
 		return mContentId;
-	}
+	}// End of getmContentId method
 
 	public void setmContentId(String mContentId) {
 		this.mContentId = mContentId;
-	}
+	}// End of setmContentId method
 
 	public String getmContentName() {
 		return mContentName;
-	}
+	}// End of getmContentName method
 
 	public void setmContentName(String mContentName) {
 		this.mContentName = mContentName;
-	}
+	}// End of setmContentName method
 
 	public String getmCategoryName() {
 		return mCategoryName;
-	}
+	}// End of getmCategoryName method
 
 	public void setmCategoryName(String mCategoryName) {
 		this.mCategoryName = mCategoryName;
-	}
+	}// End of setmCategoryName method
 
 	public String getmView() {
 		return mView;
-	}
+	}// End of getmView method
 
 	public void setmView(String mView) {
 		this.mView = mView;
-	}
+	}// End of setmView method
 
 	public String getmDownload() {
 		return mDownload;
-	}
+	}// End of getmDownload method
 
 	public void setmDownload(String mDownload) {
 		this.mDownload = mDownload;
-	}
+	}// End of setmDownload method
 
-}
+}// End of VisitorsInfo class

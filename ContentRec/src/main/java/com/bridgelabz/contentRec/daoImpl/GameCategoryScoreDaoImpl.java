@@ -49,11 +49,12 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 							.add(Restrictions.eq("mCategoryName", parCategoryName)))
 					.uniqueResult();
 			return lCategoryScore;
-		} catch (HibernateException e) {
+		} // End of try
+		catch (HibernateException e) {
 			e.printStackTrace();
-		}
+		} // End of try
 		return null;
-	}
+	}// End of CatgeoryExists method
 
 	/**
 	 * This method is used to add new game category
@@ -69,11 +70,12 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 
 		try {
 			lSess.save(mGameCategoryScore);
-		} catch (Exception e) {
+		} // End of try
+		catch (Exception e) {
 			e.printStackTrace();
-		}
+		} // End of catch
 
-	}
+	}// End of addNewCategory method
 
 	/**
 	 * This method is used to add update the game category score
@@ -101,7 +103,7 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 		lQueryForToUpdateCategoryScore.setParameter("CatName", parCategoryName);
 		int lStatus = lQueryForToUpdateCategoryScore.executeUpdate();
 		return lStatus;
-	}
+	}// End of UpdateCategoryScore method
 
 	/**
 	 * This method is used to recommend game category name to visitor by
@@ -120,7 +122,7 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 		List<GameCategoryScore> lGamecategoryScore = lQueryToGetCategoryName.list();
 		return lGamecategoryScore;
 
-	}
+	}// End of gamesCategoryNamesRecommendationByVisitorId method
 
 	/**
 	 * This method is used to get game category name byvisitorId
@@ -138,5 +140,5 @@ public class GameCategoryScoreDaoImpl implements GameCategoryScoreDao {
 		List lCategoryNameList = lQueryToGetCategoryNameByVisitorId.list();
 		return lCategoryNameList;
 
-	}
-}
+	}// End of getCategoryNameByVisitorId method
+}// End of getCategoryNameByVisitorId class

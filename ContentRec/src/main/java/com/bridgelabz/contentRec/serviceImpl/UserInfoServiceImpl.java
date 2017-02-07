@@ -28,7 +28,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 	public void saveUserInfo(UserInfo parUserInfo) {
 		mUserInfoDao.saveGameInfo(parUserInfo);
 
-	}
+	}// End of saveUserInfo method
 
 	/**
 	 * This method is used to get visitor history
@@ -42,6 +42,6 @@ public class UserInfoServiceImpl implements UserInfoService {
 	public List<UserInfo> getVisitorHistoryByVisitorId(String parVisitorId) {
 		List<UserInfo> mUserInfo = mUserInfoDao.getVisitorHistoryByVisitorId(parVisitorId);
 		return mUserInfo;
-	}
+	}// End of getVisitorHistoryByVisitorId method
 
-}
+}// End of UserInfoServiceImpl class

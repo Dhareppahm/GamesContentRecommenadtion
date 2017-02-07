@@ -32,4 +32,4 @@ public interface GameInfoDao {
 	// This method is used to get game names by visitor Id.
 	public List<GameInfo> getGameNameByFileSize(String parVisitorId);
 
-}
+}// End of GameInfoDao interface

@@ -16,4 +16,5 @@ public interface UserInfoDao {
 
 	// This method is used to get visitor history.
 	public List<UserInfo> getVisitorHistoryByVisitorId(String parVisitorId);
-}
+	
+}// End of UserInfoDao interface

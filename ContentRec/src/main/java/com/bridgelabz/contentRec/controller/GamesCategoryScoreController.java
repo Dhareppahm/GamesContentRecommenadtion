@@ -47,7 +47,7 @@ public class GamesCategoryScoreController {
 	@RequestMapping(value = "/getCategoryScore", method = RequestMethod.GET)
 	public String dispalyVisitorFrom() {
 		return "getCategoryScore";
-	}
+	}// End of dispalyVisitorFrom method
 
 	/**
 	 * This method is used to calculate game category score
@@ -68,20 +68,23 @@ public class GamesCategoryScoreController {
 
 			if (lInput == null) {
 				System.out.println("Sorry, unable to find " + lFileName);
-			}
+			} // End of if
 			lProp.load(lInput);
 
-		} catch (IOException e1) {
+		} // End of try
+		catch (IOException e1) {
 			e1.printStackTrace();
-		} finally {
+		} // End of catch
+		finally {
 			if (lInput != null) {
 				try {
 					lInput.close();
-				} catch (IOException e) {
+				} // End of try
+				catch (IOException e) {
 					e.printStackTrace();
-				}
-			}
-		}
+				} // End of catch
+			} // End of if
+		} // End of finally
 		List lCategoryNameList = mVisitorsInfoService.getCategoryNamesByVisitorId(parVisitorId);
 		for (Iterator iterator = lCategoryNameList.iterator(); iterator.hasNext();) {
 			String lCategoryName = (String) iterator.next();
@@ -97,26 +100,28 @@ public class GamesCategoryScoreController {
 				if (lCatScore != null) {
 					lStatus = mGameCategoryScoreService.UpdateCategoryScore(parVisitorId, lCategoryName);
 
-				} else {
+				} // End of if
+				else {
 					mGameCategoryScoreService.addNewCategory(parVisitorId, lCategoryName);
 					lStatus = mGameCategoryScoreService.UpdateCategoryScore(parVisitorId, lCategoryName);
-				}
+				} // End of else
 			} else {
 				continue;
-			}
+			} // End of else
 			if (lStatus > 0) {
 				System.out.println("Succesfullly updated" + " " + lCategoryName + " " + "category score for visitrID:"
 						+ parVisitorId);
 
-			} else {
+			} // End of if
+			else {
 				System.out.println("Error occured while updating" + " " + lCategoryName + " "
 						+ "category scogetCategoryNameByVisitorIdre for visitrID:" + parVisitorId);
-			}
+			} // End of else
 
-		}
+		} // End of for
 		return "getCategoryScore";
 
-	}
+	}// End of getCatScore method
 
 	/**
 	 * This method is used to display visitor form
@@ -127,10 +132,11 @@ public class GamesCategoryScoreController {
 	public String displayGamesCategoryNameRecommendation() {
 		return "VisitorFormToRecommendGamesBasedOnCategories";
 
-	}
+	}// End of displayGamesCategoryNameRecommendation method
 
 	/**
-	 * This method is used to transfer games category name and games name recommendations to view part
+	 * This method is used to transfer games category name and games name
+	 * recommendations to view part
 	 * 
 	 * @param String,
 	 *            is the first parameter for this method contains visitor Id
@@ -147,6 +153,6 @@ public class GamesCategoryScoreController {
 		lMap.put("gameCategoryScore", lGameCategoryScore);
 		lMap.put("gameInfo", lGameInfo);
 		return new ModelAndView("gamesCategoryNameAndGamesNameRecommendations", "map", lMap);
-	}
+	}// End of gamesCategoryNameRecommendation method
 
-}
+}// End of GamesCategoryScoreController class

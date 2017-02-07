@@ -36,11 +36,12 @@ public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 		Session lSess = mSessionFactory.getCurrentSession();
 		try {
 			lSess.save(visitorsInfo);
-		} catch (Exception e) {
+		} // End of try
+		catch (Exception e) {
 			e.printStackTrace();
-		}
+		} // End of catch
 
-	}
+	}// End of addVisitors method
 
 	/**
 	 * This method is used to get visitor information by content Id
@@ -57,7 +58,7 @@ public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 		List<VisitorsInfo> lVisitorsInfo = lQueryToGetVisitorsInfoBycontentId.list();
 		return lVisitorsInfo;
 
-	}
+	}// End of getVisitorsInfoByContentId method
 
 	/**
 	 * This method is used to get visitor information by visitor Id
@@ -74,7 +75,7 @@ public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 		lQueryToGetVisitorsInfoByVisitorId.setParameter("id", parVisitorId);
 		String lVisitorsInfo = lQueryToGetVisitorsInfoByVisitorId.uniqueResult().toString();
 		return lVisitorsInfo;
-	}
+	}// End of getVisitorsInfoByVisitorId method
 
 	/**
 	 * This method is used to get category name by visitor Id
@@ -92,7 +93,7 @@ public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 		List lCategoryNameList = qry.list();
 		return lCategoryNameList;
 
-	}
+	}// End of getCategoryNameByVisitorId
 
 	/**
 	 * This method is used to get content Id by visitor Id
@@ -108,6 +109,6 @@ public class VisitorsInfoDaoImpl implements VisitorsInfoDao {
 		qry.setParameter("id", parVisitorId);
 		List lCategoryNameList = qry.list();
 		return lCategoryNameList;
-	}
+	}// End ofgetContentIdByVisitorId method
 
-}
+}// End of VisitorsInfoDaoImpl class

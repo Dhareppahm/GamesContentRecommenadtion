@@ -25,4 +25,4 @@ public interface VisitorsInfoDao {
 
 	// This method is used to get content Id by visitor Id.
 	public List getContentIdByVisitorId(String parVisitorId);
-}
+}// End of VisitorsInfoDao interface

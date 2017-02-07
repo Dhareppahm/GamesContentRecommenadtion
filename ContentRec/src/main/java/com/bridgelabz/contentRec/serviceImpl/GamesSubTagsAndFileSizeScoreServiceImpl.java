@@ -27,7 +27,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao.CatgeoryExists(parVisitorId,
 				parCategoryName);
 		return lUserContentInfo;
-	}
+	}// End of CatgeoryExists method
 
 	/**
 	 * This method is used to add new game category
@@ -49,7 +49,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		lCategoryScore.setmSubCategoryTagName("No sub tag");
 		mGamesSubTagsAndFileSizeScoreDao.addNewCategory(lCategoryScore);
 
-	}
+	}// End of addNewCategory method
 
 	/**
 	 * This method is used to add update the game category score
@@ -65,7 +65,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 	public int UpdateCategoryScore(String parVisitorId, String parCategoryName) {
 		int mStatus = mGamesSubTagsAndFileSizeScoreDao.UpdateCategoryScore(parVisitorId, parCategoryName);
 		return mStatus;
-	}
+	}// End of UpdateCategoryScore method
 
 	/**
 	 * This method is used to check the game sub tag exists or not
@@ -81,7 +81,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao
 				.SubCatgeoryTagExists(parVisitorId, parSubCategoryName);
 		return lUserContentInfo;
-	}
+	}// End of SubCatgeoryTagExists method
 
 	/**
 	 * This method is used to add new game sub tag
@@ -104,7 +104,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		lSubCategoryScore.setmCategoryName("No category Name");
 		lSubCategoryScore.setmFileSize("No file size");
 		mGamesSubTagsAndFileSizeScoreDao.addNewSubCategoryTag(lSubCategoryScore);
-	}
+	}// End of addNewSubCategoryTag method
 
 	/**
 	 * This method is used to update the sub tag score
@@ -121,7 +121,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 	public int UpdateSubCategoryTagScore(String parVisitorId, String parSubCategoryName) {
 		int mStatus = mGamesSubTagsAndFileSizeScoreDao.UpdateSubCategoryScoreTag(parVisitorId, parSubCategoryName);
 		return mStatus;
-	}
+	}// End of UpdateSubCategoryTagScore method
 
 	/**
 	 * This method is used to check the game file size exists or not
@@ -138,7 +138,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreDao.FileSizeExists(parVisitorId,
 				parFileSize);
 		return lUserContentInfo;
-	}
+	}// End of FileSizeExists method
 
 	/**
 	 * This method is used to add new game file size
@@ -160,7 +160,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		lUserContentInfo.setmContentId("No content id");
 		mGamesSubTagsAndFileSizeScoreDao.addNewFileSize(lUserContentInfo);
 
-	}
+	}// End of addNewFileSize method
 
 	/**
 	 * This method is used to update the file size score
@@ -177,7 +177,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 	public int UpdateFileSizeScore(String parVisitorId, String parFileSize) {
 		int status = mGamesSubTagsAndFileSizeScoreDao.UpdateFileSizeScore(parVisitorId, parFileSize);
 		return status;
-	}
+	}// End of UpdateFileSizeScore method
 
 	/**
 	 * This method is used to recommend the game sub tags by visitor ID
@@ -192,7 +192,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 	public List gamesSubTagsRecommendationByVisitorId(String parVisitorId) {
 		List lSubTagsList = mGamesSubTagsAndFileSizeScoreDao.gamesSubTagsRecommendationByVisitorId(parVisitorId);
 		return lSubTagsList;
-	}
+	}// End of gamesSubTagsRecommendationByVisitorId method
 
 	/**
 	 * This method is used to get sub tags score by visitor ID
@@ -207,7 +207,7 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		List<GamesSubTagsAndFileSizeScore> lSubTagsScore = mGamesSubTagsAndFileSizeScoreDao
 				.getGamesSubTagsScore(parVisitorId);
 		return lSubTagsScore;
-	}
+	}// End of getGamesSubTagsScore method
 
 	/**
 	 * This method is used to get file size score by visitor ID
@@ -221,6 +221,6 @@ public class GamesSubTagsAndFileSizeScoreServiceImpl implements GamesSubTagsAndF
 		List<GamesSubTagsAndFileSizeScore> lGamesFileSizeScore = mGamesSubTagsAndFileSizeScoreDao
 				.getGamesFileSizeScore(parVisitorId);
 		return lGamesFileSizeScore;
-	}
+	}// End of getGamesFileSizeScore method
 
-}
+}// End of GamesSubTagsAndFileSizeScoreServiceImpl class

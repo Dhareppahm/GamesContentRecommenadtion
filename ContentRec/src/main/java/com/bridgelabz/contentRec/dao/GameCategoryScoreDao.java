@@ -10,7 +10,7 @@ import java.util.List;
 import com.bridgelabz.contentRec.model.GameCategoryScore;
 
 public interface GameCategoryScoreDao {
-	
+
 	// This method is used to check category exists or not.
 	public GameCategoryScore CatgeoryExists(String parVisitorId, String parCategoryName);
 
@@ -26,4 +26,4 @@ public interface GameCategoryScoreDao {
 	// This method is used to get category name by visitor Id.
 	public List getCategoryNameByVisitorId(String parVisitorId);
 
-}
+}// End of GameCategoryScoreDao interface

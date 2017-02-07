@@ -18,4 +18,4 @@ public interface UserInfoService {
 	// This method is used to get visitor history.
 	public List<UserInfo> getVisitorHistoryByVisitorId(String parVisitorId);
 
-}
+}// End of UserInfoService class

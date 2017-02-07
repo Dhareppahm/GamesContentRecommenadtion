@@ -42,4 +42,5 @@ public interface GamesSubTagsAndFileSizeScoreDao {
 
 	// This method is used to recommend file size score by visitor Id.
 	public List<GamesSubTagsAndFileSizeScore> getGamesFileSizeScore(String parVisitorId);
-}
+
+}// End of GamesSubTagsAndFileSizeScoreDao interface

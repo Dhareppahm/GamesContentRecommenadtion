@@ -46,7 +46,7 @@ public class GameInformationController {
 	@RequestMapping(value = "/displayGameInfo", method = RequestMethod.GET)
 	public String dispalyGameInfo() {
 		return "DisplayGameInfo";
-	}
+	}// End of dispalyGameInfo method
 
 	/**
 	 * This method is used to display game information form
@@ -56,7 +56,7 @@ public class GameInformationController {
 	@RequestMapping(value = "/fetchAndSaveGameInfo", method = RequestMethod.GET)
 	public String fetchAndSaveGameInfo() {
 		return "FetchAndSaveGameInfo";
-	}
+	}// End of fetchAndSaveGameInfo method
 
 	/**
 	 * This method is used to transfer game information view part
@@ -67,7 +67,7 @@ public class GameInformationController {
 	public ModelAndView dispalyGameData(@RequestParam("contentId") String parContId) {
 		List<GameInfo> lGameInfo = mGameInfoService.getGameInfoByContentId(parContId);
 		return new ModelAndView("GameInformation", "gameInfo", lGameInfo);
-	}
+	}// End of dispalyGameData method
 
 	/**
 	 * This method is used to fetch game information from the rest call
@@ -90,7 +90,7 @@ public class GameInformationController {
 				System.out.println("Sorry, unable to find " + lFileName);
 				return null;
 
-			}
+			} // End of if
 
 			lProp.load(lInput);
 			mGbDeviceId = lProp.getProperty("gbDeviceId");
@@ -100,17 +100,19 @@ public class GameInformationController {
 			System.out.println(mGbAppVersionCode);
 			System.out.println(mUrlString);
 
-		} catch (IOException e1) {
+		} // End of try
+		catch (IOException e1) {
 			e1.printStackTrace();
-		} finally {
+		} // End of catch
+		finally {
 			if (lInput != null) {
 				try {
 					lInput.close();
 				} catch (IOException e) {
 					e.printStackTrace();
-				}
-			}
-		}
+				} // End of catch
+			} // End of if
+		} // End of finally
 
 		GameInfo lGameInfo = new GameInfo();
 		try {
@@ -128,7 +130,7 @@ public class GameInformationController {
 
 			if (lConn.getResponseCode() != 200) {
 				throw new RuntimeException("Failed : HTTP error code : " + lConn.getResponseCode());
-			}
+			} // End of if
 
 			BufferedReader lBufferReader = new BufferedReader(new InputStreamReader((lConn.getInputStream())));
 
@@ -194,20 +196,22 @@ public class GameInformationController {
 			mGameInfoService.saveGameInfo(lGameInfo);
 			lConn.disconnect();
 
-		}
+		} // End of try
 
 		catch (MalformedURLException e) {
 
 			e.printStackTrace();
-		} catch (IOException e) {
+		} // End of catch
+		catch (IOException e) {
 
 			e.printStackTrace();
-		} catch (ParseException e) {
+		} // End of catch
+		catch (ParseException e) {
 
 			e.printStackTrace();
-		}
+		} // End of catch
 
 		return "FetchAndSaveGameInfo";
-	}
+	}// End of fetchAndSaveGameData method
 
-}
+}// End of GameInformationController class

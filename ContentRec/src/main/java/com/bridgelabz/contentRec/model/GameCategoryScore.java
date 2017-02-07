@@ -31,34 +31,34 @@ public class GameCategoryScore {
 
 	public int getmId() {
 		return mId;
-	}
+	}// End of getmId method
 
 	public void setmId(int mId) {
 		this.mId = mId;
-	}
+	}// End of setmId method
 
 	public String getmVisitorId() {
 		return mVisitorId;
-	}
+	}// End of getmVisitorId method
 
 	public void setmVisitorId(String mVisitorId) {
 		this.mVisitorId = mVisitorId;
-	}
+	}// End of setmVisitorId method
 
 	public String getmCategoryName() {
 		return mCategoryName;
-	}
+	}// End of setmVisitorId method
 
 	public void setmCategoryName(String mCategoryName) {
 		this.mCategoryName = mCategoryName;
-	}
+	}// End of setmCategoryName method
 
 	public long getmCatMarks() {
 		return mCatMarks;
-	}
+	}// End of setmCategoryName method
 
 	public void setmCatMarks(long mCatMarks) {
 		this.mCatMarks = mCatMarks;
-	}
+	}// End of setmCatMarks method
 
-}
+}// End of GameCategoryScore class

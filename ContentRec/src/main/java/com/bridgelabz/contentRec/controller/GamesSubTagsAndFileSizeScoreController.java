@@ -47,8 +47,7 @@ public class GamesSubTagsAndFileSizeScoreController {
 	@RequestMapping(value = "/userContentInfo", method = RequestMethod.GET)
 	public String userContentInfo() {
 		return "UserContentInfo";
-
-	}
+	}// End of userContentInfo method
 
 	/**
 	 * This method is used to calculate the sub tags and file size score
@@ -69,20 +68,23 @@ public class GamesSubTagsAndFileSizeScoreController {
 
 			if (lInput == null) {
 				System.out.println("Sorry, unable to find " + lFileName);
-			}
+			} // End of if
 			lProp.load(lInput);
 
-		} catch (IOException e1) {
+		} // End of try
+		catch (IOException e1) {
 			e1.printStackTrace();
-		} finally {
+		} // End of catch
+		finally {
 			if (lInput != null) {
 				try {
 					lInput.close();
-				} catch (IOException e) {
+				} // End of try
+				catch (IOException e) {
 					e.printStackTrace();
-				}
-			}
-		}
+				} // End of catch
+			} // End of if
+		} // End of finally
 		List lCategoryNameList = mVisitorsInfoService.getCategoryNamesByVisitorId(parVisitorId);
 		for (Iterator iterator = lCategoryNameList.iterator(); iterator.hasNext();) {
 			String lCategoryName = (String) iterator.next();
@@ -100,11 +102,12 @@ public class GamesSubTagsAndFileSizeScoreController {
 					mCategoryStatus = mGamesSubTagsAndFileSizeScoreService.UpdateCategoryScore(parVisitorId,
 							lCategoryName);
 
-				} else {
+				} // End of if
+				else {
 					mGamesSubTagsAndFileSizeScoreService.addNewCategory(parVisitorId, lCategoryName);
 					mCategoryStatus = mGamesSubTagsAndFileSizeScoreService.UpdateCategoryScore(parVisitorId,
 							lCategoryName);
-				}
+				} // End of else
 
 				List lContentIdList = mVisitorsInfoService.getContentIdByVisitorId(parVisitorId);
 
@@ -118,43 +121,47 @@ public class GamesSubTagsAndFileSizeScoreController {
 								.SubCatgeoryTagExists(parVisitorId, subTags[i]);
 						if (userContentInfo != null) {
 							mGamesSubTagsAndFileSizeScoreService.UpdateSubCategoryTagScore(parVisitorId, subTags[i]);
-						} else {
+						} // End of if
+						else {
 							mGamesSubTagsAndFileSizeScoreService.addNewSubCategoryTag(parVisitorId, subTags[i],
 									lContentId);
 							int mCategorySubTagStatus = mGamesSubTagsAndFileSizeScoreService
 									.UpdateSubCategoryTagScore(parVisitorId, subTags[i]);
-						}
-					}
+						} // End of else
+					} // End of for
 					String lFileSize = mGameInfoService.getFileSizeByContentId(lContentId);
 					System.out.println(lFileSize);
 					GamesSubTagsAndFileSizeScore lUserContentInfo = mGamesSubTagsAndFileSizeScoreService
 							.FileSizeExists(parVisitorId, lFileSize);
 					if (lUserContentInfo != null) {
 						mGamesSubTagsAndFileSizeScoreService.UpdateFileSizeScore(parVisitorId, lFileSize);
-					} else {
+					} // End of if
+					else {
 
 						mGamesSubTagsAndFileSizeScoreService.addNewFileSize(parVisitorId, lFileSize);
 						mGamesSubTagsAndFileSizeScoreService.UpdateFileSizeScore(parVisitorId, lFileSize);
-					}
+					} // End of else
 
-				}
+				} // End of for
 
-			} else {
+			} // End of if
+			else {
 				continue;
-			}
+			} // End of else
 			if (mCategoryStatus > 0) {
 				System.out.println("Succesfullly updated" + " " + lCategoryName + " " + "category score for visitrID:"
 						+ parVisitorId);
 
-			} else {
+			} // End of if
+			else {
 				System.out.println("Error occured while updating" + " " + lCategoryName + " "
 						+ "category score for visitrID:" + parVisitorId);
-			}
+			} // End of else
 
-		}
+		} // End of if
 		return "UserContentInfo";
 
-	}
+	}// End of getCatScore method
 
 	/**
 	 * This method is used to display games recommendation form
@@ -164,7 +171,7 @@ public class GamesSubTagsAndFileSizeScoreController {
 	@RequestMapping(value = "/gamesRecommendationBasedOnMostVisitedSubTags", method = RequestMethod.GET)
 	public String dispalyVisitorFrom() {
 		return "getSubTagsScore";
-	}
+	}// End of dispalyVisitorFrom method
 
 	/**
 	 * This method is used to transfer visited sub tags to view part
@@ -174,7 +181,6 @@ public class GamesSubTagsAndFileSizeScoreController {
 	@RequestMapping(value = "/gamesRecommendationBasedOnMostVisitedSubTags", method = RequestMethod.POST)
 	public ModelAndView gamesCategoryNameRecommendation(@RequestParam("visitorId") String parVisitorId,
 			Model parModel) {
-		// int lFlag = 0;
 		List lGameInfoList = new ArrayList();
 		List<GamesSubTagsAndFileSizeScore> lGameSubTagsSCore = mGamesSubTagsAndFileSizeScoreService
 				.getGamesSubTagsScore(parVisitorId);
@@ -185,14 +191,14 @@ public class GamesSubTagsAndFileSizeScoreController {
 
 			List<GameInfo> lGameInfo = mGameInfoService.getGameNameBySubTags(lsubTagName);
 			lGameInfoList.add(lGameInfo);
-		}
+		} // End of for
 		parModel.addAttribute("visitorID", parVisitorId);
 		lGameInfoAndSubTagsmap.put("Subtags", lGameSubTagsSCore);
 		lGameInfoAndSubTagsmap.put("GameInfo", lGameInfoList);
 
 		return new ModelAndView("gamesRecommendationBasedOnMostVisitedSubTags", "GameInfoAndSubTagsmap",
 				lGameInfoAndSubTagsmap);
-	}
+	}// End of gamesCategoryNameRecommendation method
 
 	/**
 	 * This method is used to transfer visited file size to view part
@@ -210,7 +216,7 @@ public class GamesSubTagsAndFileSizeScoreController {
 		lMap.put("gameFileScore", lGameFileSizeScore);
 		lMap.put("gameInfo", lGameInfo);
 		return new ModelAndView("gamesRecommendationBasedOnFileSize", "map", lMap);
-	}
+	}// End of gamesRecommendationBasedOnFileSize method
 
 	/**
 	 * This method is used to display games recommendation form
@@ -221,6 +227,6 @@ public class GamesSubTagsAndFileSizeScoreController {
 	public String gamesRecommendationBasedOnFileSizeVisitorForm() {
 		return "gamesRecommendationBasedOnFileSizeVisitorForm";
 
-	}
+	}// End of gamesRecommendationBasedOnFileSizeVisitorForm method
 
-}
+}// End of GamesSubTagsAndFileSizeScoreController class

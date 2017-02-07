@@ -30,7 +30,7 @@ public class GameCategoryScoreServiceImpl implements GameCategoryScoreService {
 	public GameCategoryScore CatgeoryExists(String parVisitorId, String parCategoryName) {
 		GameCategoryScore lCategoryScore = mGameCategoryScoreDao.CatgeoryExists(parVisitorId, parCategoryName);
 		return lCategoryScore;
-	}
+	}// End of CatgeoryExists method
 
 	/**
 	 * This method is used to add new game category
@@ -47,7 +47,7 @@ public class GameCategoryScoreServiceImpl implements GameCategoryScoreService {
 		lCategoryScore.setmCategoryName(parCategoryName);
 		mGameCategoryScoreDao.addNewCategory(lCategoryScore);
 
-	}
+	}// End of addNewCategory method
 
 	/**
 	 * This method is used to add update the game category score
@@ -63,7 +63,7 @@ public class GameCategoryScoreServiceImpl implements GameCategoryScoreService {
 	public int UpdateCategoryScore(String parVisitorId, String parCategoryName) {
 		int mStatus = mGameCategoryScoreDao.UpdateCategoryScore(parVisitorId, parCategoryName);
 		return mStatus;
-	}
+	}// End of UpdateCategoryScore method
 
 	/**
 	 * This method is used to recommend game category name to visitor by
@@ -78,7 +78,7 @@ public class GameCategoryScoreServiceImpl implements GameCategoryScoreService {
 		List<GameCategoryScore> mGameCategoryScore = mGameCategoryScoreDao
 				.gamesCategoryNamesRecommendationByVisitorId(parVisitorId);
 		return mGameCategoryScore;
-	}
+	}// End of gamesCategoryNameRecommendationByVisitorId method
 
 	/**
 	 * This method is used to get game category name byvisitorId
@@ -91,6 +91,6 @@ public class GameCategoryScoreServiceImpl implements GameCategoryScoreService {
 	public List getCategoryNameByVisitorId(String parVisitorId) {
 		List mCategoryNameList = mGameCategoryScoreDao.getCategoryNameByVisitorId(parVisitorId);
 		return mCategoryNameList;
-	}
+	}// End of getCategoryNameByVisitorId method
 
-}
+}// End of GameCategoryScoreServiceImpl class

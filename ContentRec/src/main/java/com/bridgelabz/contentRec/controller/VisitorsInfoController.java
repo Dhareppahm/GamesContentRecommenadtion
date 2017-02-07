@@ -36,7 +36,7 @@ public class VisitorsInfoController {
 	@RequestMapping(value = "/uploadCSVToDb", method = RequestMethod.GET)
 	public String dispalyGameInfo() {
 		return "UploadCSV";
-	}
+	}// End of dispalyGameInfo method
 
 	/**
 	 * This method is used to read visitors information from CSV file
@@ -60,13 +60,13 @@ public class VisitorsInfoController {
 			lData = lNextRecord.split("\\,");
 			for (i = 0; i < lData.length; i++) {
 				System.out.print(i + " " + lData[i] + " ");
-			}
+			} // End of for
 			while (lNextRecord != null) {
 				lData = lNextRecord.split("\\,");
 				System.out.println(lNextRecord);
 				for (i = 0; i < lData.length; i++) {
 					lData[i] = lData[i].replace("\"", "");
-				}
+				} // End of for
 				if (!(lData[0].equals(lTemp))) {
 					VisitorsInfo vi = new VisitorsInfo();
 					vi.setmVisitorId(lData[0]);
@@ -76,18 +76,20 @@ public class VisitorsInfoController {
 					vi.setmView(lData[4]);
 					vi.setmDownload(lData[5]);
 					mVisitorsInfoService.addVisitors(vi);
-				}
+				} // End of if
 				lNextRecord = lBufferedReader.readLine();
-			}
+			} // End of while
 			lBufferedReader.close();
 			lFileReader.close();
-		} catch (FileNotFoundException e) {
+		} // End of try
+		catch (FileNotFoundException e) {
 
 			e.printStackTrace();
-		} catch (IOException e) {
+		} // End of catch
+		catch (IOException e) {
 
 			e.printStackTrace();
 		}
 		return "GetUserHistory";
-	}
-}
+	}// End of getDataFromCSV method
+}// End of VisitorsInfoController class
