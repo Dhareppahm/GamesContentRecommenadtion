@@ -41,27 +41,27 @@ public class GameInformationController {
 	/**
 	 * This method is used to display game information form
 	 * 
-	 * @return String(view),DisplayGameInfo view
+	 * @return ModelAndView ,DisplayGameInfo view
 	 */
 	@RequestMapping(value = "/displayGameInfo", method = RequestMethod.GET)
-	public String dispalyGameInfo() {
-		return "DisplayGameInfo";
+	public ModelAndView dispalyGameInfo() {
+		return new ModelAndView("DisplayGameInfo");
 	}// End of dispalyGameInfo method
 
 	/**
 	 * This method is used to display game information form
 	 * 
-	 * @return String(view),FetchAndSaveGameInfo view
+	 * @return ModelAndView,FetchAndSaveGameInfo view
 	 */
 	@RequestMapping(value = "/fetchAndSaveGameInfo", method = RequestMethod.GET)
-	public String fetchAndSaveGameInfo() {
-		return "FetchAndSaveGameInfo";
+	public ModelAndView fetchAndSaveGameInfo() {
+		return new ModelAndView("FetchAndSaveGameInfo");
 	}// End of fetchAndSaveGameInfo method
 
 	/**
 	 * This method is used to transfer game information view part
 	 * 
-	 * @return String(view),GameInformation view
+	 * @return ModelAndView,GameInformation view
 	 */
 	@RequestMapping(value = "/displayGameInfo", method = RequestMethod.POST)
 	public ModelAndView dispalyGameData(@RequestParam("contentId") String parContId) {
@@ -74,10 +74,10 @@ public class GameInformationController {
 	 * 
 	 * @param String,
 	 *            is the first parameter for this method contains content Id
-	 * @return String(view),FetchAndSaveGameInfo view
+	 * @return ModelAndView,FetchAndSaveGameInfo view
 	 */
 	@RequestMapping(value = "/fetchAndSaveGameInfo", method = RequestMethod.POST)
-	public String fetchAndSaveGameData(@RequestParam("contentId") String parContId) {
+	public ModelAndView fetchAndSaveGameData(@RequestParam("contentId") String parContId) {
 
 		String lFileName = "RestCalInformation.properties";
 		JSONParser lParser = new JSONParser();
@@ -211,7 +211,7 @@ public class GameInformationController {
 			e.printStackTrace();
 		} // End of catch
 
-		return "FetchAndSaveGameInfo";
+		return new ModelAndView("FetchAndSaveGameInfo");
 	}// End of fetchAndSaveGameData method
 
 }// End of GameInformationController class

@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.bridgelabz.contentRec.model.GameCategoryScore;
 import com.bridgelabz.contentRec.model.GameInfo;
 import com.bridgelabz.contentRec.model.GamesSubTagsAndFileSizeScore;
 import com.bridgelabz.contentRec.services.GameInfoService;
@@ -42,11 +41,11 @@ public class GamesSubTagsAndFileSizeScoreController {
 	/**
 	 * This method is used to display user form
 	 * 
-	 * @return String(view),UserContentInfo view
+	 * @return ModelAndView,UserContentInfo view
 	 */
 	@RequestMapping(value = "/userContentInfo", method = RequestMethod.GET)
-	public String userContentInfo() {
-		return "UserContentInfo";
+	public ModelAndView userContentInfo() {
+		return new ModelAndView("UserContentInfo");
 	}// End of userContentInfo method
 
 	/**
@@ -54,10 +53,10 @@ public class GamesSubTagsAndFileSizeScoreController {
 	 * 
 	 * @param String,
 	 *            is the first parameter for this method contains visitor Id
-	 * @return String(view),UserContentInfo view
+	 * @return ModelAndView,UserContentInfo view
 	 */
 	@RequestMapping(value = "/userContentInfo", method = RequestMethod.POST)
-	public String getCatScore(@RequestParam("visitorId") String parVisitorId) {
+	public ModelAndView getCatScore(@RequestParam("visitorId") String parVisitorId) {
 
 		Properties lProp = new Properties();
 		String lFileName = "CategoryList.properties";
@@ -159,18 +158,18 @@ public class GamesSubTagsAndFileSizeScoreController {
 			} // End of else
 
 		} // End of if
-		return "UserContentInfo";
+		return new ModelAndView("UserContentInfo");
 
 	}// End of getCatScore method
 
 	/**
 	 * This method is used to display games recommendation form
 	 * 
-	 * @return String(view),getSubTagsScore view
+	 * @return ModelAndView,getSubTagsScore view
 	 */
 	@RequestMapping(value = "/gamesRecommendationBasedOnMostVisitedSubTags", method = RequestMethod.GET)
-	public String dispalyVisitorFrom() {
-		return "getSubTagsScore";
+	public ModelAndView dispalyVisitorFrom() {
+		return new ModelAndView("getSubTagsScore");
 	}// End of dispalyVisitorFrom method
 
 	/**
@@ -224,8 +223,8 @@ public class GamesSubTagsAndFileSizeScoreController {
 	 * @return ModelAndView,gamesRecommendationBasedOnFileSizeVisitorForm view
 	 */
 	@RequestMapping(value = "/gamesRecommendationBasedOnFileSize", method = RequestMethod.GET)
-	public String gamesRecommendationBasedOnFileSizeVisitorForm() {
-		return "gamesRecommendationBasedOnFileSizeVisitorForm";
+	public ModelAndView gamesRecommendationBasedOnFileSizeVisitorForm() {
+		return new ModelAndView("gamesRecommendationBasedOnFileSizeVisitorForm");
 
 	}// End of gamesRecommendationBasedOnFileSizeVisitorForm method
 

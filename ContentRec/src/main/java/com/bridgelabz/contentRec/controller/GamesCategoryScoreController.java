@@ -42,11 +42,11 @@ public class GamesCategoryScoreController {
 	/**
 	 * This method is used to display category form
 	 * 
-	 * @return String(view),getCategoryScore view
+	 * @return ModelAndView,getCategoryScore view
 	 */
 	@RequestMapping(value = "/getCategoryScore", method = RequestMethod.GET)
-	public String dispalyVisitorFrom() {
-		return "getCategoryScore";
+	public ModelAndView dispalyVisitorFrom() {
+		return new ModelAndView("getCategoryScore");
 	}// End of dispalyVisitorFrom method
 
 	/**
@@ -54,10 +54,10 @@ public class GamesCategoryScoreController {
 	 * 
 	 * @param String,
 	 *            is the first parameter for this method contains visitor Id
-	 * @return String(view),FetchAndSaveGameInfo view
+	 * @return ModelAndView,FetchAndSaveGameInfo view
 	 */
 	@RequestMapping(value = "/getCategoryScore", method = RequestMethod.POST)
-	public String getCatScore(@RequestParam("visitorId") String parVisitorId) {
+	public ModelAndView getCatScore(@RequestParam("visitorId") String parVisitorId) {
 		int lStatus;
 		Properties lProp = new Properties();
 		String lFileName = "CategoryList.properties";
@@ -119,18 +119,18 @@ public class GamesCategoryScoreController {
 			} // End of else
 
 		} // End of for
-		return "getCategoryScore";
+		return new ModelAndView("getCategoryScore");
 
 	}// End of getCatScore method
 
 	/**
 	 * This method is used to display visitor form
 	 * 
-	 * @return String(view),VisitorFormToRecommendGamesBasedOnCategories view
+	 * @return ModelAndView,VisitorFormToRecommendGamesBasedOnCategories view
 	 */
 	@RequestMapping(value = "/gamesCategoryNameRecommendation", method = RequestMethod.GET)
-	public String displayGamesCategoryNameRecommendation() {
-		return "VisitorFormToRecommendGamesBasedOnCategories";
+	public ModelAndView displayGamesCategoryNameRecommendation() {
+		return new ModelAndView("VisitorFormToRecommendGamesBasedOnCategories");
 
 	}// End of displayGamesCategoryNameRecommendation method
 

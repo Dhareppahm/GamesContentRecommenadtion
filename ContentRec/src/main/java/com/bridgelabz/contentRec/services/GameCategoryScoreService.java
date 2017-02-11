@@ -26,4 +26,4 @@ public interface GameCategoryScoreService {
 	// This method is used to get category name by visitor Id.
 	public List getCategoryNameByVisitorId(String parVisitorId);
 
-}// End of GameCategoryScoreService class
+}// End of GameCategoryScoreService interface

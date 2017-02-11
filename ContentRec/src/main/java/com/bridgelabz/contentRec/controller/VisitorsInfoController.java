@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.bridgelabz.contentRec.model.VisitorsInfo;
 import com.bridgelabz.contentRec.services.VisitorsInfoService;
@@ -31,11 +32,11 @@ public class VisitorsInfoController {
 	 * 
 	 * @param String,
 	 *            is the first parameter for this method contains visitor Id
-	 * @return String(view),UploadCSV view
+	 * @return ModelAndView,UploadCSV view
 	 */
 	@RequestMapping(value = "/uploadCSVToDb", method = RequestMethod.GET)
-	public String dispalyGameInfo() {
-		return "UploadCSV";
+	public ModelAndView dispalyGameInfo() {
+		return new ModelAndView("UploadCSV");
 	}// End of dispalyGameInfo method
 
 	/**
@@ -43,10 +44,10 @@ public class VisitorsInfoController {
 	 * 
 	 * @param String,
 	 *            is the first parameter for this method contains visitor Id
-	 * @return String(view),GetUserHistory view
+	 * @return ModelAndView,GetUserHistory view
 	 */
 	@RequestMapping(value = "/getDataFromCSV", method = RequestMethod.GET)
-	public String getDataFromCSV() {
+	public ModelAndView getDataFromCSV() {
 		FileReader lFileReader;
 		String[] lData;
 		String lTemp = "visitor_id";
@@ -90,6 +91,6 @@ public class VisitorsInfoController {
 
 			e.printStackTrace();
 		}
-		return "GetUserHistory";
+		return new ModelAndView("GetUserHistory");
 	}// End of getDataFromCSV method
 }// End of VisitorsInfoController class

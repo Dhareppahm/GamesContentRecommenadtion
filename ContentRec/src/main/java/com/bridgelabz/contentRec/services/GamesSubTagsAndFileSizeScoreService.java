@@ -42,4 +42,4 @@ public interface GamesSubTagsAndFileSizeScoreService {
 	// This method is used to recommend file size score by visitor Id.
 	public List<GamesSubTagsAndFileSizeScore> getGamesFileSizeScore(String parVisitorId);
 
-}// End of GamesSubTagsAndFileSizeScoreService class
+}// End of GamesSubTagsAndFileSizeScoreService interface

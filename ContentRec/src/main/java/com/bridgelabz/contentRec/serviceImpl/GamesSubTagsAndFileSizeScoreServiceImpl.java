@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.bridgelabz.contentRec.dao.GamesSubTagsAndFileSizeScoreDao;
-import com.bridgelabz.contentRec.model.GameCategoryScore;
 import com.bridgelabz.contentRec.model.GamesSubTagsAndFileSizeScore;
 import com.bridgelabz.contentRec.services.GamesSubTagsAndFileSizeScoreService;
 

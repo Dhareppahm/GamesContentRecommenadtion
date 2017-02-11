@@ -42,8 +42,8 @@ public class UserInfoController {
 	 * @return StoreUserInfo,StoreUserInfo view
 	 */
 	@RequestMapping(value = "/storeUserInfo", method = RequestMethod.GET)
-	public String dispalyGameInfo() {
-		return "StoreUserInfo";
+	public ModelAndView dispalyGameInfo() {
+		return new ModelAndView("StoreUserInfo");
 	}// End of dispalyGameInfo method
 
 	/**
@@ -51,10 +51,10 @@ public class UserInfoController {
 	 * 
 	 * @param String,
 	 *            is the first parameter for this method contains content Id
-	 * @return String(view),StoreUserInfo view
+	 * @return ModelAndView,StoreUserInfo view
 	 */
 	@RequestMapping(value = "/storeUserDatatoDb", method = RequestMethod.POST)
-	public String storeUserDatatoDb(@RequestParam("contentId") String parContentId) {
+	public ModelAndView storeUserDatatoDb(@RequestParam("contentId") String parContentId) {
 		// Multiple visitors information for same contentId
 		List<VisitorsInfo> lVisitorsInfo = mVisitorsInfoService.getVisitorsInfoByContentId(parContentId);
 		// Game information
@@ -78,17 +78,17 @@ public class UserInfoController {
 
 		} // End of outer for
 
-		return "StoreUserInfo";
+		return new ModelAndView("StoreUserInfo");
 	}// End of storeUserDatatoDb method
 
 	/**
 	 * This method is used to display user form
 	 * 
-	 * @return String(view),GetUserHistory view
+	 * @return ModelAndView,GetUserHistory view
 	 */
 	@RequestMapping(value = "/getUserHistory", method = RequestMethod.GET)
-	public String getUserHistory() {
-		return "GetUserHistory";
+	public ModelAndView getUserHistory() {
+		return new ModelAndView("GetUserHistory");
 	}// End of getUserHistory method
 
 	/**
@@ -96,7 +96,7 @@ public class UserInfoController {
 	 * 
 	 * @param String,
 	 *            is the first parameter for this method contains visitor Id
-	 * @return String(view),DisplayUserHistory view
+	 * @return ModelAndView,DisplayUserHistory view
 	 */
 	@RequestMapping(value = "/getUserHistory", method = RequestMethod.POST)
 	public ModelAndView getHistory(@RequestParam("visitorId") String parVisitorId) {

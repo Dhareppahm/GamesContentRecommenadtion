@@ -7,7 +7,6 @@ package com.bridgelabz.contentRec.services;
 
 import java.util.List;
 
-import com.bridgelabz.contentRec.model.GameCategoryScore;
 import com.bridgelabz.contentRec.model.UserInfo;
 
 public interface UserInfoService {
@@ -18,4 +17,4 @@ public interface UserInfoService {
 	// This method is used to get visitor history.
 	public List<UserInfo> getVisitorHistoryByVisitorId(String parVisitorId);
 
-}// End of UserInfoService class
+}// End of UserInfoService interface

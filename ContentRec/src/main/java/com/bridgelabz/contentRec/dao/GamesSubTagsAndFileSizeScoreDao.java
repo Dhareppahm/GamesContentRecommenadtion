@@ -2,7 +2,6 @@ package com.bridgelabz.contentRec.dao;
 
 import java.util.List;
 
-import com.bridgelabz.contentRec.model.GameCategoryScore;
 import com.bridgelabz.contentRec.model.GamesSubTagsAndFileSizeScore;
 
 public interface GamesSubTagsAndFileSizeScoreDao {

@@ -14,7 +14,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bridgelabz.contentRec.dao.GamesSubTagsAndFileSizeScoreDao;
-import com.bridgelabz.contentRec.model.GameCategoryScore;
 import com.bridgelabz.contentRec.model.GamesSubTagsAndFileSizeScore;
 
 @Repository
